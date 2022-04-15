@@ -1,0 +1,133 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>FlutterFlow</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="./codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="flutterflow"
+                  title="FlutterFlow"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="はじめに" duration="0">
+        <h2 is-upgraded>本書のコンセプト</h2>
+<p>最近はコロナの影響もあり、在宅勤務が推奨され、学校の授業がオンライン化され、買い物はeコマースの利用が増加し、食事の際は出前アプリの利用が流行っています。コロナ以前から社会生活におけるデジタル化の必要性がうたわれていましたが、コロナ渦となり、あらゆる生活シーンでオンライン利用が半強制化され、便利で使いやすいオンラインサービスに対する需要が増しています。</p>
+<p>また最近のシステム開発の動きを見ると、いままで「使いづらい」の代名詞であった行政や金融のオンラインサービスに「<a href="https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E4%B8%AD%E5%BF%83%E8%A8%AD%E8%A8%88" target="_blank">ユーザ中心設計</a>」を採用し、使いやすくセキュリティ上も安全なサービスに作り替えようとする取組が進められています。またIT化が比較的遅れていた中小企業においてもDX（<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" target="_blank">デジタルトランスフォーメーション</a>）を促進しようとする動きがあります。</p>
+<p>このように、あらゆる業界や組織において、あらゆる生活シーンでそれぞれの立場の要望にあった使いやすいオンラインサービスが安価に構築・提供されることが求められています。</p>
+<p>一方これらの要望を担う人材育成の観点では、子供から大人までプログラミング教育がはやっており、例えば文科省は小学校でのプログラミング授業を必須化しています。しかしシステム開発や人材育成においては下記のような課題があると感じています。</p>
+<p class="image-container"><img style="width: 181.50px" src="img/86ab61652efc6246.png"></p>
+<ul>
+<li>アプリ開発の要件定義や設計フェーズにおいて画面設計に走りがちで、データ構造やロジックの設計がおろそかになり、プログラマーがまともに開発をはじめらずプロジェクトが遅延するといった状況に陥りがちです。このような状況は「<a href="https://shop.nikkeibp.co.jp/front/commodity/0000/P82710/" target="_blank">デスマーチ</a>」と呼ばれ、20年近くIT企業でアプリ開発をみてきましたが、昔も今もこのような破綻したプロジェクトは大量に発生しています。<br></li>
+<li>この原因としては、システムデザインについての手法（<a href="https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E9%A7%86%E5%8B%95%E8%A8%AD%E8%A8%88" target="_blank">ドメイン駆動設計</a>や<a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" target="_blank">システムアーキテクチャ</a>など）やその説明が高尚で難しいという問題があります。そのため、本来必要なシステムデザインがスルーされ、スケジュールのプレッシャーもあり、とりあえず簡易な画面設計に走ることにつながるのではと感じています。<img style="width: 183.50px" src="img/fd577b997dbe38e4.png"></li>
+<li>昨今の<a href="https://nijibox.jp/blog/humancentereddesign/" target="_blank">人間中心設計</a>の誤った解釈から、システムの顧客接点である画面のデザインがフォーカスされ、発注側の要件定義担当者やデザイナーを含めたプロジェクトメンバーが、本来画面設計の元になるはずの<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0" target="_blank">データモデリング</a>について理解が乏しいことに原因があるのではとも感じています。例えば、人間中心設計のプロセスで作成するカスタマージャーニーマップはユーザ視点の顧客体験を理解し、開発するシステムが単なる静的なインタフェースではなく動的なサービスであることを表現するにはよいのですが、アーキテクト不在の場合、顧客接点の整理をしたらすぐに画面設計にとりかかろうという雰囲気になりがちなので、意識して気をつける必要があります。</li>
+<li>例えば、過去相談を受けたシステム開発プロジェクトに、業務で扱う情報が整理できておらず各業務ステップで担当者が手動で作業をしているため、残業が減らないのでシステム化して改善したい、というものがありました。ここでもアーキテクト不在で要件定義が進められ、プロジェクトマネージャやデザイナーが画面設計に走り、案の定プロジェクトの半年後はじめからやりなおしになりました。システム化とは業務と情報の整理整頓であり、仕事が複雑になり残業が発生するのもその整理整頓ができていないのがそもそもの原因です。そのため、まずはデータモデリングが必要であることを強く意識しておく必要があるでしょう。</li>
+<li>エンジニア育成という観点からは、従来のプログラミングの学習コンテンツはプログラミング言語の文法を学ぶことが目標となっており、出来上がったプログラムが端末に&#34;Hello World&#34;と表示するといった面白みにかけ作りたいものからかけ離れた学習内容になっていることが多いです。そのため学習自体に面白味がなく、初心者の時点からやる気をなくしてしまいます。</li>
+<li>最近の子供向けプログラミング授業用ソフトは使いやすく、見た目がよく、マウス操作でプログラミングの論理的思考が学べるといったすぐれた面がある一方、汎用的なアプリケーションを開発するため使えないといった欠点もあります。学習指導要領上、小学校からプログラミング教育が必須化する理由は「プログラミング的思考をやしなうため」「順序立てて考え、試行錯誤し、ものごとを解決する力を身につけるため」であることはわかるのですが、教科書で決められた作り込まれたソフトを使っているので汎用性がなく学習した後のその先がないため少し残念です。</li>
+</ul>
+<p>以上のことから、エンジニアだけでなく発注側顧客企業の担当者やプロジェクトマネージャもユースケースからデータモデルに落とす考え方やデータモデルから画面設計を行うための考え方、さらにはこれらのパターンを知っていることが望まれます。</p>
+<p>そこで本書では。またエンジニア育成という観点では、アイデアが浮かんだらすぐに完成品までもっていけるよう効率的で汎用的なノーコードアプリであるFlutterFlowを選び、それらのハンズオンを掲載しています。</p>
+<p>様々な立場の人が本書を読みハンズオンを試してもらうことで「こんなに簡単に作れるんだ」とものづくりに興味をもってもらい、自分たちが実現したいシステムを自らが構築するマインドをもっていただく一助になればと思っています。また本書をとおしてIT技術の活用が民主化されることで、自らの会社や組織、業界においてより価値を産むアイデア考察に積極的になり、それらを自ら実現した便利で使いやすいオンラインサービスが世に増えることを願っています。</p>
+<aside class="warning"><p><strong>ノート: </strong>著者は2020年2月に第33回「21世紀交流サロン・葵丘」にてこれらの考え方を「テクノロジーの民主化」と題して話しました。<a href="http://21cmikawa.jp/activity/activity.php" target="_blank">http://21cmikawa.jp/activity/activity.php</a></p>
+</aside>
+<h2 is-upgraded>本書で学ぶこと</h2>
+<ul>
+<li>GoogleやFlutterFlowの無料アカウントの登録方法とログインのしくみ</li>
+<li>FlutterFlowの基本的な使い方</li>
+<li>マテリアルデザインをベースとした画面デザイン</li>
+<li>Firebaseの主要サービスの使い方（認証とNoSQLデータベース、通知機能など）</li>
+<li>世の中にある主要なアプリケーションパターンとFlutterFlowを使った実装</li>
+</ul>
+<h2 is-upgraded>ライセンス</h2>
+<p><a href="https://david3080.github.io/firestore/LICENSE.txt" target="_blank">Apache License, Version 2.0</a></p>
+<center>Copyright 2020 RISA Co., LTD.</center>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Googleアカウントの作成" duration="0">
+        <p>GoogleはGmailやGoogleスプレッドシート等々Webから利用可能な有益なアプリケーションを無料で提供しています。強靭で使いやすいセキュリティ基盤の上にこれらのサービスが提供されており、Gmailアカウントを作成することなく自分が持っている既存のメールアドレスを使ってGoogleアカウントを作成することができますので、大学のメールアドレスを使ってGoogleアカウントを追加するなどして授業にも利用することもできます。ここでは、既存のメールアドレスを使ってGoogleアカウントを作成する手順を紹介します。</p>
+<h2 is-upgraded>1. Googleアカウント作成URLにアクセス</h2>
+<p>Googleアカウントを作成する下記URLにアクセスします。</p>
+<p><a href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp" target="_blank">https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&amp;flowEntry=SignUp</a></p>
+<h2 is-upgraded>2. Googleアカウントの作成</h2>
+<p>「姓」「名」に自分の名前を入れて、「代わりに現在のメールアドレスを使用」を選択してメールアドレスに自分のメアドを入力して、パスワードを入力して「次へ」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 506.50px" src="img/d2f8a100a8bd55d0.png"></p>
+<h2 is-upgraded>3. アカウント作成完了</h2>
+<p>自分のメアドに送られてきたメールに記載された数字をメモして、次画面に入力するとアカウント作成が完了します。</p>
+<h2 is-upgraded>4. Googleアカウント</h2>
+<p>下記URLにアクセスして画面右上の「Googleアカウントに移動」ボタンをクリックして、登録したASUメアドとパスワードでログインします。</p>
+<p><a href="https://myaccount.google.com/" target="_blank">https://myaccount.google.com/</a></p>
+<center>Copyright 2020 RISA Co., LTD.</center>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="FlutterFlowへのユーザ登録" duration="0">
+        <p>FlutterFlowにGoogleアカウントのユーザを登録します。</p>
+<h2 is-upgraded>1. FlutterFlowのページにアクセス</h2>
+<p>​​下記URLにアクセスして画面右上の「Start for free」ボタンをクリックします。</p>
+<p><a href="https://flutterflow.io" target="_blank">https://flutterflow.io</a></p>
+<p class="image-container"><img style="width: 601.70px" src="img/4fbd44380933d66c.png"></p>
+<h2 is-upgraded>2. Googleアカウントでユーザ登録</h2>
+<p>「Create Account」画面が表示されますので、画面下の「Google」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/b5677669d5822ff2.png"></p>
+<h2 is-upgraded>3. Googleアカウントでユーザ登録</h2>
+<p>Googleログインのダイアログが表示されるので、そこからASUメアドを選択します。</p>
+<p class="image-container"><img style="width: 420.50px" src="img/11f5cc0b161b48d8.png"></p>
+<p>次ページでアンケートを聞かれることがあるので適当にチェックを入れて回答します。</p>
+<p>登録が完了すると「Welcome to FlutterFlow」という画面が表示されます。</p>
+<center>Copyright 2020 RISA Co., LTD.</center>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="ログイン画面の作成" duration="0">
+        <p>。</p>
+<p>。</p>
+<h2 is-upgraded>1. 面</h2>
+<p>。</p>
+<h3 is-upgraded><strong>① </strong></h3>
+<p><strong>（TODO）</strong></p>
+<h3 is-upgraded><strong>② </strong></h3>
+<p><strong>（TODO）</strong></p>
+<h3 is-upgraded><strong>③ </strong></h3>
+<center>Copyright 2020 RISA Co., LTD.</center>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="まとめ" duration="0">
+        <p>（TODO）</p>
+<center>Copyright 2020 RISA Co., LTD.</center>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

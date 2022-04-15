@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-04-15T07:44:51Z",
+  "id": "flutterflow",
+  "duration": 0,
+  "title": "FlutterFlow",
+  "summary": "Flutterをベースとしたノーコード開発環境であるFlutterFlowを使ったスマホアプリ開発演習",
+  "source": "1LVsNg5GtUojiPeDkGHcRX7WBMAAezFPbjn0niDChvIk",
+  "theme": "",
+  "status": null,
+  "category": [
+    "データモデル",
+    "firebase",
+    "firestore",
+    "flutter"
+  ],
+  "tags": [],
+  "url": "flutterflow"
+}
