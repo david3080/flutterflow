@@ -99,16 +99,132 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="ログイン画面の作成" duration="0">
-        <p>。</p>
-<p>。</p>
-<h2 is-upgraded>1. 面</h2>
-<p>。</p>
-<h3 is-upgraded><strong>① </strong></h3>
-<p><strong>（TODO）</strong></p>
-<h3 is-upgraded><strong>② </strong></h3>
-<p><strong>（TODO）</strong></p>
-<h3 is-upgraded><strong>③ </strong></h3>
+      <google-codelab-step label="ログインアプリの作成" duration="0">
+        <p>eコマースサイトやチャットアプリなどユーザの区別が必要だったり、秘匿情報を扱うアプリケーションではユーザ登録とログインが必要であるため、アプリケーションの基本はログイン画面です。ここではFirebaseが提供する認証のしくみとFlutterFlowを組み合わせたログインアプリを作成します。</p>
+<h2 is-upgraded>前提条件</h2>
+<ul>
+<li>Firebaseと連携したFlutterFlowのプロジェクトが作成されていること。</li>
+</ul>
+<h2 is-upgraded>1. FlutterFlowにログインする</h2>
+<p>下記URLにアクセスして「Google」ボタンをクリックしてログインする。</p>
+<p><a href="https://app.flutterflow.io/" target="_blank">https://app.flutterflow.io/</a></p>
+<p class="image-container"><img style="width: 249.23px" src="img/2b02d6e0bd979fe8.png"></p>
+<h2 is-upgraded>2. FlutterFlowプロジェクトの選択</h2>
+<p>FlutterFlowのダッシュボード上で「ASU...」から始まる名前のプロジェクトを選択します。</p>
+<p class="image-container"><img style="width: 456.50px" src="img/304aab244db1ea86.png"></p>
+<h2 is-upgraded>3. 「UI Builder」でログイン画面を作成</h2>
+<p>ログインすると下図の画面（UIビルダー）が表示されるので、左側のパレット上にあるアイコンを中央の画面にドラッグ＆ドロップしながらログイン画面を作成していきます。</p>
+<p class="image-container"><img style="width: 576.08px" src="img/43c6ef875f5171ea.png"></p>
+<h3 is-upgraded><strong>① Row </strong><img style="width: 27.95px" src="img/38d6af0985caca15.png"><strong> アイコンを中央のアプリ画面の白いエリア（Column（カラム））にドラッグ＆ドロップします。</strong></h3>
+<p class="image-container"><img style="width: 601.70px" src="img/8b491e3ddb9d53c5.png"></p>
+<h3 is-upgraded><strong>② もう一度Rowアイコンを中央のアプリ画面の白いエリア（Column（カラム））にドラッグ＆ドロップし、二行にします。</strong><img style="width: 601.70px" src="img/58796cf2a2d58b17.png"></h3>
+<h3 is-upgraded><strong>③ ボタン </strong><img style="width: 40.92px" src="img/a6e3b96e3fa149ee.png"><strong> アイコンを二行のRowアイコンの下にドラッグ＆ドロップします（ボタンアイコンは左側のアイコンリストをスクロールすると下の方にあります）。</strong></h3>
+<p class="image-container"><img style="width: 601.70px" src="img/edd5e3822132585a.png"></p>
+<h3 is-upgraded><strong>④アプリ画面の白い部分をクリックしColumnを選択して右側のパレットに注目します。</strong></h3>
+<p class="image-container"><img style="width: 601.70px" src="img/5e569b1cf38d3b8f.png"></p>
+<h3 is-upgraded><strong>⑤ Main Axis Alignmentで左から二番目のアイコンを選択し、上記でドラッグ＆ドロップしたコンポーネントを上下中央に配置します。</strong></h3>
+<p class="image-container"><img style="width: 456.00px" src="img/57c234f90b24bb4d.png"></p>
+<h3 is-upgraded><strong>⑥ パレット上部のPadding（パディング）で真ん中のロックをクリックしてロック上部に10と入力して上下左右4ヶ所すべてを10に設定します。</strong></h3>
+<p class="image-container"><img style="width: 310.00px" src="img/65b126f8833859ba.png"></p>
+<h3 is-upgraded><strong>⑦以上により下記のような配置になります。</strong></h3>
+<p class="image-container"><img style="width: 266.87px" src="img/a10559658d969bf9.png"></p>
+<h3 is-upgraded><strong>⑧左のパレットからText </strong><img style="width: 28.39px" src="img/87fcce27ab51f153.png"><strong> アイコンを2行のRowの左側に配置します。上下2ヶ所に配置します。</strong></h3>
+<p class="image-container"><img style="width: 601.70px" src="img/77f8f7b214f52017.png"></p>
+<h3 is-upgraded><strong>⑨左パレットのTextField </strong><img style="width: 29.17px" src="img/ebe98edac7b69c3c.png"><strong> アイコンを、さきほど配置した2箇所のTextの右側にドラッグ&amp;ドロップします。</strong></h3>
+<h3 is-upgraded><img style="width: 405.50px" src="img/8f7f5f5916523a20.png"></h3>
+<h3 is-upgraded><strong>⑩ログイン画面の詳細の設定</strong></h3>
+<ol type="1" start="1">
+<li>「Hello World」と書かれたTextをクリックして表示される右側のパレット上で「Hello World」を「eメール：」に編集します。</li>
+</ol>
+<p class="image-container"><img style="width: 486.50px" src="img/9a3e4b52174813e5.png"></p>
+<ol type="1" start="2">
+<li>二行目の「Hello World」も同じように「パスワード：」に編集します。</li>
+</ol>
+<p class="image-container"><img style="width: 495.50px" src="img/6940a7bef2bf0a7b.png"></p>
+<ol type="1" start="3">
+<li>「パスワード：」の右側のTextFieldを選択して右側のパレットに表示される「Password Field」の右側のチェックを入れます。これによってTextFieldにパスワードを入れることができるようになります。</li>
+</ol>
+<p class="image-container"><img style="width: 516.11px" src="img/52739d042921ae3b.png"></p>
+<ol type="1" start="4">
+<li>最後にアプリ画面周辺の黒い部分をクリックして、右側に表示されるパレットのScaffoldの下の鉛筆アイコンをクリックして「HomePage」を「LoginPage」に修正して右側の ✔️ をクリックして編集を終了します。</li>
+</ol>
+<p class="image-container"><img style="width: 339.50px" src="img/c7be3b575c0af714.png"></p>
+<p>以上でログイン画面の作成は終了です。</p>
+<h2 is-upgraded>4. 新規ページを作成</h2>
+<p>ログイン画面を作成したので、次はログイン後に遷移する先の画面を作成します。</p>
+<h3 is-upgraded><strong>①ページ追加画面に移動</strong></h3>
+<p>画面左端のページとダイアが表示されたアイコン <img style="width: 30.69px" src="img/41d50054b65c457e.png"> をクリックするとページ追加画面に遷移します。</p>
+<p class="image-container"><img style="width: 334.50px" src="img/390726109c385bf8.png"></p>
+<h3 is-upgraded><strong>②新規ページ追加</strong></h3>
+<p>画面下部にあるページ追加ボタン <img style="width: 62.70px" src="img/e700508b1d83a742.png"> をクリックして、表示される「Create Page」画面で「HomePage」と入力して「Create New」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 235.50px" src="img/8895e7df9cdc6c44.png"></p>
+<p>すると「LoginPage」のほかに「HomePage」が追加されます。</p>
+<p class="image-container"><img style="width: 351.50px" src="img/7d6e483ca750f5aa.png"></p>
+<h2 is-upgraded>5. ログインの設定</h2>
+<p>ログイン画面とホームページができたのでログインを行うロジックを作成していきます。</p>
+<h3 is-upgraded><strong>①ログインページとホームページの設定</strong></h3>
+<p>画面上部のバグアイコン <img style="width: 37.08px" src="img/4e3925c06d4d62ce.png"> をクリックします。バグはエラーを表し、赤丸背景に2と書かれているのは2つのエラーが存在していることを表します。クリックして表示されるダイアログ上で「auth page setup」をクリックします。</p>
+<p class="image-container"><img style="width: 432.50px" src="img/e3a23cfbc3ebb6bb.png"></p>
+<h3 is-upgraded><strong>②ログインページとホームページの設定</strong></h3>
+<p>「App Details」画面が表示されるので、「Initial Page」の「Entry Page」に「LoginPage」、「Logged in Page」に「HomePage」を選択します。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/80987cc7f45e1513.png"></p>
+<h3 is-upgraded><strong>③ログインアクションを追加</strong></h3>
+<p>ログイン画面でボタンをクリックした際のアクションの設定を行います。</p>
+<ol type="1" start="1">
+<li>画面左端の「UI Builder」アイコン<img style="width: 24.87px" src="img/dfdf397a8407c9ab.png">をクリックします。</li>
+</ol>
+<p class="image-container"><img style="width: 363.50px" src="img/645aff36df14fcb5.png"></p>
+<ol type="1" start="2">
+<li>画面右上の「HomePage」をクリックすると画面を切り替えられるので「LoginPage」に切り替えます。</li>
+</ol>
+<p class="image-container"><img style="width: 354.50px" src="img/97a5a37537ab0ed6.png"></p>
+<ol type="1" start="3">
+<li>ログイン画面上の「Button」をクリックして右側に表示されるパレットのアクションアイコン<img style="width: 35.20px" src="img/5f25b8397baaa98c.png">をクリックします。</li>
+</ol>
+<p class="image-container"><img style="width: 492.99px" src="img/3374c6d44a7cd6c7.png"></p>
+<ol type="1" start="4">
+<li>「+ Add Action」ボタンをクリックして表示される「Select Action」のテキストフィールドに「login」と入力して、リストの一番下にある「Authentication」をクリックし、展開表示される「Log in」をクリックします。</li>
+</ol>
+<p class="image-container"><img style="width: 238.50px" src="img/570e2c45286f6f2a.png"></p>
+<ol type="1" start="5">
+<li>「Define Action」の「Auth Provider」で「Email」を選択し、「Email Field」で「Text Field 1」、「Password Field」で「Password Field1」を選択し、右上の「+ Add」ボタンをクリックします。</li>
+</ol>
+<p class="image-container"><img style="width: 241.58px" src="img/8d724d5edeb4589.png"></p>
+<p>下記のようなページが表示されるので右下の「Close」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 473.28px" src="img/662305d6f3ca253e.png"></p>
+<p>以上でログインボタンを押した時のアクションの設定は完了です。</p>
+<h3 is-upgraded><strong>④ ログアウトアクションの追加</strong></h3>
+<p>ログイン後に表示される「HomePage」にログアウトボタンを追加します。</p>
+<ol type="1" start="1">
+<li>画面右上の「LoginPage」をクリックして「HomePage」に切り替えます。</li>
+</ol>
+<p class="image-container"><img style="width: 508.50px" src="img/d705179aec862782.png"></p>
+<ol type="1" start="2">
+<li>「Page Title」の右側に左側からボタンをドラッグ＆ドロップします。</li>
+</ol>
+<p class="image-container"><img style="width: 405.50px" src="img/f13fe4810e7bc6ad.png"></p>
+<ol type="1" start="3">
+<li>追加したボタンを選択した状態で右側のパレットに表示されるテキスト「Button」を「ログアウト」に編集します。</li>
+</ol>
+<p class="image-container"><img style="width: 450.50px" src="img/60eeb53279787a83.png"></p>
+<ol type="1" start="4">
+<li>右側パレット上部のアクションアイコン<img style="width: 35.20px" src="img/5f25b8397baaa98c.png">をクリックし、「+ Add Action」ボタンをクリックして表示される「Select Action」のテキストフィールドに「logout」と入力して、リストの一番下にある「Authentication」をクリックし、展開表示される「Logout」をクリックします。</li>
+</ol>
+<p class="image-container"><img style="width: 205.84px" src="img/71b83c273df17f10.png"></p>
+<p>「+ Add」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 200.50px" src="img/4b4b030e0fcd8259.png"></p>
+<p>「Close」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 311.50px" src="img/918b619ebe1f1911.png"></p>
+<p>以上でログアウトボタンの設定が完了しました。</p>
+<h3 is-upgraded><strong>⑤ ログインアプリの実行</strong></h3>
+<p>画面右上の「Run」ボタンをクリックします。</p>
+<h3 is-upgraded><img style="width: 521.50px" src="img/21e2d50e6c7cbd44.png"></h3>
+<p>すると新しいタブが開いて下記の画面が表示されます。これは作成したログイン画面がビルドされていることを表しており、ビルドが完成するまで数分まってください。</p>
+<p class="image-container"><img style="width: 310.50px" src="img/343e89ca9c90ef7b.png"></p>
+<p>すると下図左のようなアプリ画面が表示されるので、自分のメアドとパスワードには「password」と入れてボタンをクリックします。ログインが成功すると下図右の画面が表示されるので、ログアウトボタンをクリックしてログイン画面に戻ります。</p>
+<p class="image-container"><img style="width: 229.50px" src="img/9aa3b778531472f4.png"><img style="width: 217.59px" src="img/daf7027d637876c.png"></p>
+<p>以上でログインアプリの完成です。</p>
+<p class="image-container"><img style="width: 307.37px" src="img/daf7027d637876c.png"></p>
 <center>Copyright 2021 RISA Co., LTD.</center>
 
 
