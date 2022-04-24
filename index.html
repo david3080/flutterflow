@@ -9,7 +9,7 @@
   <title>FlutterFlow</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="./codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -32,12 +32,15 @@
 <p>最近はコロナの影響もあり、在宅勤務が推奨され、学校の授業がオンライン化され、買い物はeコマースの利用が増加し、食事の際は出前アプリの利用が流行っています。コロナ以前から社会生活におけるデジタル化の必要性がうたわれていましたが、コロナ渦となり、あらゆる生活シーンでオンライン利用が半強制化され、便利で使いやすいオンラインサービスに対する需要が増しています。</p>
 <p>また最近のシステム開発の動きを見ると、いままで「使いづらい」の代名詞であった行政や金融のオンラインサービスに「<a href="https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E4%B8%AD%E5%BF%83%E8%A8%AD%E8%A8%88" target="_blank">ユーザ中心設計</a>」を採用し、使いやすくセキュリティ上も安全なサービスに作り替えようとする取組が進められています。またIT化が比較的遅れていた中小企業においてもDX（<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" target="_blank">デジタルトランスフォーメーション</a>）を促進しようとする動きがあります。</p>
 <p>このように、あらゆる業界や組織において、あらゆる生活シーンでそれぞれの立場の要望にあった使いやすいオンラインサービスが安価に構築・提供されることが求められています。</p>
-<p>一方これらの要望を担う人材育成の観点では、子供から大人までプログラミング教育がはやっており、例えば文科省は小学校でのプログラミング授業を必須化しています。しかしシステム開発や人材育成においては下記のような課題があると感じています。</p>
-<p class="image-container"><img style="width: 181.50px" src="img/86ab61652efc6246.png"></p>
+<p>一方、これらの要望を担う人材育成の観点では、子供から大人までプログラミング教育がはやっており、例えば文科省は小学校でのプログラミング授業を必須化しています。しかしシステム開発や人材育成においては下記のような課題があると感じています。</p>
+<p class="image-container"><img style="width: 155.00px" src="img/86ab61652efc6246.png"></p>
 <ul>
 <li>アプリ開発の要件定義や設計フェーズにおいて画面設計に走りがちで、データ構造やロジックの設計がおろそかになり、プログラマーがまともに開発をはじめらずプロジェクトが遅延するといった状況に陥りがちです。このような状況は「<a href="https://shop.nikkeibp.co.jp/front/commodity/0000/P82710/" target="_blank">デスマーチ</a>」と呼ばれ、20年近くIT企業でアプリ開発をみてきましたが、昔も今もこのような破綻したプロジェクトは大量に発生しています。<br></li>
-<li>この原因としては、システムデザインについての手法（<a href="https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E9%A7%86%E5%8B%95%E8%A8%AD%E8%A8%88" target="_blank">ドメイン駆動設計</a>や<a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" target="_blank">システムアーキテクチャ</a>など）やその説明が高尚で難しいという問題があります。そのため、本来必要なシステムデザインがスルーされ、スケジュールのプレッシャーもあり、とりあえず簡易な画面設計に走ることにつながるのではと感じています。<img style="width: 183.50px" src="img/fd577b997dbe38e4.png"></li>
-<li>昨今の<a href="https://nijibox.jp/blog/humancentereddesign/" target="_blank">人間中心設計</a>の誤った解釈から、システムの顧客接点である画面のデザインがフォーカスされ、発注側の要件定義担当者やデザイナーを含めたプロジェクトメンバーが、本来画面設計の元になるはずの<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0" target="_blank">データモデリング</a>について理解が乏しいことに原因があるのではとも感じています。例えば、人間中心設計のプロセスで作成するカスタマージャーニーマップはユーザ視点の顧客体験を理解し、開発するシステムが単なる静的なインタフェースではなく動的なサービスであることを表現するにはよいのですが、アーキテクト不在の場合、顧客接点の整理をしたらすぐに画面設計にとりかかろうという雰囲気になりがちなので、意識して気をつける必要があります。</li>
+<li>この原因としては、システムデザインについての手法（<a href="https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E9%A7%86%E5%8B%95%E8%A8%AD%E8%A8%88" target="_blank">ドメイン駆動設計</a>や<a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" target="_blank">システムアーキテクチャ</a>など）やその説明が高尚で難しいという問題があります。そのため、本来必要なシステムデザインがスルーされ、スケジュールのプレッシャーもあり、とりあえず簡易な画面設計に走ることにつながるのではと感じています。</li>
+<li>昨今の<a href="https://nijibox.jp/blog/humancentereddesign/" target="_blank">人間中心設計</a>の誤った解釈から、システムの顧客接点である画面のデザインがフォーカスされ、発注側の要件定義担当者やデザイナーを含めたプロジェクトメンバーが、本来画面設計の元になるはずの<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0" target="_blank">データモデリング</a>について理解が乏しいことに原因があるのではとも感じています。例えば、人間中心設計のプロセスで作成するカスタマージャーニーマップはユーザ視点の顧客体験を理解するにはよいのですが、アーキテクト不在の場合、顧客接点の整理をしたらすぐに画面設計にとりかかろうという雰囲気になりがちなので、意識して気をつける必要があります。</li>
+</ul>
+<p class="image-container"><img style="width: 183.50px" src="img/fd577b997dbe38e4.png"></p>
+<ul>
 <li>例えば、過去相談を受けたシステム開発プロジェクトに、業務で扱う情報が整理できておらず各業務ステップで担当者が手動で作業をしているため、残業が減らないのでシステム化して改善したい、というものがありました。ここでもアーキテクト不在で要件定義が進められ、プロジェクトマネージャやデザイナーが画面設計に走り、案の定プロジェクトの半年後はじめからやりなおしになりました。システム化とは業務と情報の整理整頓であり、仕事が複雑になり残業が発生するのもその整理整頓ができていないのがそもそもの原因です。そのため、まずはデータモデリングが必要であることを強く意識しておく必要があるでしょう。</li>
 <li>エンジニア育成という観点からは、従来のプログラミングの学習コンテンツはプログラミング言語の文法を学ぶことが目標となっており、出来上がったプログラムが端末に&#34;Hello World&#34;と表示するといった面白みにかけ作りたいものからかけ離れた学習内容になっていることが多いです。そのため学習自体に面白味がなく、初心者の時点からやる気をなくしてしまいます。</li>
 <li>最近の子供向けプログラミング授業用ソフトは使いやすく、見た目がよく、マウス操作でプログラミングの論理的思考が学べるといったすぐれた面がある一方、汎用的なアプリケーションを開発するため使えないといった欠点もあります。学習指導要領上、小学校からプログラミング教育が必須化する理由は「プログラミング的思考をやしなうため」「順序立てて考え、試行錯誤し、ものごとを解決する力を身につけるため」であることはわかるのですが、教科書で決められた作り込まれたソフトを使っているので汎用性がなく学習した後のその先がないため少し残念です。</li>
@@ -57,44 +60,274 @@
 </ul>
 <h2 is-upgraded>ライセンス</h2>
 <p><a href="https://david3080.github.io/firestore/LICENSE.txt" target="_blank">Apache License, Version 2.0</a></p>
-<center>Copyright 2021 RISA Co., LTD.</center>
+<p>Copyright 2022 RISA Co., LTD.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="スマホアプリのUIデザイン" duration="0">
+        <p>ここでは画面設計に関連して、スマホアプリのUIデザインについて記述します。世の中のスマホといえば、iPhoneとAndroidの2種類ですが、それぞれAppleとGoogleがUIデザインのガイドラインを出しています。iPhoneは<a href="https://developer.apple.com/design/human-interface-guidelines/ios" target="_blank">ヒューマン・インタフェース・ガイドライン</a>、Androidでは<a href="https://material.io/" target="_blank">マテリアル・デザイン</a>です。各ガイドラインの紹介をする前に、スマホアプリ特有の問題からデザインの歴史を説明してから、ヒューマン・インタフェース・ガイドラインとマテリアルデザインの紹介をします。</p>
+<h2 is-upgraded>1. スマホの特徴</h2>
+<p>スマホには、パソコンとは異なる2つの特徴があります。</p>
+<p><strong>画面が小さく操作手段が限定的</strong></p>
+<p>スマホは画面が小さく、さらにマウスやキーボードがないため操作手段が限定されるため、画面レイアウトや操作方法をどのようにデザインするかでユーザ満足度が大きく変化します。</p>
+<p><strong>画面サイズがばらばら</strong></p>
+<p>AndroidとiPhoneという違いだけでなく、同種のスマホでも画面サイズが様々で、アプリのレイアウト幅や高さを固定すると画面表示が崩れて使い物にならなくなります。例えば、歴代のiPhoneを比べても下図のとおり様々な画面サイズが存在しますし、Androidは各デバイス開発会社が様々なものを出しているのでiPhone以上に画面サイズはバラバラです。</p>
+<p class="image-container"><img style="width: 531.80px" src="img/7775aa3910ab82ed.png"></p>
+<h2 is-upgraded>2. スマホアプリで発生しやすい問題</h2>
+<p>Google PlayやApp Storeに登録された実際のアプリの評判からまとめたスマホアプリに対するよくある悪評は主に以下の4つに集約されます。</p>
+<ol type="1" start="1">
+<li>操作途中でクラッシュしてしまう</li>
+<li>ナビ機能が不十分で、元の画面に戻れない、探している機能に行き着かない</li>
+<li>デザインが必要以上に凝っていたり意味不明のため使えない</li>
+<li>大量の情報がそのまま表示され、検索したりフィルタリングする機能がない</li>
+</ol>
+<p>これらの悪評のうち、1以外の2から4まではUIデザインの問題といえます。</p>
+<h2 is-upgraded>3. スマホデザインの歴史</h2>
+<p>それではスマホにおけるデザインはどのような歴史を歩んできたのでしょうか。</p>
+<p>まず、2000年前半のWebやアプリケーションのUIはそれまでのWindowsパソコンが機械的で使いづらく利用者のことを考えて作られていないという反省から、現実世界を模した装飾的なデザインからなるUIを取り入れるようになりました。この考え方によるデザインを<a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" target="_blank">スキューモーフィズム</a>と呼びます。ただし、この装飾に凝ったデザインでは、デザイナーの主張が先行し、見た目や操作性に統一感がないといった弊害を生むことになりました。</p>
+<p>そのため、20世紀初頭に<a href="https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%80%E3%83%8B%E3%82%BA%E3%83%A0" target="_blank">モダニズム</a>が建築や工業製品のデザインに取り入れられたように、パソコンやWebやスマホのデザインにも極力装飾を廃した<a href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%A9%E3%83%83%E3%83%88%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3" target="_blank">フラットデザイン</a>が採用されることになりました。このフラットデザインを採用しているのがAppleです。AppleはiPhone 7のデザインにフラットデザインを取り入れ、<a href="https://developer.apple.com/design/human-interface-guidelines/ios" target="_blank">ヒューマン・インタフェース・ガイドライン</a>もそれにのっとったガイドラインを発表しています。</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p>iPhone6のスキューモーフィズム</p>
+<p class="image-container"><img style="width: 259.50px" src="img/b92ed31bf6c84e58.png"></p>
+</td><td colspan="1" rowspan="1"><p>iPhone7のフラットデザイン</p>
+<p class="image-container"><img style="width: 251.75px" src="img/7c137b9e7fc11196.png"></p>
+</td></tr>
+</table>
+<p>しかし、フラットデザインはシンプルすぎて、システムの構造やしくみが理解しづらいといったデメリットが挙げられます。そこで、Googleはフラットデザインとスキューモフィズムの中間をとり、さらに発展させた「<a href="https://material.io/" target="_blank">マテリアル・デザイン</a>」を定義し、2014年にだれもが参照して利用できるオープンソースな形でデザインガイドラインを発表しました。</p>
+<p>本書では、<a href="https://developer.apple.com/design/human-interface-guidelines/ios" target="_blank">ヒューマン・インタフェース・ガイドライン</a>の概要を述べるものの、<a href="https://material.io/" target="_blank">マテリアル・デザイン</a>をメインに説明します。また、本書で利用している開発プラットフォームであるFlutterもマテリアルデザインを全面的に採用しており、AndroidはもとよりiPhoneでもマテリアルデザインを実装することができるツールであるため、本書においては開発全般でマテリアルデザインを採用しています。</p>
+<h2 is-upgraded>4. ヒューマン・インタフェース・ガイドラインとは？</h2>
+<p>ヒューマン・インタフェース・ガイドラインでは3つのデザインテーマと6つのデザイン原則とその他設計の詳細が記載されていますが、ここでは3つのデザインテーマと6つのデザイン原則を紹介します。</p>
+<h3 is-upgraded><strong>①3つのデザインテーマ</strong></h3>
+<p>iOSアプリは「明確であること」「コンテンツにフォーカスすること」「奥行きがあること」の3つのデザインテーマにのっとってデザインすることを推奨しています。</p>
+<p><strong>1. 明確であること</strong></p>
+<p>あらゆる画面サイズのスマホデバイスで、テキストは読みやすく、アイコンは明快で、装飾は繊細で適度であり、かつ機能的であることが必要です。空間、色、フォント、グラフィック、インターフェイスに関する各要素は、重要なコンテンツは適度に強調されインタラクティブ性を向上します。</p>
+<p><strong>2. コンテンツにフォーカスすること</strong></p>
+<p>滑らかな動きと鮮明で美しいインターフェースは、ユーザが操作に迷うことなく、コンテンツを理解して操作するのに役立ちます。通常、コンテンツは背景の上に表示されますが、背景を半透明にするなどの工夫で、より多くのことを示唆します。ベゼル、グラデーション、ドロップシャドウの使用を最小限に抑えながら、コンテンツを最優先に表示することで、インターフェイスを明るくわかりやすくします。</p>
+<p><strong>3. 奥行きがあること</strong></p>
+<p>明確な視覚的レイヤーとリアルな動きが階層を伝え、画面に活力を与え、ユーザに理解を促進します。接触の感覚と発見のしやすさはユーザに喜びを高め、コンテキストを失うことなく機能と追加コンテンツへのアクセスを可能にします。画面遷移時には、奥行き感のあるコンテンツのナビゲーションを提供します。</p>
+<h3 is-upgraded><strong>②6つのデザイン原則</strong></h3>
+<p>iOSアプリは、ユーザへのインパクトとリーチを最大化するため、アプリのアイデンティティを強化するため、次の原則に従うことを推奨しています。</p>
+<p><strong>1. 美的完全性</strong></p>
+<p>美的完全性は、アプリの外観と動作がその機能とどれだけうまく統合されているかを表します。たとえば、ユーザが慎重を期す作業をするアプリでは、微妙で目立たないグラフィックと標準的な操作、予測可能な動作を提示することで集中力を維持できます。一方、ゲームなどの没入型アプリでは、発見を促しながら楽しさと興奮をうながす魅力的な外観を提供するとよいでしょう。</p>
+<p><strong>2. 一貫性</strong></p>
+<p>一貫性のあるアプリはシステムが提供するインターフェース要素とよく知られたアイコン、標準のテキストスタイル、統一された用語を使用することで、使い慣れた標準的な印象を与えます。このようなアプリはユーザが期待する方法で機能と動作を組み込んでいます。</p>
+<p><strong>3. 直接的な操作</strong></p>
+<p>画面上のコンテンツを操作することで、ユーザを引き付け、理解を促進します。ユーザは、デバイスを回転させたり、ジェスチャーを使用して画面上のコンテンツに影響を与えたりして直接的な操作を体験します。直接的な操作を通じて自らの行動が即時にアプリに影響を与えることを体験するわけです。</p>
+<p><strong>4. フィードバック</strong></p>
+<p>フィードバックは行動を認め、結果を示して人々に情報を提供し続けます。組み込みのiOSアプリは、すべてのユーザーアクションに応答して知覚可能なフィードバックを提供します。インタラクティブな要素をタップすると簡単に強調表示され、進行状況インジケーターが長時間実行されている操作のステータスを伝え、アニメーションとサウンドがアクションの結果を明確にするのに役立ちます。</p>
+<p><strong>5. メタファー</strong></p>
+<p>アプリの仮想オブジェクトとアクションが、現実の世界に根ざしているのかデジタルの世界に根ざしているのかにかかわらず、身近な体験のメタファーである場合、ユーザはより迅速に学習します。ユーザが画面を物理的に操作するため、メタファーはiOSでうまく機能します。ビューを邪魔にならないように移動して、下のコンテンツを公開します。コンテンツをドラッグしてスワイプします。スイッチを切り替えたり、スライダーを移動したり、ピッカーの値をスクロールしたりします。ユーザは本や雑誌のページをめくることさえします。</p>
+<p><strong>6. ユーザーコントロール</strong></p>
+<p>アプリはユーザーが制御します。アプリは一連の行動を提案したり、危険な結果について警告したりできますが、アプリは意思決定をしません。最高のアプリは、ユーザーを有効にすることと望ましくない結果を回避することの間の正しいバランスを持ちます。アプリは、インタラクティブな要素を使い慣れた予測可能な状態に保ち、破壊的なアクションを確認し、すでに進行中の場合でも操作を簡単にキャンセルできるようにすることで、ユーザーがアプリをコントロールしているように感じさせることができます。</p>
+<h2 is-upgraded>5. マテリアルデザインとは？</h2>
+<p>マテリアルデザインとは、Googleが2014年に発表したUIのデザインガイドラインです。元々Googleは、Gmailなどの数多くのアプリを世に出していましたが、それらがパソコン、Android、iPhone、タブレットなど異なるデバイスで利用されるとき、画面サイズもOSも異なるため、異なった見た目と操作性を持ってしまったことを問題視していました。そこで、デバイスが異なっていても、統一したデザインで操作できるようなUIデザインのガイドラインを作る目的で開発されたのがマテリアルデザインです。例えば、スマホのようなデバイス用には、片手で操作することを想定し、直感的で意味のある物理的（マテリアル）な概念をデザインに取り入れてガイドラインが策定されています。また、明示はされていませんが、ユーザ インタフェースという意味では、ヒューマン・インタフェース・ガイドラインで挙げた3つのデザインテーマと6つのデザイン原則は、マテリアルデザインでも目指すところは同じです。</p>
+<p>マテリアルデザインは、あくまでもガイドラインであるため、必ず準拠すべきものではありませんが、デザインの部品がどのような形でどのように動くかが細かく規定されており、Java、Kotlin、Swift、JavaScript、Flutterといったさまざまな言語に対応した無料で利用できるプログラムライブラリとともに提供されているため、まるまる採用することで一定レベル以上のUIデザインのアプリを最小のコストで開発することができます。そのため、多くのプロジェクトで採用されるに至っています。</p>
+<h3 is-upgraded><strong>①マテリアルデザインの4つの考え方</strong></h3>
+<p>マテリアルデザインは以下の4つのコンセプトからなりたっています。</p>
+<p><strong>1. 形をもった面</strong></p>
+<p>形をもったうすい紙のような面が重なって画面を表示するしくみを採用しています。この考え方によって、一枚の紙を切って分割して記事を表示したり、メニューやフッターを表示するための紙と中心のコンテンツをのせるための紙が重なって表示されることを影を使って表現することができます。これによって実際は奥行きがなくフラットなスマホの画面を立体的に表現することによって、表示されているものの種類が区別しやすくなったり、高さを使うことで手前にあるものほど重要といったユーザが3次元の世界で感じるのと同じくどこに注意をむけるべきかを直感的に知らせることができるようになっています。</p>
+<p class="image-container"><img style="width: 428.01px" src="img/d0deb77314afc055.png"></p>
+<aside class="warning"><p><strong>ノート: </strong>指によるタッチや文字入力など人による操作は物理的なルールに従い画面表示に影響を及ぼします。また面は厚さを持つので、同じ奥行きに存在することはなく透過することもない、といった実際の物理的な世界の常識を反映します。このように、マテリアルデザインにおいて面・奥行き・光と影に関しては、下記のルールにのっとって実装されています。</p>
+<p>面：現実世界の物理世界をスマホ画面のデザインに反映し、画面に表示される部品は厚さ1dp(ドットポイント)の面で構成されます。</p>
+<p><a href="https://material.io/design/environment/surfaces.html" target="_blank">https://material.io/design/environment/surfaces.html</a></p>
+<p>奥行き：概念的には面が何層にも重なっていて奥行きをもった構造を持っています。</p>
+<p><a href="https://material.io/design/environment/elevation.html" target="_blank">https://material.io/design/environment/elevation.html</a></p>
+<p>光と影：面と面との奥行きの違いは後ろの面にうつった影によって表現され、手前の面が手前に浮き上がれば影は大きくなります。</p>
+<p><a href="https://material.io/design/environment/light-shadows.html" target="_blank">https://material.io/design/environment/light-shadows.html</a></p>
+</aside>
+<p><strong>2. 印刷物のようなデザイン</strong></p>
+<p>文字や絵が紙に載っているという概念からなり、ベースラインやキーラインといった印刷物のコンセプトを踏襲しています。ベースラインを決めることでコンテンツが収まる範囲を決めたり、本文やタイトルなどはキーラインを基準に配置するなど、印刷用にワードなどに設定する値などを応用することで、見た目に統一感を持たせて画面を美しくみせます。また<a href="https://fonts.google.com/icons" target="_blank">見やすいフォントやアイコンが無料で提供</a>されています。</p>
+<p><strong>3. 意味のあるアニメーション</strong></p>
+<p>ユーザになんらかの意味を伝えるためにはアニメーションが効果的な場合がありますが、コンポーネントにアニメーション表示を簡単にほどこせるようなしくみを実装しています。</p>
+<p><strong>4. アダプティブデザイン</strong></p>
+<p>パソコン、Androidスマホ、iPhone、タブレットなどデバイスが異なり画面サイズが異なっていても形を崩さず表示するしくみを実装しています。レスポンシブデザインも同じコンセプトですが、アダプティブデザインは横幅の伸び縮みだけでなく、メニューの表示非表示などを含む、より画面サイズに応じた（アダプティブな）形でデザインを変化させるしくみをそなえています。</p>
+<p><a href="https://docs.flutter.dev/development/ui/layout/adaptive-responsive" target="_blank">レスポンシブ・アダプティブデザインのアプリの構築</a></p>
+<h3 is-upgraded><strong>②Flutterにおけるマテリアルデザイン</strong></h3>
+<p>マテリアルデザインを使うと下記のようなリッチなUI画面を実装することができます。下記リンクを開くとFlutterを使って実装したUI画面のサンプルギャラリーが参照できます。</p>
+<p><a href="https://gallery.flutter.dev/" target="_blank">Flutterを使って実装したUI画面のサンプルギャラリー</a></p>
+<aside class="warning"><p><strong>ノート: </strong>Flutterチームは、改変可能で商用利用可能なオープンソースライセンスであるBSDライセンスで豊富なデモサンプルをソースコードと一緒に提供しています。</p>
+<p><a href="https://flutter.github.io/samples/#?platform=web" target="_blank">https://flutter.github.io/samples/#?platform=web</a></p>
+</aside>
+<p>またFlutterでは、下記のようなマテリアルデザインの部品が提供されています。このように画面にのせる部品はたくさん存在しているので、それぞれ何ができるかだけ覚えておいて、画面パターンに従って使う部品を選別してから詳細の実装方法を調べるのがよいでしょう。</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/app-bars-top" target="_blank">アップバー</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/29e75c6608daddc0.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/bottom-navigation" target="_blank">ボトムナビゲーション</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/82f4bc86c88bdd72.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/buttons" target="_blank">ボタン</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/b44e6581619dd0a.png"></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/floating-action-buttons" target="_blank">ﾌﾛｰﾃｨﾝｸﾞｱｸｼｮﾝﾎﾞﾀﾝ</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/aefbb067c714dd9f.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/cards" target="_blank">カード</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/561abd7781313ffb.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/Chip-class.html" target="_blank">チップ</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/191958847e464fde.png"></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/data-tables" target="_blank">データテーブル</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/d60278843d8b55a4.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/showDatePicker.html" target="_blank">デートピッカー</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/2571c0f6182ba7d1.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/Dialog-class.html" target="_blank">ダイアログ</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/ec60a4c7af819311.png"></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/Divider-class.html" target="_blank">デバイダー</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/3d5e861e9cbefc16.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/lists" target="_blank">リスト</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/3247e6de9bcae1ed.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/PopupMenuButton-class.html" target="_blank">メニュー</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/913f0d2944ee0677.png"></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/Drawer-class.html" target="_blank">ナビゲーションドローア</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/fed62e249f2f7f57.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/LinearProgressIndicator-class.html" target="_blank">プログレスインジケータ</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/902b6509332e3e8e.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/checkboxes" target="_blank">チェックボックス</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/33e7b359b12daf64.png"></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/radio-buttons" target="_blank">ラジオボタン</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/f83c308295fb5f0f.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/Switch-class.html" target="_blank">スイッチ</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/40799bd48f133d72.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/BottomSheet-class.html" target="_blank">ボトムシーツ</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/f903b87d55867cfa.png"></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/Slider-class.html" target="_blank">スライダー</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/7a6f25f54d8f91b3.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/snackbars" target="_blank">スナックバー</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/20c36cae6f8c47d2.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/tabs" target="_blank">タブ</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/ffcc7181838bd2f2.png"></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><a href="https://material.io/develop/flutter/components/text-fields/" target="_blank">テキストフィールド</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/4177496247184d72.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/Tooltip-class.html" target="_blank">ツールチップ</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/923cbd00e039bd69.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://api.flutter.dev/flutter/material/showTimePicker.html" target="_blank">タイムピッカー</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/8ad115e252d03533.png"></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><a href="https://material.io/design/layout/responsive-layout-grid.html" target="_blank">グリッド</a></p>
+<p class="image-container"><img style="width: 186.00px" src="img/185c75b0f7b83f05.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/resources/icons/" target="_blank">アイコン</a></p>
+<p class="image-container"><img style="width: 166.50px" src="img/892b7672fd38c0e1.png"></p>
+</td><td colspan="1" rowspan="1"><p><a href="https://material.io/design/communication/imagery.html#informational-imagery" target="_blank">アバター</a></p>
+<p class="image-container"><img style="width: 168.61px" src="img/524b77f23fed32e4.png"></p>
+</td></tr>
+</table>
+<aside class="warning"><p><strong>ノート: </strong></p>
+<p>- マテリアルデザインのコンポーネント詳細については下記URLを参照してください。</p>
+<p><a href="https://material.io/components" target="_blank">https://material.io/components</a></p>
+<p>- Flutterにおけるマテリアルデザインについては下記URLを参照してください。</p>
+<p><a href="https://material.io/develop/flutter" target="_blank">https://material.io/develop/flutter</a></p>
+</aside>
+<h3 is-upgraded><strong>③カラーテーマ</strong></h3>
+<p>マテリアルデザインはアプリのブランディングを統一的に進めるためにカラーテーマというしくみを採用し、アプリケーション全体で部品の色やフォントカラーを統一させることが可能です。逆に言うと、同じアプリでもカラーテーマを変えてイメージの異なるアプリとして仕上げることが可能ですので、アプリケーションのテンプレートを先に作っておいて様々なプロジェクトに応用する場合にもこのようなしくみは役に立つでしょう。</p>
+<p>カラーテーマ：<a href="https://material.io/design/color/the-color-system.html" target="_blank">https://material.io/design/color/the-color-system.html</a></p>
+<p>カラーツール：<a href="https://material.io/resources/color/" target="_blank">https://material.io/resources/color/</a></p>
+<h3 is-upgraded><strong>④マテリアルデザインの発展</strong></h3>
+<p>マテリアルデザインは単なる画面と画面遷移にとどまらず、音声や機械学習に関するUIについても拡張し、ガイドラインを提供しています。</p>
+<p>機械学習機能に関するマテリアルデザイン：<a href="https://material.io/design/machine-learning/understanding-ml-patterns.html" target="_blank">https://material.io/design/machine-learning/understanding-ml-patterns.html</a></p>
+<p>音声に関するマテリアルデザイン：<a href="https://material.io/design/sound/about-sound.html" target="_blank">https://material.io/design/sound/about-sound.html</a></p>
+<p>これらはスマホにかかわらず、スマートウォッチ、スマートスピーカーやスマートイヤフォン、スマートグラスなどにもマテリアルデザインを適用していこうという取り組みのあらわれであり、次章で紹介するFlutterという開発環境も同じ目的で開発が進められています。</p>
+<p>2021年5月のGoogle I/OにおいてAndroid12のリリースにあわせて<a href="https://www.youtube.com/watch?v=rLKtIGY2Mgc" target="_blank">マテリアルデザインの更新</a>がなされています。ここでは、スキューモフィズム的なモノを表現する普遍的なロゴデザインを継承しつつ、高度にパーソナライズすることができ、仕事とプライベートの切り替えが用意でモダニズム的な要素を加えたデザインを目指したとのことです。具体的には、新しいテクノロジーを快適に使えること、デバイスやアプリとの境界線を無くすような慣習に挑戦すること（イコノクラスム）、入力に反応する有機的な動きなど自然界のスピリットを取り入れることを目指しています。また、壁紙の色使いにあわせてパーソナライズされたカラーパレットを適切に自動設定してくれるダイナミックカラーという機能を有しています。今後<a href="https://material.io/resources/color/" target="_blank">カラーツール</a>等にもこれらの自動化機能が付与されてくるかもしれません。</p>
+<p>このようにマテリアルデザインは、いま世界で最も適切にデザインされ、オープンで誰にでも利用可能で、いまだ活発に進化を続けている生きているデザインシステムといえます。</p>
+<h2 is-upgraded>6. デザインシステム</h2>
+<p>通常、アプリケーションの開発プロジェクトでは、事前にマテリアルデザインのようなデザインフレームワークからプロジェクトで活用するレイアウトや部品を選択してカラーテーマやフォントを決めて、アプリのブランドに統一感を持たせることをします。このようなデザイン原則とデザインフレームワークの組み合わせを「デザインシステム」と呼びます。</p>
+<p>最近日本国内でも「<a href="https://note.minna-no-ginko.com/n/n5990880b26ae" target="_blank">みんなの銀行</a>」や「<a href="https://digital-gov.note.jp/n/n78f6a2f82e48" target="_blank">デジタル庁</a>」でもデザイン原則やシステムデザインを整備してWebサイトを作るといったアプリ開発を行うことがはじまっています。Webサイトといった単純なUIだけならデザインシステムもロゴやカラーデザインや画面テンプレート程度を決めるだけですみますが、スマホアプリのデザインシステムというとより複雑な機能を含みますので、これを一から作るのは大変な労力がかかります。</p>
+<p>そのため、本書ではマテリアルデザインをまるまるデザインシステムとして採用してスマホアプリを開発します。サービスのブランディングに関わるロゴやイラスト、カラーデザインをカスタマイズする機能もマテリアルデザインを支えるFlutterのようなツールにも開発が進められていますので、これを使わない手はないでしょう。</p>
+<p>Copyright 2022 RISA Co., LTD.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="開発環境とインフラ選定根拠" duration="0">
+        <p>本書では、開発環境にGoogleがオープンソースとして開発しているクロスプラットフォーム開発環境であるFlutterを、インフラ環境にはGoogle Cloud Platform上のモバイル開発用クラウドプラットフォームであるFirebaseを、ノーコード開発環境にFlutterFlowを利用します。本章ではこれらを選定した根拠を記載し、さらにベンダーロックインを排除するための代替案をまとめます。</p>
+<h2 is-upgraded>1. Flutterの選択根拠</h2>
+<p>最近のスマホアプリ開発では「あらゆるデバイス向けにネイティブアプリを開発しメンテナンスをする」か「特定のクロスプラットフォームフレームワークを選択して一つのコードをメンテナンスする」かを選択する必要があると言われています。</p>
+<p>「あらゆるデバイス向けにネイティブアプリを開発しメンテナンスをする」を選択しているのは現在スマホアプリをリリースする企業の80%に上り、ネイティブアプリ開発により得られる操作性のよさと引き換えにiPhoneとAndroid用に2つのソースコードで開発し、両プラットフォーム用に卓越したプログラマーを雇い、コストをかけて運用しています。一方「特定のクロスプラットフォームフレームワークを選択して一つのコードをメンテナンスする」を選択する場合、開発されるアプリケーションはネイティブアプリより操作性や機能は劣りますが、両方をネイティブ開発するより半分程度のコストですむことになります。下図はデバイスごとに開発プロジェクトを作成してネイティブアプリを開発する場合と特定のフレームワークを選択して単一のプロジェクトを開発する場合との開発の困難さと開発されるアプリについて表したものです。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/6fbfa02ec4c9cddb.png"></p>
+<p>参考）<a href="https://medium.com/@stefan.klerkx/why-choose-flutter-for-your-company-6b2e67a4a7d9" target="_blank">Why choose Flutter for your company?</a></p>
+<p>しかし、Flutterは第三の選択肢として機能します。FlutterはDart言語でプログラミングすると完全にネイティブなiOS用コードとAndroid用コードを生成してくれます。さらにはこれをリアルタイムで行うため、開発したスマホアプリを動かしながらDart言語によるソースコードを修正し、画面を修正することができます（この機能をホットリロードといいます）。このようにFlutterを使うことで、ワンコードで同じUIのiPhoneとAndroid両方のネイティブアプリを開発することが可能になります。</p>
+<p>またFlutterを選択することで得られるビジネス上のメリットを以下に示します。</p>
+<ul>
+<li>アプリ投入までの時間短縮：Flutterはワンコードでネイティブアプリを開発できるのはもちろん、マテリアルデザインをサポートしており画面実装に必要な部品を標準で利用することができることやインターネット経由でのAPI操作に適した非同期処理を直感的に操作しやすいDart言語の特徴により一定レベル以上のアプリを開発する際の開発スピードを早めることができます。</li>
+<li>高品質のルックアンドフィール：Flutterはピクセルレベルのデザインの実装が可能であり、リッチなマテリアルデザインベースの部品やアニメーションのしくみを有しているので、デザイナーはフレームワークの制約で妥協することなくブランディングを優先して様々なアイデアのデザインを行うことができます。</li>
+<li>手ごろなコスト：Flutterはオープンソースでコミュニティベースで開発されているため、ツール採用のために必要なコストはありません。また、Java開発者のようなオブジェクト指向言語経験者ならDart言語の学習はそれほど難しくなく、エンジニア育成コストもそれほど高くありません。</li>
+<li>リーチとリテンション：リッチなデザインの操作性のよいネイティブアプリをiPhoneとAndroid向けに同時にリリースできるため、世の中のすべてのユーザにリーチできます。また使い勝手がよいアプリの提供によりユーザのリテンション（維持・保持）率もアップします。</li>
+</ul>
+<p>なお、Flutterと比較されるクロスプラットフォーム開発環境と特徴を以下に紹介します。</p>
+<ul>
+<li>Cordova: HTML5とCSS、JavaScriptを使ってiPhoneとAndroid共通のUI部分を実装し、プラットフォーム依存の部分をプラットフォームにあわせてプラグインとして開発することでクロスプラットフォームを実現します。そのため、操作性や機能に制限があり、ネイティブな機能を使う場合には両プラットフォーム用にプラグイン開発が発生します。</li>
+<li>ReactNative: Facebookが開発したクロスプラットフォーム開発環境で、JavaScriptで開発をします。一つのコードからiPhoneとAndroid用のネイティブコードを生成しますが、生成に時間が発生し、ホットリロードができません。</li>
+<li>Xamarin: マイクロソフトが開発するクロスプラットフォーム開発環境で、C#で開発をします。Flutterと同じくネイティブコードを生成し、最近ホットリロードにも対応していますが、描画スピードに乏しいのが欠点です。またコミュニティサポートが不十分であるため、Flutterほど情報があり、人気があるとはいえません。</li>
+</ul>
+<p>以上のことを総合的に判断し、Flutterをベストな選択であると考え採用しました。</p>
+<aside class="warning"><p><strong>ノート:</strong> FlutterはiOSとAndroidの二台スマホプラットフォームとWebアプリケーションだけでなく、PC系のmacOS、Windows、Linuxやエンベッドデバイス、さらには「Fuchsia（フクシア）」と呼ばれるGoogleが新たに開発を計画しているマルチデバイスプラットフォームに対応するために進化を続けています。また、Flutter開発を支えるプラグインの対応プラットフォームをこの8種類に拡大していくための提案がコミュニティから公開されていたりします。</p>
+<p><a href="https://docs.google.com/document/d/1LD7QjmzJZLCopUrFAAE98wOUQpjmguyGTN2wd_89Srs" target="_blank">https://docs.google.com/document/d/1LD7QjmzJZLCopUrFAAE98wOUQpjmguyGTN2wd_89Srs</a></p>
+</aside>
+<p>Flutterのよさだけを強調すると初めての方は少ない知識で何も考慮することなくアプリが開発できると勘違いするとよくないので、Flutterを正しく学ぶためのマインドセットを最後に紹介します。</p>
+<ol type="1" start="1">
+<li>Flutterのベース言語であるDart言語のコンセプトと特徴を学ぶこと<br>Flutterはスマホアプリ開発に必要なプログラミング言語のコンセプトを持ち、Flutterと同期しながら進化しているDartという言語をベース言語に採用しています。本書では「Dart言語の基礎」でハンズオン付きで解説します。</li>
+<li>状態管理と関心の分離<br>通常アプリケーションは画面と画面遷移から成り立ちますが、その遷移中に永続化して保持したいデータがあります。そのことを状態と呼びますが、Flutterでもこの状態管理方法を選択することは悩ましい課題です。また、FlutterはUIロジックとビジネスロジックを分離する制約を言語として持ち合わせていません。そのため、開発者がBLoCパターンなどのデザインパターンを自ら採用してルール化してプログラミングする必要があります。本書では「状態管理とBLoCパターンによる関心の分離」で解説します。</li>
+<li>ネイティブコードの知識<br>Flutterがいくらクロスプラットフォーム対応であると言っても最終的にはネイティブコードとしてコンパイルされ、iPhone、Android、Webアプリ、Windows、Mac、ChromeBook、Linuxといった各プラットフォーム独自のルールとしきたりにあわせてリリースされるため、ネイティブコードの知識は不可欠です。</li>
+</ol>
+<p>※ 本記事は下記の動画を参考に作成しました。</p>
+<p><a href="https://www.youtube.com/watch?v=kD-1dZBmRPU" target="_blank">https://www.youtube.com/watch?v=kD-1dZBmRPU</a></p>
+<h2 is-upgraded>2. Firebaseの選択根拠</h2>
+<p>本書で開発するレストランレビューアプリもそうですが、世の中のスマホアプリはインターネット上のサーバと連携してサービスを提供します。通常インターネット上のサーバはアプリに入力したデータを保存したり、アプリに表示するデータを提供するデータベースが主要な機能になりますが、スマホアプリからのアクセスに通常のWebアプリが採用しているODBCやJDBCのようなしくみを選択するのはセキュリティ上の理由からも推奨されません。そのため、アプリからのアクセスの際、テーブルへのCRUDのどの機能が必要かを考えてAPIを開発し、さらに認証認可のしくみを実装することが必要になります。</p>
+<p>一方、Firebaseは、アプリにログインする認証のしくみ（Firebase Auth）とアプリと安全にコネクションを繋いだままストリーム処理が可能なデータベース（Firestore）、写真などの大きめのバイナリファイルを保存するためのストレージ（Firestorage）といったサービスを提供します。またクライアント用には、Firebase Authで認証されたユーザIDと紐づけてFirestoreデータベースにデータを保存したり、FirestorageのURIをFirestoreデータベースに保存して利用する機能を、様々なプログラミング言語向けに標準的なSDKとして提供されています。そのため、一からバックエンドのサービスを開発するのに比べ、基本的な機能をほとんど開発する必要がないため、開発工数を劇的に削減することができます。</p>
+<p>※ Firebase Authにおけるブルートフォース攻撃対策については下記記事を参照してください。</p>
+<p><a href="https://medium.com/swlh/google-firebase-authentication-vulnerability-245050cb7ceb" target="_blank">https://medium.com/swlh/google-firebase-authentication-vulnerability-245050cb7ceb</a></p>
+<p>さらには、FirebaseはA/Bテストを行う機能やスマホアプリのクラッシュログを収集する機能、ユーザがどの画面のどのボタンをクリックしたかといった動線を集計する機能、スマホアプリをテストユーザに配布する機能などモバイルアプリ用に豊富な機能を安価に提供しているため、多くのモバイルアプリ開発者に採用されています。</p>
+<p>以上の理由から本書ではバックエンドの機能にFirebaseを採用することにしました。</p>
+<h2 is-upgraded>3. FlutterFlowの選択根拠</h2>
+<p>あああ。</p>
+<h2 is-upgraded>4. ベンダーロックインの排除</h2>
+<p>企業におけるITツールの選定で気をつけるべき点にベンダーロックインの排除が挙げられます。というのも、採用技術の開発が止まったり急に利用コストが値上げされ別の方法を模索しなければならなくなったり、アプリを横展開して他社に提供する場合先方のプラットフォームにあわせなければならない、といったことがありうるため、採用時のメリデメだけでなく他に乗り換える可能性も考慮しなければなりません。</p>
+<p>まず開発環境としてのFlutterについては、100%オープンソースであり、プロジェクトがストップしたりいきなり有料サービスになることは、いまとなってはまずあり得ないため、Flutterを採用することによるベンダーロックインはありえないと考えてよいでしょう。</p>
+<p>一方、Firebaseについてはアプリの横展開をする際にクラウドサービスを使いたくないケースが考えられるので、なんらかの代替案を考える必要があります。Firebaseのサービスごとに代替案を以下に紹介します。</p>
+<ul>
+<li>Firebase Auth：独自に認証サーバを立ち上げたり、Keycloakのような統合認証認可サービスを立ち上げてユーザ管理をすることで代替できます。</li>
+<li>Cloud Firestore：OIDC認証のしくみはKeycloakのクライアントプラグインを使って実装することで実現できます。ドキュメント型データベースとしてmongoDBがあげられるので、ストリーム型でアプリから連携できるようgRPCで公開し、Dart言語のgRPCクライアントを開発しFlutterで利用することで実現できます。ただし、Firestoreで実現しているセキュリティルールやオフライン機能や差分のみをやりとりする機能などの高度な機能の実装は困難なので、アプリの使い勝手は悪くなると思われます。</li>
+<li>Firebase Storage：Keycloakのような認証サービスと連携したストレージサービスを開発するのは難しいので、データベースにサイズを小さくしたバイナリとして保存するようにするとよいでしょう。</li>
+<li>FlutterFlow：あああ</li>
+</ul>
+<p>Copyright 2020 RISA Co., LTD.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Googleアカウントの作成" duration="0">
         <p>GoogleはGmailやGoogleスプレッドシート等々Webから利用可能な有益なアプリケーションを無料で提供しています。強靭で使いやすいセキュリティ基盤の上にこれらのサービスが提供されており、Gmailアカウントを作成することなく自分が持っている既存のメールアドレスを使ってGoogleアカウントを作成することができますので、大学のメールアドレスを使ってGoogleアカウントを追加するなどして授業にも利用することもできます。ここでは、既存のメールアドレスを使ってGoogleアカウントを作成する手順を紹介します。</p>
-<h2 is-upgraded>1. Googleアカウント作成URLにアクセス</h2>
+<h2 is-upgraded>1. Googleアカウント作成</h2>
 <p>Googleアカウントを作成する下記URLにアクセスします。</p>
 <p><a href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp" target="_blank">https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&amp;flowEntry=SignUp</a></p>
-<h2 is-upgraded>2. Googleアカウントの作成</h2>
 <p>「姓」「名」に自分の名前を入れて、「代わりに現在のメールアドレスを使用」を選択してメールアドレスに自分のメアドを入力して、パスワードを入力して「次へ」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 506.50px" src="img/d2f8a100a8bd55d0.png"></p>
-<h2 is-upgraded>3. アカウント作成完了</h2>
-<p>自分のメアドに送られてきたメールに記載された数字をメモして、次画面に入力するとアカウント作成が完了します。</p>
-<h2 is-upgraded>4. Googleアカウント</h2>
+<p>自分のメアドに送られてきたメールに記載された数字をメモし、次画面に入力するとアカウント作成が完了します。</p>
+<h2 is-upgraded>2. Googleログイン</h2>
 <p>下記URLにアクセスして画面右上の「Googleアカウントに移動」ボタンをクリックして、登録したASUメアドとパスワードでログインします。</p>
 <p><a href="https://myaccount.google.com/" target="_blank">https://myaccount.google.com/</a></p>
-<p>Copyright 2020 RISA Co., LTD.</p>
+<p>Copyright 2022 RISA Co., LTD.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="FlutterFlowへのユーザ登録" duration="0">
         <p>FlutterFlowにGoogleアカウントのユーザを登録します。</p>
-<h2 is-upgraded>1. FlutterFlowのページにアクセス</h2>
+<h2 is-upgraded>1. FlutterFlowへのユーザ登録</h2>
 <p>​​下記URLにアクセスして画面右上の「Start for free」ボタンをクリックします。</p>
 <p><a href="https://flutterflow.io" target="_blank">https://flutterflow.io</a></p>
 <p class="image-container"><img style="width: 601.70px" src="img/4fbd44380933d66c.png"></p>
-<h2 is-upgraded>2. Googleアカウントでユーザ登録</h2>
-<p>「Create Account」画面が表示されますので、画面下の「Google」ボタンをクリックします。</p>
+<p>「Create Account」画面が表示されるので、画面下の「Google」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 601.70px" src="img/b5677669d5822ff2.png"></p>
-<h2 is-upgraded>3. Googleアカウントでユーザ登録</h2>
+<h2 is-upgraded>2. Googleアカウントでユーザ登録</h2>
 <p>Googleログインのダイアログが表示されるので、そこからASUメアドを選択します。</p>
 <p class="image-container"><img style="width: 420.50px" src="img/11f5cc0b161b48d8.png"></p>
 <p>次ページでアンケートを聞かれることがあるので適当にチェックを入れて回答します。</p>
 <p>登録が完了すると「Welcome to FlutterFlow」という画面が表示されます。</p>
-<center>Copyright 2021 RISA Co., LTD.</center>
+<p>Copyright 2022 RISA Co., LTD.</p>
 
 
       </google-codelab-step>
@@ -105,135 +338,145 @@
 <ul>
 <li>Firebaseと連携したFlutterFlowのプロジェクトが作成されていること。</li>
 </ul>
-<h2 is-upgraded>1. FlutterFlowにログインする</h2>
+<h2 is-upgraded>1. FlutterFlowにログイン</h2>
 <p>下記URLにアクセスして「Google」ボタンをクリックしてログインする。</p>
 <p><a href="https://app.flutterflow.io/" target="_blank">https://app.flutterflow.io/</a></p>
 <p class="image-container"><img style="width: 249.23px" src="img/2b02d6e0bd979fe8.png"></p>
 <h2 is-upgraded>2. FlutterFlowプロジェクトの選択</h2>
 <p>FlutterFlowのダッシュボード上で「ASU...」から始まる名前のプロジェクトを選択します。</p>
 <p class="image-container"><img style="width: 456.50px" src="img/304aab244db1ea86.png"></p>
-<h2 is-upgraded>3. 「UI Builder」でログイン画面を作成</h2>
+<h2 is-upgraded>3. 「UI Builder」でログイン画面作成</h2>
 <p>ログインすると下図の画面（UIビルダー）が表示されるので、左側のパレット上にあるアイコンを中央の画面にドラッグ＆ドロップしながらログイン画面を作成していきます。</p>
 <p class="image-container"><img style="width: 576.08px" src="img/43c6ef875f5171ea.png"></p>
-<h3 is-upgraded><strong>① Row </strong><img style="width: 27.95px" src="img/38d6af0985caca15.png"><strong> アイコンを中央のアプリ画面の白いエリア（Column（カラム））にドラッグ＆ドロップします。</strong></h3>
+<h3 is-upgraded><strong>① LoginPageの選択</strong></h3>
+<p>画面右上の選択肢から「LoginPage」を選択します。</p>
+<p class="image-container"><img style="width: 485.36px" src="img/80db654e68a54345.png"></p>
+<h3 is-upgraded><strong>② Rowの追加</strong></h3>
+<p>Row <img style="width: 27.95px" src="img/38d6af0985caca15.png"> アイコンを中央のアプリ画面の白いエリア（Column）にドラッグ＆ドロップします。</p>
 <p class="image-container"><img style="width: 601.70px" src="img/8b491e3ddb9d53c5.png"></p>
-<h3 is-upgraded><strong>② もう一度Rowアイコンを中央のアプリ画面の白いエリア（Column（カラム））にドラッグ＆ドロップし、二行にします。</strong><img style="width: 601.70px" src="img/58796cf2a2d58b17.png"></h3>
-<h3 is-upgraded><strong>③ ボタン </strong><img style="width: 40.92px" src="img/a6e3b96e3fa149ee.png"><strong> アイコンを二行のRowアイコンの下にドラッグ＆ドロップします（ボタンアイコンは左側のアイコンリストをスクロールすると下の方にあります）。</strong></h3>
+<h3 is-upgraded><strong>③ 再度Rowの追加</strong></h3>
+<p>もう一度Rowアイコンを中央のアプリ画面の白いエリア（Column（カラム））にドラッグ＆ドロップし、二行にします。</p>
+<h3 is-upgraded><img style="width: 601.70px" src="img/58796cf2a2d58b17.png"></h3>
+<h3 is-upgraded><strong>④ ボタンの追加</strong></h3>
+<p>ボタン <img style="width: 26.31px" src="img/a6e3b96e3fa149ee.png"> アイコンを二行のRowアイコンの下にドラッグ＆ドロップします（ボタンアイコンは左側のアイコンリストをスクロールすると下の方にあります）。</p>
 <p class="image-container"><img style="width: 601.70px" src="img/edd5e3822132585a.png"></p>
-<h3 is-upgraded><strong>④アプリ画面の白い部分をクリックしColumnを選択して右側のパレットに注目します。</strong></h3>
+<h3 is-upgraded><strong>⑤</strong><strong> Scrollable有効化</strong></h3>
+<p>アプリ画面の白い部分をクリックしColumnを選択して右側のパレットに注目し、Scrollableを有効化します。</p>
 <p class="image-container"><img style="width: 601.70px" src="img/5e569b1cf38d3b8f.png"></p>
-<h3 is-upgraded><strong>⑤ Main Axis Alignmentで左から二番目のアイコンを選択し、上記でドラッグ＆ドロップしたコンポーネントを上下中央に配置します。</strong></h3>
-<p class="image-container"><img style="width: 456.00px" src="img/57c234f90b24bb4d.png"></p>
-<h3 is-upgraded><strong>⑥ パレット上部のPadding（パディング）で真ん中のロックをクリックしてロック上部に10と入力して上下左右4ヶ所すべてを10に設定します。</strong></h3>
+<p class="image-container"><img style="width: 323.36px" src="img/5d6bc834dd0fbb51.png"></p>
+<h3 is-upgraded><strong>⑥ Columnにパディング追加</strong></h3>
+<p>パレット上部のPadding（パディング）で真ん中のロックをクリックしてロック上部に10と入力して上下左右4ヶ所すべてを10に設定します。</p>
 <p class="image-container"><img style="width: 310.00px" src="img/65b126f8833859ba.png"></p>
-<h3 is-upgraded><strong>⑦以上により下記のような配置になります。</strong></h3>
-<p class="image-container"><img style="width: 266.87px" src="img/a10559658d969bf9.png"></p>
-<h3 is-upgraded><strong>⑧左のパレットからText </strong><img style="width: 28.39px" src="img/87fcce27ab51f153.png"><strong> アイコンを2行のRowの左側に配置します。上下2ヶ所に配置します。</strong></h3>
-<p class="image-container"><img style="width: 601.70px" src="img/77f8f7b214f52017.png"></p>
-<h3 is-upgraded><strong>⑨左パレットのTextField </strong><img style="width: 29.17px" src="img/ebe98edac7b69c3c.png"><strong> アイコンを、さきほど配置した2箇所のTextの右側にドラッグ&amp;ドロップします。</strong></h3>
-<h3 is-upgraded><img style="width: 405.50px" src="img/8f7f5f5916523a20.png"></h3>
-<h3 is-upgraded><strong>⑩ログイン画面の詳細の設定</strong></h3>
-<ol type="1" start="1">
-<li>「Hello World」と書かれたTextをクリックして表示される右側のパレット上で「Hello World」を「eメール：」に編集します。</li>
-</ol>
-<p class="image-container"><img style="width: 486.50px" src="img/9a3e4b52174813e5.png"></p>
-<ol type="1" start="2">
-<li>二行目の「Hello World」も同じように「パスワード：」に編集します。</li>
-</ol>
-<p class="image-container"><img style="width: 495.50px" src="img/6940a7bef2bf0a7b.png"></p>
-<ol type="1" start="3">
-<li>「パスワード：」の右側のTextFieldを選択して右側のパレットに表示される「Password Field」の右側のチェックを入れます。これによってTextFieldにパスワードを入れることができるようになります。</li>
-</ol>
-<p class="image-container"><img style="width: 516.11px" src="img/52739d042921ae3b.png"></p>
-<ol type="1" start="4">
-<li>最後にアプリ画面周辺の黒い部分をクリックして、右側に表示されるパレットのScaffoldの下の鉛筆アイコンをクリックして「HomePage」を「LoginPage」に修正して右側の ✔️ をクリックして編集を終了します。</li>
-</ol>
-<p class="image-container"><img style="width: 339.50px" src="img/c7be3b575c0af714.png"></p>
-<p>以上でログイン画面の作成は終了です。</p>
-<h2 is-upgraded>4. 新規ページを作成</h2>
-<p>ログイン画面を作成したので、次はログイン後に遷移する先の画面を作成します。</p>
-<h3 is-upgraded><strong>①ページ追加画面に移動</strong></h3>
-<p>画面左端のページとダイアが表示されたアイコン <img style="width: 30.69px" src="img/41d50054b65c457e.png"> をクリックするとページ追加画面に遷移します。</p>
-<p class="image-container"><img style="width: 334.50px" src="img/390726109c385bf8.png"></p>
-<h3 is-upgraded><strong>②新規ページ追加</strong></h3>
-<p>画面下部にあるページ追加ボタン <img style="width: 62.70px" src="img/e700508b1d83a742.png"> をクリックして、表示される「Create Page」画面で「HomePage」と入力して「Create New」ボタンをクリックします。</p>
-<p class="image-container"><img style="width: 235.50px" src="img/8895e7df9cdc6c44.png"></p>
-<p>すると「LoginPage」のほかに「HomePage」が追加されます。</p>
-<p class="image-container"><img style="width: 351.50px" src="img/7d6e483ca750f5aa.png"></p>
-<h2 is-upgraded>5. ログインの設定</h2>
-<p>ログイン画面とホームページができたのでログインを行うロジックを作成していきます。</p>
-<h3 is-upgraded><strong>①ログインページとホームページの設定</strong></h3>
-<p>画面上部のバグアイコン <img style="width: 37.08px" src="img/4e3925c06d4d62ce.png"> をクリックします。バグはエラーを表し、赤丸背景に2と書かれているのは2つのエラーが存在していることを表します。クリックして表示されるダイアログ上で「auth page setup」をクリックします。</p>
-<p class="image-container"><img style="width: 432.50px" src="img/e3a23cfbc3ebb6bb.png"></p>
-<h3 is-upgraded><strong>②ログインページとホームページの設定</strong></h3>
-<p>「App Details」画面が表示されるので、「Initial Page」の「Entry Page」に「LoginPage」、「Logged in Page」に「HomePage」を選択します。</p>
-<p class="image-container"><img style="width: 601.70px" src="img/80987cc7f45e1513.png"></p>
-<h3 is-upgraded><strong>③ログインアクションを追加</strong></h3>
+<p>すると下記のような配置になります。</p>
+<p class="image-container"><img style="width: 425.54px" src="img/680eb2d52be28b7d.png"></p>
+<h3 is-upgraded><strong>⑦ eメール入力用TextFieldの追加</strong></h3>
+<p>左パレットのTextField <img style="width: 29.17px" src="img/ebe98edac7b69c3c.png"> アイコンを、さきほど配置した上のRowにドラッグ&amp;ドロップします。</p>
+<p class="image-container"><img style="width: 413.97px" src="img/43a4fbeae903fed8.png"></p>
+<p>「TextField」をクリックした状態で右側のパレットに注目します。</p>
+<p>「Padding &amp; Alignment 」でロックアイコン<img style="width: 20.00px" src="img/21ec55eb45e4bd5c.png">をクリックして四方に5を入力します。</p>
+<p class="image-container"><img style="width: 290.42px" src="img/7242cf7521cf163.png"></p>
+<p>パレット下部の「Label Text」に「eメール：」と入力します。</p>
+<p class="image-container"><img style="width: 288.36px" src="img/12e6c7d46dcdb45c.png"></p>
+<p>パレット下部の「Input Border Type」で「Outline」を選択し「Border Color」で「Black」を選択する。<img style="width: 292.54px" src="img/cb2dc34031170a4e.png"></p>
+<p>「Content Padding」でロックアイコン<img style="width: 20.00px" src="img/21ec55eb45e4bd5c.png">をクリックして四方に5を入力します。</p>
+<p class="image-container"><img style="width: 284.36px" src="img/7e1644f80a4c20d2.png"></p>
+<h3 is-upgraded><strong>⑧ パスワード入力用TextFieldの追加</strong></h3>
+<p>左パレットのTextField <img style="width: 29.17px" src="img/ebe98edac7b69c3c.png"> アイコンを、二つ目のRowにドラッグ&amp;ドロップします。</p>
+<p class="image-container"><img style="width: 453.35px" src="img/710c84aaedfb84ef.png"></p>
+<p>「TextField」をクリックした状態で右側のパレットに注目します。</p>
+<p>「Padding &amp; Alignment 」でロックアイコン<img style="width: 20.00px" src="img/21ec55eb45e4bd5c.png">をクリックして四方に5を入力します。</p>
+<p class="image-container"><img style="width: 371.48px" src="img/7242cf7521cf163.png"></p>
+<p>パレット下部の「Password Field」にチェックを入れ「Label Text」に「パスワード：」と入力します。</p>
+<p class="image-container"><img style="width: 371.36px" src="img/7298cf11dabe3cba.png"></p>
+<p>パレット下部の「Input Border Type」で「Outline」を選択し「Border Color」で「Black」を選択する。</p>
+<p class="image-container"><img style="width: 351.36px" src="img/cb2dc34031170a4e.png"></p>
+<p>「Content Padding」でロックアイコン<img style="width: 20.00px" src="img/21ec55eb45e4bd5c.png">をクリックして四方に5を入力します。</p>
+<p class="image-container"><img style="width: 347.36px" src="img/7e1644f80a4c20d2.png"></p>
+<h2 is-upgraded>4. ログインの設定</h2>
+<p>ログインを行うロジックを作成していきます。</p>
+<h3 is-upgraded><strong>① ログインページとホームページの設定</strong></h3>
+<p>左端のメニューから設定アイコン<img style="width: 24.57px" src="img/a35508990fb81076.png">をクリックし、その右から「Authentication」を選択し、右の画面で「Enable Authentication」にチェックをいれます。すると「Initial Page」が表示されるので、「Entry Page」で「LoginPage」、「LoggedIn Page」で「HomePage」を選択します。</p>
+<p class="image-container"><img style="width: 501.16px" src="img/b02aef862b9b3469.png"></p>
+<h3 is-upgraded><strong>② ログインアクションを追加</strong></h3>
 <p>ログイン画面でボタンをクリックした際のアクションの設定を行います。</p>
 <ol type="1" start="1">
 <li>画面左端の「UI Builder」アイコン<img style="width: 24.87px" src="img/dfdf397a8407c9ab.png">をクリックします。</li>
 </ol>
-<p class="image-container"><img style="width: 363.50px" src="img/645aff36df14fcb5.png"></p>
+<p class="image-container"><img style="width: 326.36px" src="img/645aff36df14fcb5.png"></p>
 <ol type="1" start="2">
-<li>画面右上の「HomePage」をクリックすると画面を切り替えられるので「LoginPage」に切り替えます。</li>
+<li>画面右上の選択肢が「LoginPage」になっていることを確認します。</li>
 </ol>
-<p class="image-container"><img style="width: 354.50px" src="img/97a5a37537ab0ed6.png"></p>
+<p class="image-container"><img style="width: 330.36px" src="img/97a5a37537ab0ed6.png"></p>
 <ol type="1" start="3">
-<li>ログイン画面上の「Button」をクリックして右側に表示されるパレットのアクションアイコン<img style="width: 35.20px" src="img/5f25b8397baaa98c.png">をクリックします。</li>
+<li>「Button」をクリックし右に表示されるパレットのアクションアイコン<img style="width: 26.36px" src="img/5f25b8397baaa98c.png">をクリックします。</li>
 </ol>
-<p class="image-container"><img style="width: 492.99px" src="img/3374c6d44a7cd6c7.png"></p>
+<p class="image-container"><img style="width: 474.36px" src="img/99a2b2e2ef16a4b9.png"></p>
 <ol type="1" start="4">
 <li>「+ Add Action」ボタンをクリックして表示される「Select Action」のテキストフィールドに「login」と入力して、リストの一番下にある「Authentication」をクリックし、展開表示される「Log in」をクリックします。</li>
 </ol>
 <p class="image-container"><img style="width: 238.50px" src="img/570e2c45286f6f2a.png"></p>
 <ol type="1" start="5">
-<li>「Define Action」の「Auth Provider」で「Email」を選択し、「Email Field」で「Text Field 1」、「Password Field」で「Password Field1」を選択し、右上の「+ Add」ボタンをクリックします。</li>
+<li>「Define Action」の「Auth Provider」で「Email」を選択し、「Email Field」で「Text Field 1」、「Password Field」で「Password Field1」を選択します。</li>
 </ol>
-<p class="image-container"><img style="width: 241.58px" src="img/8d724d5edeb4589.png"></p>
-<p>下記のようなページが表示されるので右下の「Close」ボタンをクリックします。</p>
-<p class="image-container"><img style="width: 473.28px" src="img/662305d6f3ca253e.png"></p>
+<p class="image-container"><img style="width: 249.36px" src="img/c18ea846e71b7823.png"></p>
 <p>以上でログインボタンを押した時のアクションの設定は完了です。</p>
-<h3 is-upgraded><strong>④ ログアウトアクションの追加</strong></h3>
+<h3 is-upgraded><strong>③ ログアウトアクションの追加</strong></h3>
 <p>ログイン後に表示される「HomePage」にログアウトボタンを追加します。</p>
 <ol type="1" start="1">
 <li>画面右上の「LoginPage」をクリックして「HomePage」に切り替えます。</li>
 </ol>
-<p class="image-container"><img style="width: 508.50px" src="img/d705179aec862782.png"></p>
+<p class="image-container"><img style="width: 435.36px" src="img/d705179aec862782.png"></p>
 <ol type="1" start="2">
 <li>「Page Title」の右側に左側からボタンをドラッグ＆ドロップします。</li>
 </ol>
-<p class="image-container"><img style="width: 405.50px" src="img/f13fe4810e7bc6ad.png"></p>
+<p class="image-container"><img style="width: 298.09px" src="img/f13fe4810e7bc6ad.png"></p>
 <ol type="1" start="3">
 <li>追加したボタンを選択した状態で右側のパレットに表示されるテキスト「Button」を「ログアウト」に編集します。</li>
 </ol>
-<p class="image-container"><img style="width: 450.50px" src="img/60eeb53279787a83.png"></p>
+<p class="image-container"><img style="width: 255.36px" src="img/60eeb53279787a83.png"></p>
 <ol type="1" start="4">
 <li>右側パレット上部のアクションアイコン<img style="width: 35.20px" src="img/5f25b8397baaa98c.png">をクリックし、「+ Add Action」ボタンをクリックして表示される「Select Action」のテキストフィールドに「logout」と入力して、リストの一番下にある「Authentication」をクリックし、展開表示される「Logout」をクリックします。</li>
 </ol>
 <p class="image-container"><img style="width: 205.84px" src="img/71b83c273df17f10.png"></p>
-<p>「+ Add」ボタンをクリックします。</p>
-<p class="image-container"><img style="width: 200.50px" src="img/4b4b030e0fcd8259.png"></p>
-<p>「Close」ボタンをクリックします。</p>
-<p class="image-container"><img style="width: 311.50px" src="img/918b619ebe1f1911.png"></p>
 <p>以上でログアウトボタンの設定が完了しました。</p>
-<h3 is-upgraded><strong>⑤ ログインアプリの実行</strong></h3>
+<h3 is-upgraded><strong>④ ログインアプリの実行</strong></h3>
 <p>画面右上の「Run」ボタンをクリックします。</p>
-<h3 is-upgraded><img style="width: 521.50px" src="img/21e2d50e6c7cbd44.png"></h3>
+<h3 is-upgraded><img style="width: 410.36px" src="img/21e2d50e6c7cbd44.png"></h3>
 <p>すると新しいタブが開いて下記の画面が表示されます。これは作成したログイン画面がビルドされていることを表しており、ビルドが完成するまで数分まってください。</p>
-<p class="image-container"><img style="width: 310.50px" src="img/343e89ca9c90ef7b.png"></p>
+<p class="image-container"><img style="width: 274.36px" src="img/343e89ca9c90ef7b.png"></p>
 <p>すると下図のようなアプリ画面が表示されるので、自分のメアドとパスワードには「password」と入れてボタンをクリックします。</p>
-<p class="image-container"><img style="width: 229.50px" src="img/9aa3b778531472f4.png"></p>
+<p class="image-container"><img style="width: 272.36px" src="img/793d04c7bd3a0025.png"></p>
 <p>ログインが成功すると下図の画面が表示されるので、ログアウトボタンをクリックしてログイン画面に戻ります。</p>
-<p class="image-container"><img style="width: 217.59px" src="img/daf7027d637876c.png"></p>
+<p class="image-container"><img style="width: 272.36px" src="img/a71c85b14cdfe01f.png"></p>
 <p>以上でログインアプリの完成です。</p>
-<center>Copyright 2021 RISA Co., LTD.</center>
+<p>Copyright 2022 RISA Co., LTD.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="チャットの設定" duration="0">
+        <p>一対一チャットの設定を行います。</p>
+<h2 is-upgraded>前提条件</h2>
+<ul>
+<li>Firebaseと連携したFlutterFlowのログインアプリが作成されていること。</li>
+<li>FlutterFlowにログインしていること。</li>
+</ul>
+<h2 is-upgraded>1. FlutterFlowプロジェクトの選択</h2>
+<p>FlutterFlowのダッシュボード上で「ASU...」から始まる名前のプロジェクトを選択します。</p>
+<p class="image-container"><img style="width: 456.50px" src="img/304aab244db1ea86.png"></p>
+<h2 is-upgraded>2. チャットの設定</h2>
+<p>。</p>
+<h3 is-upgraded><strong>① LoginPageの選択</strong></h3>
+<p>画面右上の選択肢から「LoginPage」を選択します。</p>
+<p class="image-container"><img style="width: 485.36px" src="img/80db654e68a54345.png"></p>
+<p>Copyright 2022 RISA Co., LTD.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="まとめ" duration="0">
         <p>（TODO）</p>
-<center>Copyright 2021 RISA Co., LTD.</center>
+<p>Copyright 2022 RISA Co., LTD.</p>
 
 
       </google-codelab-step>
