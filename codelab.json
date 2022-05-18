@@ -3,10 +3,10 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2022-04-25T14:04:47Z",
-  "id": "flutterflow",
+  "updated": "2022-05-18T10:07:08Z",
+  "id": "flutterflow-",
   "duration": 0,
-  "title": "FlutterFlow",
+  "title": "FlutterFlowを使った初めてのアプリ開発",
   "summary": "Flutterをベースとしたノーコード開発環境であるFlutterFlowを使ったスマホアプリ開発演習",
   "source": "1LVsNg5GtUojiPeDkGHcRX7WBMAAezFPbjn0niDChvIk",
   "theme": "",
@@ -18,5 +18,5 @@
     "flutter"
   ],
   "tags": [],
-  "url": "flutterflow"
+  "url": "flutterflow-"
 }
