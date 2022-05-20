@@ -9,7 +9,7 @@
   <title>FlutterFlowを使った初めてのアプリ開発</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="./codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -31,11 +31,11 @@
         <h2 is-upgraded>本書のコンセプト</h2>
 <p>最近はコロナの影響もあり、在宅勤務が推奨され、学校の授業がオンライン化され、買い物はeコマースの利用が増加し、食事の際は出前アプリの利用が流行っています。コロナ以前から社会生活におけるデジタル化の必要性がうたわれていましたが、コロナ渦となり、あらゆる生活シーンでオンライン利用が半強制化され、便利で使いやすいオンラインサービスに対する需要が増しています。</p>
 <p>また最近のシステム開発の動きを見ると、いままで「使いづらい」の代名詞であった行政や金融のオンラインサービスに「<a href="https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E4%B8%AD%E5%BF%83%E8%A8%AD%E8%A8%88" target="_blank">ユーザ中心設計</a>」を採用し、使いやすくセキュリティ上も安全なサービスに作り替えようとする取組が進められています。またIT化が比較的遅れていた中小企業においてもDX（<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" target="_blank">デジタルトランスフォーメーション</a>）を促進しようとする動きがあります。</p>
-<p>このように、あらゆる業界や組織において、あらゆる生活シーンでそれぞれの立場の要望にあった使いやすいオンラインサービスが安価に構築・提供されることが求められています。</p>
+<p>このように、あらゆる業界や組織において、あらゆる生活シーンで、それぞれの立場の要望にあった使いやすいオンラインサービスが安価に構築・提供されることが求められています。</p>
 <p>一方、これらの要望を担う人材育成の観点では、子供から大人までプログラミング教育がはやっており、例えば文科省は小学校でのプログラミング授業を必須化しています。しかしシステム開発や人材育成においては下記のような課題があると感じています。</p>
 <p class="image-container"><img style="width: 155.00px" src="img/86ab61652efc6246.png"></p>
 <ul>
-<li>アプリ開発の要件定義や設計フェーズにおいて画面設計に走りがちで、データ構造やロジックの設計がおろそかになり、プログラマーがまともに開発をはじめらずプロジェクトが遅延するといった状況に陥りがちです。このような状況は「<a href="https://shop.nikkeibp.co.jp/front/commodity/0000/P82710/" target="_blank">デスマーチ</a>」と呼ばれ、20年近くIT企業でアプリ開発をみてきましたが、昔も今もこのような破綻したプロジェクトは大量に発生しています。<br></li>
+<li>アプリ開発の要件定義や設計フェーズにおいて画面設計に走りがちで、データ構造やロジックの設計がおろそかになり、プログラマーがまともに開発をはじめらずプロジェクトが遅延するといった状況に陥りがちです。このような状況は「<a href="https://shop.nikkeibp.co.jp/front/commodity/0000/P82710/" target="_blank">デスマーチ</a>」と呼ばれ、20年近くIT企業でアプリ開発をみてきましたが、昔も今もこのような破綻したプロジェクトは大量に発生しています。</li>
 <li>この原因としては、システムデザインについての手法（<a href="https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E9%A7%86%E5%8B%95%E8%A8%AD%E8%A8%88" target="_blank">ドメイン駆動設計</a>や<a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" target="_blank">システムアーキテクチャ</a>など）やその説明が高尚で難しいという問題があります。そのため、本来必要なシステムデザインがスルーされ、スケジュールのプレッシャーもあり、とりあえず簡易な画面設計に走ることにつながるのではと感じています。</li>
 <li>昨今の<a href="https://nijibox.jp/blog/humancentereddesign/" target="_blank">人間中心設計</a>の誤った解釈から、システムの顧客接点である画面のデザインがフォーカスされ、発注側の要件定義担当者やデザイナーを含めたプロジェクトメンバーが、本来画面設計の元になるはずの<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0" target="_blank">データモデリング</a>について理解が乏しいことに原因があるのではとも感じています。例えば、人間中心設計のプロセスで作成するカスタマージャーニーマップはユーザ視点の顧客体験を理解するにはよいのですが、アーキテクト不在の場合、顧客接点の整理をしたらすぐに画面設計にとりかかろうという雰囲気になりがちなので、意識して気をつける必要があります。</li>
 </ul>
@@ -46,7 +46,7 @@
 <li>最近の子供向けプログラミング授業用ソフトは使いやすく、見た目がよく、マウス操作でプログラミングの論理的思考が学べるといったすぐれた面がある一方、汎用的なアプリケーションを開発するため使えないといった欠点もあります。学習指導要領上、小学校からプログラミング教育が必須化する理由は「プログラミング的思考をやしなうため」「順序立てて考え、試行錯誤し、ものごとを解決する力を身につけるため」であることはわかるのですが、教科書で決められた作り込まれたソフトを使っているので汎用性がなく学習した後のその先がないため少し残念です。</li>
 </ul>
 <p>以上のことから、エンジニアだけでなく発注側顧客企業の担当者やプロジェクトマネージャもユースケースからデータモデルに落とす考え方やデータモデルから画面設計を行うための考え方、さらにはこれらのパターンを知っていることが望まれます。</p>
-<p>そこで本書では。またエンジニア育成という観点では、アイデアが浮かんだらすぐに完成品までもっていけるよう効率的で汎用的なノーコードアプリであるFlutterFlowとバックエンドにFirebaseを選び、それらのハンズオンを掲載しています。</p>
+<p>そこで本書では、アイデアが浮かんだらすぐに完成品までもっていけるよう効率的で汎用的なノーコードアプリであるFlutterFlowとバックエンドにFirebaseを選び、それらのハンズオンを掲載しています。また、システムアーキテクチャやデータモデルのしくみの理解も重要であるため、ひととおりのハンズオンが完了したのちにそのしくみを詳しく説明して再度ハンズオン演習を実施してもらうような構成を取ります。</p>
 <p>様々な立場の人が本書を読みハンズオンを試してもらうことで「こんなに簡単に作れるんだ」とものづくりに興味をもってもらい、自分たちが実現したいシステムを自らが構築するマインドをもっていただく一助になればと思っています。また本書をとおしてIT技術の活用が民主化されることで、自らの会社や組織、業界においてより価値を産むアイデア考察に積極的になり、それらを自ら実現した便利で使いやすいオンラインサービスが世に増えることを願っています。</p>
 <aside class="warning"><p><strong>ノート: </strong>著者は2020年2月に第33回「21世紀交流サロン・葵丘」にてこれらの考え方を「テクノロジーの民主化」と題して話しました。<a href="http://21cmikawa.jp/pdf/kikyusalon20200213.pdf" target="_blank">テクノロジーの民主化</a> </p>
 </aside>
@@ -71,6 +71,7 @@
 <p>スマホには、パソコンとは異なる2つの特徴があります。</p>
 <p><strong>画面が小さく操作手段が限定的</strong></p>
 <p>スマホは画面が小さく、さらにマウスやキーボードがないため操作手段が限定されるため、画面レイアウトや操作方法をどのようにデザインするかでユーザ満足度が大きく変化します。</p>
+<p class="image-container"><img style="width: 168.86px" src="img/bfaac7a939195510.jpeg"></p>
 <p><strong>画面サイズがばらばら</strong></p>
 <p>AndroidとiPhoneという違いだけでなく、同種のスマホでも画面サイズが様々で、アプリのレイアウト幅や高さを固定すると画面表示が崩れて使い物にならなくなります。例えば、歴代のiPhoneを比べても下図のとおり様々な画面サイズが存在しますし、Androidは各デバイス開発会社が様々なものを出しているのでiPhone以上に画面サイズはバラバラです。</p>
 <p class="image-container"><img style="width: 531.80px" src="img/7775aa3910ab82ed.png"></p>
@@ -97,7 +98,7 @@
 <p>しかし、フラットデザインはシンプルすぎて、システムの構造やしくみが理解しづらいといったデメリットが挙げられます。そこで、Googleはフラットデザインとスキューモフィズムの中間をとり、さらに発展させた「<a href="https://material.io/" target="_blank">マテリアル・デザイン</a>」を定義し、2014年にだれもが参照して利用できるオープンソースな形でデザインガイドラインを発表しました。</p>
 <p>本書では、<a href="https://developer.apple.com/design/human-interface-guidelines/ios" target="_blank">ヒューマン・インタフェース・ガイドライン</a>の概要を述べるものの、<a href="https://material.io/" target="_blank">マテリアル・デザイン</a>をメインに説明します。また、本書で利用している開発プラットフォームであるFlutterもマテリアルデザインを全面的に採用しており、AndroidはもとよりiPhoneでもマテリアルデザインを実装することができるため、本書においては開発全般でマテリアルデザインを採用しています。</p>
 <h2 is-upgraded>4. ヒューマン・インタフェース・ガイドラインとは？</h2>
-<p>ヒューマン・インタフェース・ガイドラインでは3つのデザインテーマと6つのデザイン原則とその他設計の詳細が記載されていますが、ここでは3つのデザインテーマと6つのデザイン原則を紹介します。</p>
+<p>Apple社が提唱するUIガイドラインである<a href="https://developer.apple.com/design/human-interface-guidelines/ios" target="_blank">ヒューマン・インタフェース・ガイドライン</a>では3つのデザインテーマと6つのデザイン原則とその他設計の詳細が記載されていますが、ここでは3つのデザインテーマと6つのデザイン原則を紹介します。</p>
 <h3 is-upgraded><strong>①3つのデザインテーマ</strong></h3>
 <p>iOSアプリは「明確であること」「コンテンツにフォーカスすること」「奥行きがあること」の3つのデザインテーマにのっとってデザインすることを推奨しています。</p>
 <p><strong>1. 明確であること</strong></p>
@@ -117,7 +118,7 @@
 <p><strong>4. フィードバック</strong></p>
 <p>フィードバックは行動を認め、結果を示して人々に情報を提供し続けます。組み込みのiOSアプリは、すべてのユーザーアクションに応答して知覚可能なフィードバックを提供します。インタラクティブな要素をタップすると簡単に強調表示され、進行状況インジケーターが長時間実行されている操作のステータスを伝え、アニメーションとサウンドがアクションの結果を明確にするのに役立ちます。</p>
 <p><strong>5. メタファー</strong></p>
-<p>アプリの仮想オブジェクトとアクションが、現実の世界に根ざしているのかデジタルの世界に根ざしているのかにかかわらず、身近な体験のメタファーである場合、ユーザはより迅速に学習します。ユーザが画面を物理的に操作するため、メタファーはiOSでうまく機能します。ビューを邪魔にならないように移動して、下のコンテンツを公開します。コンテンツをドラッグしてスワイプします。スイッチを切り替えたり、スライダーを移動したり、ピッカーの値をスクロールしたりします。ユーザは本や雑誌のページをめくることさえします。</p>
+<p>アプリの仮想オブジェクトとアクションが、現実の世界に根ざしているのかデジタルの世界に根ざしているのかにかかわらず、身近な体験のメタファー（たとえ）である場合、ユーザはより迅速に理解し学習します。例えば iOS 上で画面遷移する場合に行うドラッグしてスワイプする操作は、ユーザが画面を物理的に操作する比喩表現であり、このメタファーは iOS でうまく機能します。スイッチを切り替えたり、スライダーを移動したり、ピッカーの値をスクロールする動作も同様です。さらに、ユーザは本や雑誌のページをめくることも可能です。</p>
 <p><strong>6. ユーザーコントロール</strong></p>
 <p>アプリはユーザーが制御します。アプリは一連の行動を提案したり、危険な結果について警告したりできますが、アプリは意思決定をしません。最高のアプリは、ユーザーを有効にすることと望ましくない結果を回避することの間の正しいバランスを持ちます。アプリは、インタラクティブな要素を使い慣れた予測可能な状態に保ち、破壊的なアクションを確認し、すでに進行中の場合でも操作を簡単にキャンセルできるようにすることで、ユーザーがアプリをコントロールしているように感じさせることができます。</p>
 <h2 is-upgraded>5. マテリアルデザインとは？</h2>
@@ -215,7 +216,7 @@
 <p>- マテリアルデザインのコンポーネント詳細については下記URLを参照してください。</p>
 <p><a href="https://material.io/components" target="_blank">Components - Material Design</a></p>
 <p>- Flutterにおけるマテリアルデザインについては下記URLを参照してください。</p>
-<p><a href="https://material.io/develop/flutter" target="_blank">https://material.io/develop/flutter</a></p>
+<p><a href="https://material.io/develop/flutter" target="_blank">Develop - Flutter - Material Design</a></p>
 </aside>
 <h3 is-upgraded><strong>③カラーテーマ</strong></h3>
 <p>マテリアルデザインはアプリのブランディングを統一的に進めるためにカラーテーマというしくみを採用し、アプリケーション全体で部品の色やフォントカラーを統一させることが可能です。逆に言うと、同じアプリでもカラーテーマを変えてイメージの異なるアプリとして仕上げることが可能ですので、アプリケーションのテンプレートを先に作っておいて様々なプロジェクトに応用する場合にもこのようなしくみは役に立つでしょう。</p>
@@ -225,8 +226,8 @@
 <p>マテリアルデザインは単なる画面と画面遷移にとどまらず、音声や機械学習に関するUIについても拡張し、ガイドラインを提供しています。</p>
 <p>機械学習機能に関するマテリアルデザイン：<a href="https://material.io/design/machine-learning/understanding-ml-patterns.html" target="_blank">Machine learning patterns - Material Design</a></p>
 <p>音声に関するマテリアルデザイン：<a href="https://material.io/design/sound/about-sound.html" target="_blank">About sound - Material Design</a></p>
-<p>これらはスマホにかかわらず、スマートウォッチ、スマートスピーカーやスマートイヤフォン、スマートグラスなどにもマテリアルデザインを適用していこうという取り組みのあらわれであり、次章で紹介するFlutterという開発環境も同じ目的で開発が進められています。</p>
-<p>2021年5月のGoogle I/OにおいてAndroid12のリリースにあわせて<a href="https://www.youtube.com/watch?v=rLKtIGY2Mgc" target="_blank">マテリアルデザインの更新</a>がなされています。ここでは、スキューモフィズム的なモノを表現する普遍的なロゴデザインを継承しつつ、高度にパーソナライズすることができ、仕事とプライベートの切り替えが用意でモダニズム的な要素を加えたデザインを目指したとのことです。具体的には、新しいテクノロジーを快適に使えること、デバイスやアプリとの境界線を無くすような慣習に挑戦すること（イコノクラスム）、入力に反応する有機的な動きなど自然界のスピリットを取り入れることを目指しています。また、壁紙の色使いにあわせてパーソナライズされたカラーパレットを適切に自動設定してくれるダイナミックカラーという機能を有しています。今後<a href="https://material.io/resources/color/" target="_blank">カラーツール</a>等にもこれらの自動化機能が付与されてくるかもしれません。</p>
+<p>これらはスマホにかかわらず、スマートウォッチ、スマートスピーカーやスマートイヤフォン、スマートグラスなどにもマテリアルデザインを適用していこうという取り組みのあらわれであり、本書で扱うFlutterという開発環境も同じ目的で開発が進められています。</p>
+<p>2021年5月のGoogle I/OにおいてAndroid12のリリースにあわせて<a href="https://www.youtube.com/watch?v=rLKtIGY2Mgc" target="_blank">マテリアルデザインの更新</a>がなされています。ここでは、スキューモフィズム的なモノを表現する普遍的なロゴデザインを継承しつつ、高度にパーソナライズすることができ、仕事とプライベートの切り替えが用意でモダニズム的な要素を加えたデザインを目指したとのことです。具体的には、新しいテクノロジーを快適に使えること、デバイスやアプリとの境界線を無くすような慣習に挑戦すること（<a href="https://ja.wikipedia.org/wiki/%E3%82%A4%E3%82%B3%E3%83%8E%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A0" target="_blank">イコノクラスム</a>）、入力に反応する有機的な動きなど自然界のスピリッツを取り入れることを目指しています。また、壁紙の色使いにあわせてパーソナライズされたカラーパレットを適切に自動設定してくれるダイナミックカラーという機能を有しています。<a href="https://material-foundation.github.io/material-theme-builder" target="_blank">マテリアルテーマビルダー</a>というツールを使うとダイナミックカラーを試したり、カラーテーマのカスタマイズを試すことができます。</p>
 <p>このようにマテリアルデザインは、いま世界で最も適切にデザインされ、オープンで誰にでも利用可能で、いまだ活発に進化を続けている生きているデザインシステムといえます。</p>
 <h2 is-upgraded>6. デザインシステム</h2>
 <p>通常、アプリケーションの開発プロジェクトでは、事前にマテリアルデザインのようなデザインフレームワークからプロジェクトで活用するレイアウトや部品を選択してカラーテーマやフォントを決めて、アプリのブランドに統一感を持たせることをします。このようなデザイン原則とデザインフレームワークの組み合わせを「デザインシステム」と呼びます。</p>
@@ -252,19 +253,21 @@
 <li>手ごろなコスト：Flutterはオープンソースでコミュニティベースで開発されているため、ツール採用のために必要なコストはありません。またJava開発者のようなオブジェクト指向言語経験者ならDart言語の学習はそれほど難しくなくエンジニア育成コストもそれほど高くありません。</li>
 <li>リーチとリテンション：リッチなデザインの操作性のよいネイティブアプリをiPhoneとAndroid向けに同時にリリースできるため世の中のすべてのユーザにリーチできます。また使い勝手がよいアプリの提供によりユーザのリテンション（維持・保持）率もアップします。</li>
 </ul>
+<p>下記の動画はこれらのFlutterの特徴を紹介しているので参照してください。</p>
+<p><a href="https://www.youtube.com/watch?v=eBVMfS7MayI" target="_blank">Create simple, beautiful UI with Flutter</a></p>
 <p>なお、Flutterと比較されるクロスプラットフォーム開発環境の特徴を以下に紹介します。</p>
 <ul>
-<li>Cordova: HTML5とCSS、JavaScriptを使ってiPhoneとAndroid共通のUI部分を実装し、プラットフォーム依存の部分をプラットフォームにあわせてプラグインとして開発することでクロスプラットフォームを実現します。そのため、操作性や機能に制限があり、ネイティブな機能を使う場合には両プラットフォーム用にプラグイン開発が発生します。</li>
-<li>ReactNative: Facebookが開発したクロスプラットフォーム開発環境で、JavaScriptで開発をします。一つのコードからiPhoneとAndroid用のネイティブコードを生成しますが、生成に時間が発生し、ホットリロードができません。</li>
-<li>Xamarin: マイクロソフトが開発するクロスプラットフォーム開発環境で、C#で開発をします。Flutterと同じくネイティブコードを生成し、最近ホットリロードにも対応していますが、描画スピードに乏しいのが欠点です。またコミュニティサポートが不十分であるため、Flutterほど情報があり、人気があるとはいえません。</li>
+<li><a href="https://cordova.apache.org/" target="_blank">Cordova</a>: HTML5とCSS、JavaScriptを使ってiPhoneとAndroid共通のUI部分を実装し、プラットフォーム依存の部分をプラットフォームにあわせてプラグインとして開発することでクロスプラットフォームを実現します。そのため、操作性や機能に制限があり、ネイティブな機能を使う場合には両プラットフォーム用にプラグイン開発が発生します。</li>
+<li><a href="https://reactnative.dev/" target="_blank">ReactNative</a>: Facebookが開発したクロスプラットフォーム開発環境で、JavaScriptで開発をします。一つのコードからiPhoneとAndroid用のネイティブコードを生成します。</li>
+<li><a href="https://docs.microsoft.com/ja-jp/xamarin/get-started/what-is-xamarin" target="_blank">Xamarin</a>: マイクロソフトが開発するクロスプラットフォーム開発環境で、C#で開発をします。Flutterと同じくネイティブコードを生成し、最近ホットリロードにも対応していますが、描画スピードに乏しいのが欠点です。またコミュニティサポートが不十分であるため、Flutterほど情報があり、人気があるとはいえません。</li>
 </ul>
 <p>以上のことを総合的に判断し、Flutterをベストな選択であると考え採用しました。</p>
-<aside class="warning"><p><strong>ノート:</strong> FlutterはiOSとAndroidの二台スマホプラットフォームとWebアプリケーションだけでなく、PC系のmacOS、Windows、Linuxやエンベッドデバイス、さらには「Fuchsia（フクシア）」と呼ばれるGoogleが新たに開発を計画しているマルチデバイスプラットフォームに対応するために進化を続けています。また、Flutter開発を支えるプラグインの対応プラットフォームをこの8種類に拡大していくための提案がコミュニティから公開されていたりします。</p>
+<aside class="warning"><p><strong>ノート:</strong> FlutterはiOSとAndroidの二台スマホプラットフォームとWebアプリケーションだけでなく、PC系のmacOS、Windows、Linuxやエンベッドデバイス、さらには「<a href="https://fuchsia.dev/" target="_blank">Fuchsia</a>（フクシア）」と呼ばれるGoogleが新たに開発を計画しているマルチデバイスプラットフォームに対応するために進化を続けています。また、Flutter開発を支えるプラグインの対応プラットフォームをこの8種類に拡大していくための提案がコミュニティから公開されていたりします。</p>
 <p><a href="https://docs.google.com/document/d/1LD7QjmzJZLCopUrFAAE98wOUQpjmguyGTN2wd_89Srs" target="_blank">Federated plugin implementations (PUBLICLY SHARED)</a></p>
 </aside>
 <p>Flutterのよさだけを強調すると初めての方は少ない知識で何も考慮することなくアプリが開発できると勘違いするとよくないので、Flutterを正しく学ぶためのマインドセットを最後に紹介します。</p>
 <ol type="1" start="1">
-<li>Flutterのベース言語であるDart言語のコンセプトと特徴を学ぶこと<br>Flutterはスマホアプリ開発に必要なプログラミング言語のコンセプトを持ち、Flutterと同期しながら進化しているDartという言語をベース言語に採用しています。本書では「Dart言語の基礎」をハンズオン付きで解説します。</li>
+<li>Flutterのベース言語であるDart言語のコンセプトと特徴を学ぶこと<br>Flutterはスマホアプリ開発に必要なプログラミング言語のコンセプトを持ち、Flutterと同期しながら進化しているDartという言語をベース言語に採用しています。</li>
 <li>状態管理と関心の分離<br>通常アプリケーションは画面と画面遷移から成り立ちますが、その遷移中に永続化して保持したいデータがあります。そのことを状態と呼びますが、Flutterでもこの状態管理方法を選択することは悩ましい課題です。また、FlutterはUIロジックとビジネスロジックを分離する制約を言語として持ち合わせていません。そのため、開発者がBLoCパターンなどのデザインパターンを自ら採用してルール化してプログラミングする必要があります。</li>
 <li>ネイティブコードの知識<br>Flutterがいくらクロスプラットフォーム対応であると言っても最終的にはネイティブコードとしてコンパイルされ、iPhone、Android、Webアプリ、Windows、Mac、ChromeBook、Linuxといった各プラットフォーム独自のルールとしきたりにあわせてリリースされるため、ネイティブコードの知識は不可欠です。</li>
 </ol>
@@ -275,17 +278,17 @@
 <p>一方、Firebaseは、アプリにログインする認証のしくみ（Firebase Auth）とアプリと安全にコネクションを繋いだままストリーム処理が可能なデータベース（Firestore）、写真などの大きめのバイナリファイルを保存するためのストレージ（Storage）といったサービスを提供します。またクライアント用には、Firebase Authで認証されたユーザIDと紐づけてFirestoreデータベースにデータを保存したり、StorageのURIをFirestoreデータベースに保存して利用する機能を、様々なプログラミング言語向けに標準的なSDKとして提供されています。そのため、一からバックエンドのサービスを開発するのに比べ、基本的な機能をほとんど開発する必要がないため、開発工数を劇的に削減することができます。</p>
 <p>※ Firebase Authにおけるブルートフォース攻撃対策については下記記事を参照してください。</p>
 <p><a href="https://medium.com/swlh/google-firebase-authentication-vulnerability-245050cb7ceb" target="_blank">Google Firebase Authentication Vulnerability by Eureka Surveys | The Startup</a></p>
-<p>さらには、FirebaseはA/Bテストを行う機能やスマホアプリのクラッシュログを収集する機能、ユーザがどの画面のどのボタンをクリックしたかといった動線を集計する機能、スマホアプリをテストユーザに配布する機能などモバイルアプリ用に豊富な機能を安価に提供しているため、多くのモバイルアプリ開発者に採用されています。</p>
+<p>さらには、FirebaseはA/Bテストを行う機能やスマホアプリのクラッシュログを収集する機能、ユーザがどの画面のどのボタンをクリックしたかといった動線を集計する機能、スマホアプリをテストユーザに配布する機能、アクセスしたアプリ（デバイス）にIDをつけて管理する機能やそれに対して通知を行う機能などモバイルアプリ用に豊富な機能を安価に提供しているため、多くのモバイルアプリ開発者に採用されています。</p>
 <p>以上の理由から本書ではバックエンドの機能にFirebaseを採用することにしました。</p>
 <h2 is-upgraded>3. FlutterFlowの選択根拠</h2>
-<p>先述の通り、Flutterを利用するとマルチデバイス向けのネイティブに近いアプリケーションをレスポンシブUIで単一コードで開発でき、劇的に開発工数を削減します。ただしDartというプログラミング言語を学習し、マテリアルデザインのウィジットのしくみや状態保持のしくみを理解した上で画面と状態遷移、バックエンドとの連携を構築しなければなりません。</p>
-<p>幸いなことにFlutterはマテリアルデザインを100%採用していて統一した部品を組み上げることで画面が開発できます。またFirebaseとの連携も綿密に行われているため、GUIベースで画面を構築し、Firebase Auth、Firestore、Storageとのバックエンド連携も設定ベースで行うことが可能です。</p>
-<p>この特徴をうまく利用してWebベースのFlutterのGUI開発プラットフォームFlutterFlowがGoogle I/O 2021で発表されました。FlutterをGUIベースでまともに開発できるプラットフォームとして唯一のものであることとGoogleが後押ししていることから永続的に利用できるサービスであることは確かでしょうが、下記のようなメリットがあるためプログラミング未経験者へのアプリ開発教育およびプロトタイプ開発プラットフォームとして本書で採用することとしました。</p>
+<p>先述の通り、Flutterを利用するとマルチデバイス向けのネイティブに近いアプリケーションをレスポンシブUIで単一のコードで開発できるため、劇的に開発工数を削減します。ただしDartというプログラミング言語を学習し、マテリアルデザインのウィジットのしくみや状態保持のしくみを理解した上で画面と状態遷移、バックエンドとの連携を構築しなければなりません。</p>
+<p>幸いなことにFlutterはマテリアルデザインを100%採用していて統一した部品を組み上げることで画面が開発できます。またFirebaseとの連携も綿密に行われているため、GUIベースで画面を構築し、Firebase Auth、Firestore、Storageとのバックエンド連携も設定ベースで行う実装が比較的容易に実現できます。</p>
+<p>この特徴をうまく利用してWebベースのFlutterのGUI開発プラットフォームFlutterFlowが開発され、<a href="https://www.youtube.com/watch?v=5j82wxzwFyI" target="_blank">Google I/O 2021で発表</a>されました。FlutterをGUIベースでまともに開発できるプラットフォームとして唯一のものであることとGoogleが後押ししていることから永続的に利用できるサービスであることは確かでしょう。さらに下記のようなメリットがあるため、本書にてプログラミング未経験者へのアプリ開発教育およびプロトタイプ開発プラットフォームとして本書で採用することとしました。</p>
 <ul>
 <li>ノーコードでFirebaseと連携するFlutterアプリの開発が可能です。</li>
 <li>開発したアプリのソースコードをまるごとGithubに連携することが可能であり、そのコードを修正して利用することが可能です。</li>
 <li>あらかじめログインやユーザ登録、パスワード変更、ユーザプロフィールなどの画面テンプレートが用意されていて、さらに高度な画面テンプレートとしてチャットやカレンダー、地図といった画面を利用することが可能です。</li>
-<li>高度な画面テンプレート（チャットなど）を利用したり、Github連携機能などを利用するには月額7000円のサブスク料金が必要になりますが、教員が有料アカウント一つ取得して学生に無料アカウントを取得させ、有料版プロジェクトを複数学生に配ることで授業を行うことが可能です。</li>
+<li>高度な画面テンプレート（チャットなど）を利用したり、Github連携機能などを利用するには月額7000円のサブスク料金が必要になりますが、教員が有料アカウント一つ取得し、学生に無料アカウントを取得させ、有料版プロジェクトを複数学生にシェアことで授業を行うことが可能です。本書ではこの形式を使った演習を紹介します。</li>
 </ul>
 <h2 is-upgraded>4. ベンダーロックインの排除</h2>
 <p>企業におけるITツールの選定で気をつけるべき点にベンダーロックインの排除が挙げられます。というのも、採用技術の開発が止まったり急に利用コストが値上げされ別の方法を模索しなければならなくなったり、アプリを横展開して他社に提供する場合先方のプラットフォームにあわせなければならない、といったことがありうるため、採用時のメリデメだけでなく他に乗り換える可能性も考慮しなければなりません。</p>
@@ -295,7 +298,7 @@
 <li>Firebase Auth：独自に認証サーバを立ち上げたり、Keycloakのような統合認証認可サービスを立ち上げてユーザ管理をすることで代替できます。</li>
 <li>Cloud Firestore：OIDC認証のしくみはKeycloakのクライアントプラグインを使って実装することで実現できます。ドキュメント型データベースとしてmongoDBがあげられるので、ストリーム型でアプリから連携できるようgRPCで公開し、Dart言語のgRPCクライアントを開発しFlutterで利用することで実現できます。ただし、Firestoreで実現しているセキュリティルールやオフライン機能や差分のみをやりとりする機能などの高度な機能の実装は困難なので、アプリの使い勝手は悪くなると思われます。</li>
 <li>Firebase Storage：Keycloakのような認証サービスと連携したストレージサービスを開発するのは難しいので、データベースにサイズを小さくしたバイナリとして保存するようにするとよいでしょう。</li>
-<li>FlutterFlow：すべてのソースコードがGithubと連携して取得できるので、ブラックボックス化によるベンダーロックインを防ぐことが可能です。</li>
+<li>FlutterFlow：有料アカウントを使うとすべてのソースコードがGithubと連携して取得できるので、ブラックボックス化によるベンダーロックインを防ぐことが可能です。</li>
 </ul>
 <p>Copyright 2020 RISA Co., LTD.</p>
 
@@ -316,9 +319,8 @@
 <li>GridView画面の作成</li>
 <li>アプリの公開</li>
 </ol>
-<p>手順3から以降の作業は有料アカウントを使って払い出され適切に設定されたFlutterFlowプロジェクトを利用する必要があります。有料アカウントを使った作業については別途記載します。</p>
-<p>これらの作業は手順に従って設定を行っていくだけであるため、作業者は裏で何が行われておりそのしくみはどうなっているのかを理解することなく作業を行うことになります。これらのしくみの説明については演習をひととおり実施したあとに行います。</p>
-<p>学習はまねることで学習効率が上がりますし、達成感を味わうことで自分ごととして親近感を持つことができます。本書でもまずは理解する前にまねてひととおりを経験することから始めることで、理解したい気持ちをもってしくみの学習をすることを目指します。</p>
+<p>手順3から以降の作業は有料アカウントを使って払い出され適切に設定されたFlutterFlowプロジェクトを利用する必要があります。有料アカウントを使った作業については本書の最後「【講師作業】事前準備」に記載します。</p>
+<p>これらの作業は手順に従って設定を行っていくだけであるため、学生はしくみを理解することなく作業を行うことになります。これらのしくみの説明については演習をひととおり実施したあとに行います。学習はまねることで学習効率が上がりますし、達成感を味わうことで自分ごととして親近感を持つことができます。本書でもまずは理解する前にまねてひととおりを経験することから始めることで、理解したい気持ちをもってしくみの学習をすることができるため、このステップを踏むこととします。</p>
 
 
       </google-codelab-step>
@@ -333,7 +335,7 @@
 <p>自分のメアドに送られてきたメールに記載された数字をメモし、次画面に入力するとアカウント作成が完了します。</p>
 <h2 is-upgraded>1-2. Googleログイン</h2>
 <p>下記URLにアクセスして画面右上の「Googleアカウントに移動」ボタンをクリックして、登録したメアドとパスワードでログインします。</p>
-<p><a href="https://myaccount.google.com/" target="_blank">https://myaccount.google.com/</a></p>
+<p><a href="https://myaccount.google.com/" target="_blank">Google Account</a></p>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
@@ -343,7 +345,7 @@
         <p>FlutterFlowにGoogleアカウントのユーザを登録します。</p>
 <h2 is-upgraded>2-1. FlutterFlowへのユーザ登録</h2>
 <p>​​下記URLにアクセスして画面右上の「Start for free」ボタンをクリックします。</p>
-<p><a href="https://flutterflow.io" target="_blank">https://flutterflow.io</a></p>
+<p><a href="https://flutterflow.io" target="_blank">FlutterFlow</a></p>
 <p class="image-container"><img style="width: 601.70px" src="img/4fbd44380933d66c.png"></p>
 <p>「Create Account」画面が表示されるので、画面下の「Google」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 601.70px" src="img/b5677669d5822ff2.png"></p>
@@ -660,6 +662,104 @@
     
       <google-codelab-step label="まとめ" duration="0">
         <p>（TODO）</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="【講師作業】事前準備" duration="0">
+        <p>本演習をはじめるにあたりFlutterFlowの有料アカウントを使い講師側でプロジェクトの作成と初期設定を行う必要があります。</p>
+<h2 is-upgraded>1. FlutterFlowにログイン</h2>
+<p>フリーアカウントの状態でFlutterFlowにログインするとログイン後に表示される画面上部に<img style="width: 56.46px" src="img/9ff879fd846d21f2.png">が表示されます。</p>
+<p class="image-container"><img style="width: 430.36px" src="img/df1564afd0194981.png"></p>
+<h2 is-upgraded>2. 有料アカウントへのアップグレード</h2>
+<p><img style="width: 58.67px" src="img/3c5d55aef4bf27af.png">ボタンをクリックすると下記のダイアログが表示されるため、月額$70のPro版を選択し、クレジットカードでの引き落としを設定します。これによってページ作成時にチャットなどの有料版テンプレートを選択できるようになります。</p>
+<p class="image-container"><img style="width: 582.25px" src="img/6a3e4d59be226ae7.png"></p>
+<h2 is-upgraded>3. 学生用のプロジェクト作成</h2>
+<p>学生用にFirebaseプロジェクトとFlutterFlowプロジェクトを作成します。</p>
+<ol type="1" start="1">
+<li>Firebaseにログイン</li>
+</ol>
+<p><a href="https://firebase.google.com/" target="_blank">Firebase</a> に遷移し、画面右上の「コンソールへ移動」をクリックします。</p>
+<p class="image-container"><img style="width: 431.36px" src="img/2f759cade5deca74.png"></p>
+<p>ログインしていないとログインするためのGoogleアカウントを聞かれるので講師用のGoogleアカウントでログインします。</p>
+<ol type="1" start="2">
+<li>Firebaseプロジェクトの作成</li>
+</ol>
+<p>「+ プロジェクトを追加」をクリックして提供先の学生がわかるようなプロジェクト名（ここでは「ASUTEST」に設定）をつけて「続行」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 316.36px" src="img/377ae889832b0d84.png"></p>
+<p>次ページでGoogleアナリティクスを無効化して「プロジェクト作成」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 317.36px" src="img/1a4448810fe6f493.png"></p>
+<p>新しいFirebaseプロジェクトが作成されるので「続行」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 216.36px" src="img/c4f51cd07d46cda5.png"></p>
+<ol type="1" start="3">
+<li>Firebase Authの有効化</li>
+</ol>
+<p>画面左メニューから「Authentication」を選択し、「始める」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 347.36px" src="img/976dbdb0c7c4acfb.png"></p>
+<ol type="1" start="4">
+<li>Firebase Authの「メール/パスワード」を有効化</li>
+</ol>
+<p>「Sign-in method」タブが選択され、下記ページが表示されるため「メール / パスワード」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 345.36px" src="img/c097a76aea6d2749.png"></p>
+<p>「メール / パスワード」を「有効にする」にチェックを入れ「保存」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 371.36px" src="img/bdb45a1667504eb8.png"></p>
+<ol type="1" start="5">
+<li>Firebase Authへのユーザ追加</li>
+</ol>
+<p>「Users」タブを選択して「ユーザを追加」ボタンをクリックし、メールとパスワードの入力が求められるため、学生のメアドと適当な初期パスワードを入力して「ユーザを追加」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 388.12px" src="img/2faee412dd937743.png"></p>
+<p>また、作成するチャットアプリで1対1チャットの会話相手であるユーザとして「test@test.com」というアカウントも追加で作成しておきます（パスワードは適当にセットします）。</p>
+<ol type="1" start="6">
+<li>Firestore Databaseの有効化</li>
+</ol>
+<p>画面左メニューから「Firestore Database」を選択し、「データベースの作成」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 370.81px" src="img/f57468e68fcbcfc6.png"></p>
+<p>「本番環境モードで開始する」にチェックを入れて「次へ」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 377.36px" src="img/f41eae252fde9064.png"></p>
+<p>次ページでデータベースが作成される場所が指定できますが、デフォルトのまま「有効にする」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 378.36px" src="img/420bee1f0fb05224.png"></p>
+<ol type="1" start="7">
+<li>Firebaseのユーザと権限に「firebase@flutterflow.io」ユーザの追加</li>
+</ol>
+<p>FlutterFlowプラットフォームからFirebaseプロジェクトへの接続を可能にするために<br>「firebase@flutterflow.io」ユーザをFirebaseの「ユーザと権限」に追加します。</p>
+<p>まずは下図のとおり、Firebaseプロジェクト画面のメニューから「プロジェクトの概要」＞「ユーザと権限」を選択します。</p>
+<p class="image-container"><img style="width: 338.36px" src="img/ab9c126c671526b6.png"></p>
+<p>画面右の「メンバーの追加」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 427.01px" src="img/c6b3c9a824e82a6e.png"></p>
+<p>表示されるダイアログの「メールアドレス」に「firebase@flutterflow.io」を入力し、「役割」には「Firebaseの役割を割り当てる」を選択し、Firebaseの「管理」にチェックを入れ、「完了」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 253.02px" src="img/db0da65332c7a6ca.png"></p>
+<p>下記のように設定されたことを確認し「メンバーを追加」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 460.36px" src="img/6eb2405e9bd93437.png"></p>
+<ol type="1" start="8">
+<li>FirebaseのプロジェクトIDの取得</li>
+</ol>
+<p>「プロジェクトの設定」画面の「全体」タブを選択し、表示される「プロジェクトID」をメモします。</p>
+<p class="image-container"><img style="width: 277.36px" src="img/b3e636647fbe6312.png"></p>
+<ol type="1" start="9">
+<li>FlutterFlowプロジェクトの作成</li>
+</ol>
+<p>次にFlutterFlowのプロジェクトを作成します。FlutterFlowへのログイン後に表示される画面（「Welcome to FlutterFlow」と表示される画面）で「+ Create Project」ボタンをクリックすると「Create Project」ダイアログが開くので「Project Name」に学生を区別できる名前（ここでは「ASUTEST」としています）を入れて「Blank App」テンプレートの「+ Create New」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 494.32px" src="img/87891df08e0f47e3.png"></p>
+<p>「Project Setup Step 1/2」のダイアログが開くので「Setup Firebase」にチェックが入っていることを確認して「Next Step」ボタンをクリックします。<img style="width: 425.38px" src="img/fc29a147eaac8502.png"></p>
+<p>次に「Project Setup Step 2/2」のダイアログが開くので「Firebase Project ID」に「8. FirebaseのプロジェクトIDの取得」でメモしたプロジェクトIDを入力し、「Connect」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 424.36px" src="img/eefca510b7a3976.png"></p>
+<p>「Connect」が成功したら「Enable Authentication」と「Create User Collection」にチェックを入れて「Auto Generate Config Files」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 332.36px" src="img/b7ab11fcd9967744.png"></p>
+<p>「Generate Config Files」ダイアログが表示されるため「Generate Files」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 330.42px" src="img/d1cb96eda598f245.png"></p>
+<p>しばらくするとFlutterFlowプロジェクトとFirebaseが連携し、下図のダイアログが表示されるので「Start Building」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 321.96px" src="img/38a7f24f01ab94ac.png"></p>
+<h2 is-upgraded>4. LoginPageとHomePageの追加</h2>
+<p>あああ</p>
+<h2 is-upgraded>5. ChatPage、AllChatPage、AddChatUsersPage、CreateGroupChatPageの追加</h2>
+<p>あああ</p>
+<h2 is-upgraded>6. FlutterFlowプロジェクトの学生へのシェア</h2>
+<p>学生のために作成したFlutterFlowプロジェクトを学生に公開します。</p>
+<p>画面左端のメニューから<img style="width: 21.10px" src="img/62818c5c4412bb50.png">アイコンをクリックして「Project Setup」の「Team」を選択し、「Invita User」をクリックします。</p>
+<p class="image-container"><img style="width: 521.36px" src="img/95aa03e7d357b937.png"></p>
+<p>「Invite User」ダイアログが表示されるので、「Email Address」テキストエリアに学生のメールアドレスを入力し「Invite」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 346.36px" src="img/5b23823e3db64e00.png"></p>
+<p>以上の作業を演習を行う学生分だけ実施します。</p>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
