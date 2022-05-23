@@ -494,12 +494,12 @@
 <h3 is-upgraded><strong>① 「Page or Component」を開く。</strong></h3>
 <p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、画面下の <img style="width: 51.63px" src="img/ee7167fa2f60a700.png"> ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 281.55px" src="img/58f51e5d4daaf6ec.png"></p>
-<h3 is-upgraded><strong>②「Create Page」ダイアログで。</strong></h3>
+<h3 is-upgraded><strong>②「ProfilePage」の作成</strong></h3>
 <p>「Create Page」ダイアログが開くので、テキストエリアに「ProfilePage」と入力し、下のタブから「Settings」を選んで「Edit Profile1」を選んで「Use Template Theme」をクリックします。</p>
 <p class="image-container"><img style="width: 453.14px" src="img/f5be081c76788cf4.png"></p>
-<h3 is-upgraded><strong>③「Create Page」ダイアログで。</strong></h3>
+<h3 is-upgraded><strong>③「ProfilePage」の編集開始</strong></h3>
 <p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
-<h3 is-upgraded><strong>④「Edit Profile」の編集。</strong></h3>
+<h3 is-upgraded><strong>④「Edit Profile」の編集</strong></h3>
 <p>画面上部の「Edit Profile」を選択し、「ユーザプロフィール」に変更します。</p>
 <p class="image-container"><img style="width: 619.36px" src="img/698841cbbb5e2dd4.png"></p>
 <p>画面上部の矢印アイコン<img style="width: 20.00px" src="img/355a1d0d8fa1d7cb.png">とそれが乗っているRowは削除します。</p>
@@ -545,40 +545,94 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="新規ユーザ登録画面の作成" duration="0">
-        <p>。</p>
+      <google-codelab-step label="新規ユーザ登録とパスワード再設定画面の作成" duration="0">
+        <p>初期ユーザとしては学生のASUメアドと「<a href="mailto:test@test.com" target="_blank">test@test.com</a>」ユーザのみが登録されていますが、作成したアプリに他のユーザにも公開して利用してもらいたいでしょうから、ログイン画面に新規ユーザ登録画面を追加します。</p>
+<p>さらに</p>
 <h2 is-upgraded>前提条件</h2>
 <ul>
-<li>。</li>
+<li>ログインの設定が完了していること。</li>
 </ul>
-<h2 is-upgraded>1. ああ</h2>
-<p>あああ</p>
-<p>Copyright 2022 RISA Co., LTD.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="パスワード再設定依頼画面の作成" duration="0">
-        <p>。</p>
-<h2 is-upgraded>前提条件</h2>
-<ul>
-<li>。</li>
-</ul>
-<h2 is-upgraded>1. あああ</h2>
-<p>あああ</p>
+<h2 is-upgraded>1. FlutterFlowにログインしプロジェクトを選択</h2>
+<p>下記URLにアクセスして「Google」ボタンをクリックしてログインし、FlutterFlowのダッシュボード上で「ASU...」から始まる名前のプロジェクトを選択します。</p>
+<p><a href="https://app.flutterflow.io/" target="_blank">https://app.flutterflow.io/</a></p>
+<h2 is-upgraded>2. 新規ユーザ登録画面作成</h2>
+<h3 is-upgraded><strong>① 「Page or Component」を開く</strong></h3>
+<p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、画面下の <img style="width: 51.63px" src="img/ee7167fa2f60a700.png"> ボタンをクリックします。</p>
+<h3 is-upgraded><strong>②「CreateAccountPage」の作成</strong></h3>
+<p>「Create Page」ダイアログが開くので、テキストエリアに「CreateAccountPage」と入力し、下のタブから「Auth」を選んで2行目の「Create Account 4」を選んで「Use Template Theme」をクリックします。</p>
+<p class="image-container"><img style="width: 404.45px" src="img/e8f70ff2a6935f62.png"></p>
+<h3 is-upgraded><strong>③「CreateAccountPage」の編集開始</strong></h3>
+<p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
+<h3 is-upgraded><strong>④「Create Account」の編集</strong></h3>
+<p>画面上部の「Create Account」を選択し、「アカウントの作成」に変更します。</p>
+<p class="image-container"><img style="width: 544.36px" src="img/be982ceefaf714f5.png"></p>
+<p>その下の「Create your ...」部分を編集し、「ユーザ登録するメールアドレスとパスワードを２回入力してボタンをクリックすると登録したメールアドレスに確認メールが届きます。」に修正します。</p>
+<p class="image-container"><img style="width: 542.36px" src="img/aba08828baebaf91.png"></p>
+<p>さらに「Create Account」ボタンをクリックして「Button Text」の「Text」を編集し「アカウントの作成」に修正します。</p>
+<p class="image-container"><img style="width: 540.36px" src="img/3aa7ec8b6440d2e0.png"></p>
+<p>以上で新規ユーザ登録画面の作成が完了です。</p>
+<h2 is-upgraded>3. パスワード再設定画面作成</h2>
+<h3 is-upgraded><strong>① 「Page or Component」を開く</strong></h3>
+<p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、画面下の <img style="width: 51.63px" src="img/ee7167fa2f60a700.png"> ボタンをクリックします。</p>
+<h3 is-upgraded><strong>②「ForgotPasswordPage」の作成</strong></h3>
+<p>「Create Page」ダイアログが開くので、テキストエリアに「ForgotPasswordPage」と入力し、下のタブから「Auth」を選んで2行目の「Forgot Password 3」を選んで「Use Template Theme」をクリックします。</p>
+<p class="image-container"><img style="width: 474.36px" src="img/e1e6f402ebb41481.png"></p>
+<h3 is-upgraded><strong>③「ForgotPasswordPage」の編集開始</strong></h3>
+<p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
+<h3 is-upgraded><strong>④「Forgot Password」の編集</strong></h3>
+<p>画面上部の「Forgot Password」を選択し、右側のパレット上で「パスワード再設定」に変更します。</p>
+<p class="image-container"><img style="width: 528.36px" src="img/32ef3f472dfbca19.png"></p>
+<p>またその下の「We will send you ...」のテキストを選択し、右側のパレット上で「アカウント登録済みのメールアドレスを入力してボタンをクリックするとパスワードをリセットする画面へのリンクをメールします。」に修正します。</p>
+<p class="image-container"><img style="width: 526.36px" src="img/fd55ec85ab6c855b.png"></p>
+<p>さらに、その下の「Send Link」ボタンをクリックし、「Button Text」の「Text」を編集し、「リンクの送信」に修正します。</p>
+<p class="image-container"><img style="width: 519.36px" src="img/a8573c121a9338b5.png"></p>
+<p>以上で新規ユーザ登録画面とパスワード再設定画面が完成です。</p>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Firebaseの参照" duration="0">
-        <p>。</p>
-<h2 is-upgraded>前提条件</h2>
-<ul>
-<li>。</li>
-</ul>
-<h2 is-upgraded>1. あああ</h2>
-<p>あああ</p>
+        <p>今までにノーコードで構築したアプリのログイン、ユーザ登録、パスワード再設定、ユーザプロフィールの参照といった機能はFirebase（ファイアベース）と呼ばれるバックエンド機能を利用しています。FirebaseもFlutterFlowと同じようにWebサービスであるため、学生のアカウントでログインして内容を確認します。</p>
+<h3 is-upgraded><strong>① Firebaseに接続</strong></h3>
+<p>下記URLにアクセスし、画面右上の「コンソールへ移動」リンクをクリックします。</p>
+<p><a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a> </p>
+<p>学生のメアドでGoogleログインしている場合、そのままFirebaseプロジェクトが表示されるため、ASUから始まる名前のプロジェクトを選択します。</p>
+<p class="image-container"><img style="width: 288.33px" src="img/cdfe35b86a50c5e7.png"></p>
+<p>下記の通り、Firebase利用規約が表示されることがあるので、同意にチェックをいれて「続行」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 312.11px" src="img/e77b4cd8ab8e6f82.png"></p>
+<h3 is-upgraded><strong>② Firebase Authenticationの確認</strong></h3>
+<p>左メニューから「構築」＞「Authentication」を選択し、「Users」タブが選択されていることを確認します。ここにはログイン可能なユーザのリストが表示されます。「ユーザを追加」ボタンをクリックすることで新たなユーザを追加することが可能です。</p>
+<p class="image-container"><img style="width: 435.36px" src="img/7550f5fd8928110f.png"></p>
+<p>「Template」タブを選択し、画面下部の鉛筆アイコンをクリックし、テンプレート言語を英語から日本語に変更し、「保存」ボタンをクリックします。これによってパスワード再設定用のメールの内容が日本語に変更されます。</p>
+<p class="image-container"><img style="width: 370.36px" src="img/1a04ce7fc80f1e6f.png"></p>
+<p>なお、Firebaseには下図のメニューにある機能を持っており、主要な機能としては下表のようなことを実現することが可能です。</p>
+<p><img style="width: 210.36px" src="img/4942547e0f266d7d.png">。</p>
+<table>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>機能名</p>
+</td><td colspan="1" rowspan="1"><p>説明</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>1</p>
+</td><td colspan="1" rowspan="1"><p>Authentication</p>
+</td><td colspan="1" rowspan="1"><p>Eメールによるログインや電話番号ログイン、匿名ログインといったさまざまな認証をサポートするAPIを提供します。FlutterFlowとはノーコードでプログラミングを行わず設定を行うことで連携します。</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>2</p>
+</td><td colspan="1" rowspan="1"><p>Firestore Database</p>
+</td><td colspan="1" rowspan="1"><p>NoSQL型データベースを実現し、さらにはリアルタイムでのI/Oが可能であるため、チャットのような複数ユーザ間でのリアルタイムメッセージ共有といった従来型のリレーショナルデータベースでは実現できない高度なやりとりが可能です。</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>3</p>
+</td><td colspan="1" rowspan="1"><p>Storage</p>
+</td><td colspan="1" rowspan="1"><p>バイナリデータを保存するストレージをAPIで扱うことができるサービスです。</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>4</p>
+</td><td colspan="1" rowspan="1"><p>Functions</p>
+</td><td colspan="1" rowspan="1"><p>さまざまな言語で関数型で処理を記述し、APIで実行することができるサービスです。従量課金型のためクレジットカードを登録したアカウントでのみ利用できます。</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>5</p>
+</td><td colspan="1" rowspan="1"><p>Machine Learning</p>
+</td><td colspan="1" rowspan="1"><p>画像認識や画像分類や自然言語処理といった著名な機械学習のしくみをAPIを使って利用できます。従量課金型のためクレジットカードを登録したアカウントでのみ利用できます。</p>
+</td></tr>
+</table>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
@@ -772,6 +826,7 @@
 <p class="image-container"><img style="width: 253.02px" src="img/db0da65332c7a6ca.png"></p>
 <p>下記のように設定されたことを確認し「メンバーを追加」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 460.36px" src="img/6eb2405e9bd93437.png"></p>
+<p>さらに画面右の「メンバーの追加」ボタンをクリックし、学生のメアドを「編集者」として追加します。</p>
 <ol type="1" start="9">
 <li>FirebaseのプロジェクトIDの取得</li>
 </ol>
