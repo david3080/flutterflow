@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2022-05-31T00:30:26Z",
+  "updated": "2022-05-31T12:19:04Z",
   "id": "flutterflow-",
   "duration": 0,
   "title": "FlutterFlowを使った初めてのアプリ開発",
@@ -15,7 +15,8 @@
     "データモデル",
     "firebase",
     "firestore",
-    "flutter"
+    "flutter",
+    "flutterflow"
   ],
   "tags": [],
   "url": "flutterflow-"

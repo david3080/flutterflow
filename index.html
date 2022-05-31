@@ -29,11 +29,11 @@
     
       <google-codelab-step label="はじめに" duration="0">
         <h2 is-upgraded>本書のコンセプト</h2>
-<p>最近はコロナの影響もあり、在宅勤務が推奨され、学校の授業がオンライン化され、買い物はEコマースの利用が増加し、食事の際は出前アプリの利用が流行っています。コロナ以前から社会生活におけるデジタル化の必要性がうたわれていましたが、コロナ渦となり、あらゆる生活シーンでオンライン利用が半強制化され、便利で使いやすいオンラインサービスに対する需要が増しています。</p>
+<p>最近はコロナの影響もあり、在宅勤務が推奨され、学校の授業がオンライン化され、買い物はeコマースの利用が増加し、食事の際は出前アプリの利用が流行っています。コロナ以前から社会生活におけるデジタル化の必要性がうたわれていましたが、コロナ渦となり、あらゆる生活シーンでオンライン利用が半強制化され、便利で使いやすいオンラインサービスに対する需要が増しています。</p>
 <p>また最近のシステム開発の動きを見ると、いままで「使いづらい」の代名詞であった行政や金融のオンラインサービスに「<a href="https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E4%B8%AD%E5%BF%83%E8%A8%AD%E8%A8%88" target="_blank">ユーザ中心設計</a>」を採用し、使いやすくセキュリティ上も安全なサービスに作り替えようとする取組が進められています。またIT化が比較的遅れていた中小企業においてもDX（<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" target="_blank">デジタルトランスフォーメーション</a>）を促進しようとする動きがあります。</p>
 <p>このように、あらゆる業界や組織において、あらゆる生活シーンで、それぞれの立場の要望にあった使いやすいオンラインサービスが安価に構築・提供されることが求められています。</p>
 <p>一方、これらの要望を担う人材育成の観点では、子供から大人までプログラミング教育がはやっており、例えば文科省は小学校でのプログラミング授業を必須化しています。しかしシステム開発や人材育成においては下記のような課題があると感じています。</p>
-<p class="image-container"><img style="width: 155.00px" src="img/86ab61652efc6246.png"></p>
+<p class="image-container"><img style="width: 145.45px" src="img/86ab61652efc6246.png"></p>
 <ul>
 <li>アプリ開発の要件定義や設計フェーズにおいて画面設計に走りがちで、データ構造やロジックの設計がおろそかになり、プログラマーがまともに開発をはじめらずプロジェクトが遅延するといった状況に陥りがちです。このような状況は「<a href="https://shop.nikkeibp.co.jp/front/commodity/0000/P82710/" target="_blank">デスマーチ</a>」と呼ばれ、20年近くIT企業でアプリ開発をみてきましたが、昔も今もこのような破綻したプロジェクトは大量に発生しています。</li>
 <li>この原因としては、システムデザインについての手法（<a href="https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E9%A7%86%E5%8B%95%E8%A8%AD%E8%A8%88" target="_blank">ドメイン駆動設計</a>や<a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" target="_blank">システムアーキテクチャ</a>など）やその説明が高尚で難しいという問題があります。そのため、本来必要なシステムデザインがスルーされ、スケジュールのプレッシャーもあり、とりあえず簡易な画面設計に走ることにつながるのではと感じています。</li>
@@ -97,7 +97,7 @@
 </table>
 <p>しかし、フラットデザインはシンプルすぎて、システムの構造やしくみが理解しづらいといったデメリットが挙げられます。そこで、Googleはフラットデザインとスキューモフィズムの中間をとり、さらに発展させた「<a href="https://material.io/" target="_blank">マテリアル・デザイン</a>」を定義し、2014年にだれもが参照して利用できるオープンソースな形でデザインガイドラインを発表しました。</p>
 <p>本書では、<a href="https://developer.apple.com/design/human-interface-guidelines/ios" target="_blank">ヒューマン・インタフェース・ガイドライン</a>の概要を述べるものの、<a href="https://material.io/" target="_blank">マテリアル・デザイン</a>をメインに説明します。また、本書で利用している開発プラットフォームであるFlutterもマテリアルデザインを全面的に採用しており、AndroidはもとよりiPhoneでもマテリアルデザインを実装することができるため、本書においては開発全般でマテリアルデザインを採用しています。</p>
-<h2 is-upgraded>4. ヒューマン・インタフェース・ガイドラインとは？</h2>
+<h2 is-upgraded>4. ヒューマン・インタフェース・ガイドライン</h2>
 <p>Apple社が提唱するUIガイドラインである<a href="https://developer.apple.com/design/human-interface-guidelines/ios" target="_blank">ヒューマン・インタフェース・ガイドライン</a>では3つのデザインテーマと6つのデザイン原則とその他設計の詳細が記載されていますが、ここでは3つのデザインテーマと6つのデザイン原則を紹介します。</p>
 <h3 is-upgraded><strong>①3つのデザインテーマ</strong></h3>
 <p>iOSアプリは「明確であること」「コンテンツにフォーカスすること」「奥行きがあること」の3つのデザインテーマにのっとってデザインすることを推奨しています。</p>
@@ -121,7 +121,7 @@
 <p>アプリの仮想オブジェクトとアクションが、現実の世界に根ざしているのかデジタルの世界に根ざしているのかにかかわらず、身近な体験のメタファー（たとえ）である場合、ユーザはより迅速に理解し学習します。例えば iOS 上で画面遷移する場合に行うドラッグしてスワイプする操作は、ユーザが画面を物理的に操作する比喩表現であり、このメタファーは iOS でうまく機能します。スイッチを切り替えたり、スライダーを移動したり、ピッカーの値をスクロールする動作も同様です。さらに、ユーザは本や雑誌のページをめくることも可能です。</p>
 <p><strong>6. ユーザーコントロール</strong></p>
 <p>アプリはユーザーが制御します。アプリは一連の行動を提案したり、危険な結果について警告したりできますが、アプリは意思決定をしません。最高のアプリは、ユーザーを有効にすることと望ましくない結果を回避することの間の正しいバランスを持ちます。アプリは、インタラクティブな要素を使い慣れた予測可能な状態に保ち、破壊的なアクションを確認し、すでに進行中の場合でも操作を簡単にキャンセルできるようにすることで、ユーザーがアプリをコントロールしているように感じさせることができます。</p>
-<h2 is-upgraded>5. マテリアルデザインとは？</h2>
+<h2 is-upgraded>5. マテリアルデザイン</h2>
 <p>マテリアルデザインとは、Googleが2014年に発表したUIのデザインガイドラインです。元々Googleは、Gmailなどの数多くのアプリを世に出していましたが、それらがパソコン、Android、iPhone、タブレットなど異なるデバイスで利用されるとき、画面サイズもOSも異なるため、異なった見た目と操作性を持ってしまったことを問題視していました。そこで、デバイスが異なっていても、統一したデザインで操作できるようなUIデザインのガイドラインを作る目的で開発されたのがマテリアルデザインです。例えば、スマホのようなデバイス用には、片手で操作することを想定し、直感的で意味のある物理的（マテリアル）な概念をデザインに取り入れてガイドラインが策定されています。また、明示はされていませんが、ユーザ インタフェースという意味では、ヒューマン・インタフェース・ガイドラインで挙げた3つのデザインテーマと6つのデザイン原則はマテリアルデザインでも目指すところは同じです。</p>
 <p>マテリアルデザインは、あくまでもガイドラインであるため、必ず準拠すべきものではありませんが、デザインの部品がどのような形でどのように動くかが細かく規定されており、Java、Kotlin、Swift、JavaScript、Flutterといったさまざまな言語に対応した無料で利用できるプログラムライブラリとともに提供されているため、まるまる採用することで一定レベル以上のUIデザインのアプリを最小のコストで開発することができます。そのため、多くのプロジェクトで採用されるに至っています。</p>
 <h3 is-upgraded><strong>①マテリアルデザインの4つの考え方</strong></h3>
@@ -349,10 +349,10 @@
       </google-codelab-step>
     
       <google-codelab-step label="ログインアプリの作成" duration="0">
-        <p>Eコマースサイトやチャットアプリなどユーザの区別が必要だったり、秘匿情報を扱うアプリケーションではユーザ登録とログインが必要であるため、アプリケーションの基本はログイン画面です。ここではFirebaseが提供する認証のしくみとFlutterFlowを組み合わせたログインアプリを作成します。</p>
+        <p>eコマースサイトやチャットアプリなどユーザの区別が必要だったり、秘匿情報を扱うアプリケーションではユーザ登録とログインが必要であるため、アプリケーションの基本はログイン画面です。ここではFirebaseが提供する認証のしくみとFlutterFlowを組み合わせたログインアプリを作成します。</p>
 <h2 is-upgraded>前提条件</h2>
 <ul>
-<li>Firebaseと連携したFlutterFlowのプロジェクトが作成されていること。</li>
+<li>講師によってFirebaseと連携したFlutterFlowのプロジェクトが作成され、受講者に共有されていること。</li>
 </ul>
 <h2 is-upgraded>1. FlutterFlowにログイン</h2>
 <p>下記URLにアクセスして「Google」ボタンをクリックしてログインします。</p>
@@ -457,7 +457,17 @@
 </ol>
 <p class="image-container"><img style="width: 205.84px" src="img/71b83c273df17f10.png"></p>
 <p>以上でログアウトボタンの設定が完了しました。</p>
-<h3 is-upgraded>④ ログインアプリの実行</h3>
+<h2 is-upgraded>5. ルールの設定と更新</h2>
+<p>FlutterFlow画面の左端メニューから「Firestore」<img style="width: 23.65px" src="img/58f85d20501ea1a4.png"> アイコンを選択し、「Collections」の中から「users」を選択します。</p>
+<p class="image-container"><img style="width: 188.40px" src="img/b7fbf58a2e8e9e90.png"></p>
+<p>「Database」画面の「Settings」タブを選択し、表示される「Firestore Settings」画面から「Firestore Rules」の表に画面をスクロールし、表示される表上の「users」の行について、「Create」「Read」「Write」「Delete」の全列を「Users Collection」に変更し、表右上に表示される「Deploy」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 680.27px" src="img/b4df3318668a35df.png"></p>
+<p>すると下図のような確認のためのダイアログ「Deploy Rules」が表示されるので、「Deploy Now」ボタンをクリックします（※すでにusersコレクションの全項目が「Users Collections」に設定されている場合は「Deploy」ボタンが表示されないためこのDeploy作業は不要です）。</p>
+<p class="image-container"><img style="width: 398.17px" src="img/3aa4bf2cf90f6f67.png"></p>
+<p>下図のように「Deployd」となればルールの更新は完了です。</p>
+<p class="image-container"><img style="width: 410.81px" src="img/559635ac36bdca07.png"></p>
+<p>これによってusersコレクションへのアクセス権については、読み込みは誰でも行えますが、作成と書込はログインユーザのみが行え、削除はできない、という設定がなされます。</p>
+<h2 is-upgraded>6. ログインアプリの実行</h2>
 <p>画面右上の「Run」ボタンをクリックします。</p>
 <h3 is-upgraded><img style="width: 410.36px" src="img/21e2d50e6c7cbd44.png"></h3>
 <p>すると新しいタブが開いて下記の画面が表示されます。これは作成したログイン画面がビルドされていることを表しており、ビルドが完成するまで数分まってください。</p>
@@ -467,6 +477,52 @@
 <p>ログインが成功すると下図の画面が表示されるので、ログアウトボタンをクリックしてログイン画面に戻ります。</p>
 <p class="image-container"><img style="width: 272.36px" src="img/a71c85b14cdfe01f.png"></p>
 <p>以上でログインアプリの完成です。</p>
+<p>Copyright 2022 RISA Co., LTD.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Firebaseの参照" duration="0">
+        <p>今までにノーコードで構築したアプリのログイン、ユーザ登録、パスワード再設定、ユーザプロフィールの参照といった機能はFirebase（ファイアベース）と呼ばれるバックエンド機能を利用しています。FirebaseもFlutterFlowと同じようにWebサービスであるため、学生のアカウントでログインして内容を確認します。</p>
+<h3 is-upgraded>① Firebaseに接続</h3>
+<p>下記URLにアクセスし、画面右上の「コンソールへ移動」リンクをクリックします。</p>
+<p><a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a> </p>
+<p>学生のメアドでGoogleログインしている場合、そのままFirebaseプロジェクトが表示されるため、ASUから始まる名前のプロジェクトを選択します。</p>
+<p class="image-container"><img style="width: 215.42px" src="img/cdfe35b86a50c5e7.png"></p>
+<p>下記の通り、Firebase利用規約が表示されることがあるので、同意にチェックをいれて「続行」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 312.11px" src="img/e77b4cd8ab8e6f82.png"></p>
+<h3 is-upgraded>② Firebase Authenticationの確認</h3>
+<p>左メニューから「構築」＞「Authentication」を選択し、「Users」タブが選択されていることを確認します。ここにはログイン可能なユーザのリストが表示されます。「ユーザを追加」ボタンをクリックすることで新たなユーザを追加することが可能です。</p>
+<p class="image-container"><img style="width: 435.36px" src="img/7550f5fd8928110f.png"></p>
+<p>「Template」タブを選択し、画面下部の鉛筆アイコンをクリックし、テンプレート言語を英語から日本語に変更し、「保存」ボタンをクリックします。これによってパスワード再設定用のメールの内容が日本語に変更されます。</p>
+<p class="image-container"><img style="width: 370.36px" src="img/1a04ce7fc80f1e6f.png"></p>
+<p>なお、Firebaseには下図のメニューにある機能を持っており、主要な機能としては下表のようなことを実現することが可能です。</p>
+<p><img style="width: 210.36px" src="img/4942547e0f266d7d.png">。</p>
+<table>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>機能名</p>
+</td><td colspan="1" rowspan="1"><p>説明</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>1</p>
+</td><td colspan="1" rowspan="1"><p>Authentication</p>
+</td><td colspan="1" rowspan="1"><p>eメールによるログインや電話番号ログイン、匿名ログインといったさまざまな認証をサポートするAPIを提供します。FlutterFlowとはノーコードでプログラミングを行わず設定を行うことで連携します。</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>2</p>
+</td><td colspan="1" rowspan="1"><p>Firestore Database</p>
+</td><td colspan="1" rowspan="1"><p>NoSQL型データベースを実現し、さらにはリアルタイムでのI/Oが可能であるため、チャットのような複数ユーザ間でのリアルタイムメッセージ共有といった従来型のリレーショナルデータベースでは実現できない高度なやりとりが可能です。</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>3</p>
+</td><td colspan="1" rowspan="1"><p>Storage</p>
+</td><td colspan="1" rowspan="1"><p>バイナリデータを保存するストレージをAPIで扱うことができるサービスです。</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>4</p>
+</td><td colspan="1" rowspan="1"><p>Functions</p>
+</td><td colspan="1" rowspan="1"><p>さまざまな言語で関数型で処理を記述し、APIで実行することができるサービスです。従量課金型のためクレジットカードを登録したアカウントでのみ利用できます。</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>5</p>
+</td><td colspan="1" rowspan="1"><p>Machine Learning</p>
+</td><td colspan="1" rowspan="1"><p>画像認識や画像分類や自然言語処理といった著名な機械学習のしくみをAPIを使って利用できます。従量課金型のためクレジットカードを登録したアカウントでのみ利用できます。</p>
+</td></tr>
+</table>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
@@ -488,24 +544,23 @@
 <h3 is-upgraded>②「ProfilePage」の作成</h3>
 <p>「Create Page」ダイアログが開くので、テキストエリアに「ProfilePage」と入力し、下のタブから「Settings」を選んで「Edit Profile1」を選んで「Use Template Theme」をクリックします。</p>
 <p class="image-container"><img style="width: 453.14px" src="img/f5be081c76788cf4.png"></p>
-<h3 is-upgraded>③「ProfilePage」の編集開始</h3>
+<h3 is-upgraded>③「Edit Profile」の編集</h3>
 <p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
-<h3 is-upgraded>④「Edit Profile」の編集</h3>
 <p>画面上部の「Edit Profile」を選択し、「ユーザプロフィール」に変更します。</p>
 <p class="image-container"><img style="width: 619.36px" src="img/698841cbbb5e2dd4.png"></p>
 <p>画面上部の矢印アイコン<img style="width: 20.00px" src="img/355a1d0d8fa1d7cb.png">とそれが乗っているRowは削除します。</p>
-<h3 is-upgraded>⑤「Save Chages」ボタンの編集</h3>
+<h3 is-upgraded>④「Save Chages」ボタンの編集</h3>
 <p>画面下部の「Save Changes」ボタンを選択し、「プロフィール更新」に変更します。</p>
 <p class="image-container"><img style="width: 499.36px" src="img/3f72b1ab7bac9c3f.png"></p>
-<h3 is-upgraded>⑥ CircleImageのPath変更</h3>
+<h3 is-upgraded>⑤ CircleImageのPath変更</h3>
 <p>犬の画面（CircleImage）をクリックして右パレットのPathの右側の「Set from Variable」をクリックします。 </p>
 <p class="image-container"><img style="width: 513.69px" src="img/354f3078390eb972.png"></p>
 <p>開いたダイアログから「Source」に「Authenticated User」、「Available Options」に「Photo URL」を選択し、「Save」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 289.30px" src="img/d8479ddd840b8632.png"></p>
-<h3 is-upgraded>⑦「Save Chages」ボタンの編集</h3>
+<h3 is-upgraded>⑥「Save Chages」ボタンの編集</h3>
 <p>犬の画像の下の「Chage Photo」ボタンをクリックし、Button Textを「画像の変更」に修正します。</p>
 <p class="image-container"><img style="width: 387.36px" src="img/1e557b93e59de23c.png"></p>
-<h3 is-upgraded>⑧テキストフィールドの編集</h3>
+<h3 is-upgraded>⑦テキストフィールドの編集</h3>
 <p>「Your Name」テキストフィールドを選択し、Initial Value右側の「Set from Variable」をクリックします。 </p>
 <p class="image-container"><img style="width: 394.36px" src="img/d5b731e1315603d9.png"></p>
 <p>開いたダイアログから「Source」に「Authenticated User」、「Available Options」に「Display Name」を選択し、「Save」ボタンをクリックします。</p>
@@ -515,24 +570,27 @@
 <p>開いたダイアログから「Source」に「Authenticated User」、「Available Options」に「Email」を選択し、「Save」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 224.36px" src="img/9e1b72d75b395094.png"></p>
 <p>「Email Address」テキストフィールド下の「myBio」テキストフィールドは削除します。</p>
-<h3 is-upgraded>⑨「firestore update」アクションを更新</h3>
+<h3 is-upgraded>⑧「firestore update」アクションを更新</h3>
 <p>画面上部右のバグアイコン<img style="width: 23.44px" src="img/113087311e27846.png">をクリックして、表示されるダイアログの「firestore update」をクリックします。 </p>
 <p class="image-container"><img style="width: 278.36px" src="img/6c2a6f349303b947.png"></p>
 <p>ダイアログが開くので「Source」に「Authenticated User」、「Available Options」に「User Record Reference」、「Set Field」に自動的に値がセットされるので、一番下の「myBio」を削除します。</p>
-<p class="image-container"><img style="width: 272.44px" src="img/a9fdea15adb85728.png"></p>
+<p class="image-container"><img style="width: 259.29px" src="img/a9fdea15adb85728.png"></p>
 <p>さらに「Action 2」のハンバーガーアイコン<img style="width: 20.00px" src="img/e06f3e06f278f060.png">をクリックし、「Delete Action」を選択し、確認のダイアログが開くので Remove ボタンをクリックします。</p>
-<p class="image-container"><img style="width: 283.62px" src="img/434680dc5d06d6d3.png"></p>
+<p class="image-container"><img style="width: 261.85px" src="img/434680dc5d06d6d3.png"></p>
 <p>削除できたら画面右下の<img style="width: 44.35px" src="img/a2cfea11511ef4a.png">ボタンをクリックしてダイアログを閉じます。</p>
-<h3 is-upgraded>⑩ボトムナビゲーションバーの設定</h3>
+<h3 is-upgraded>⑨ボトムナビゲーションバーの設定</h3>
 <p>左端のメニューから設定アイコン<img style="width: 24.57px" src="img/a35508990fb81076.png">をクリックし、その右から「NavBar &amp; AppBar」を選択し、右の画面で「Show Nav Bar」にチェックをいれます。「Nav Bar requires at least two pages to have &#34;Show on Nav Bar&#34; set.（Nav Barは少なくとも2つのページで「Show on Nav Bar」の設定が必要です）」というアラートメッセージが表示されますが、ひとまず無視します。</p>
-<p class="image-container"><img style="width: 680.27px" src="img/aa5b5f7bafffd377.png"></p>
+<p class="image-container"><img style="width: 488.86px" src="img/aa5b5f7bafffd377.png"></p>
 <p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、「HomePage」を選択し、右端パレットの「Show on Nav Bar」にチェックを入れます。</p>
-<p class="image-container"><img style="width: 288.36px" src="img/aac9c8de00aa74ed.png"></p>
+<p class="image-container"><img style="width: 238.46px" src="img/aac9c8de00aa74ed.png"></p>
 <p>さらに「ProfilePage」を選択し、右端パレットの「Show on Nav Bar」にチェックを入れ、Nav Bar Iconの「Home Outlined」をクリックし、表示されるダイアログに「person」と入力して<img style="width: 20.61px" src="img/8398c46924841bb8.png">アイコンを選択します。</p>
-<p class="image-container"><img style="width: 289.36px" src="img/3ed0e4d723659626.png"></p>
+<p class="image-container"><img style="width: 241.66px" src="img/3ed0e4d723659626.png"></p>
 <p>以上によりボトムナビゲーションバーが三つセットされます。左からホーム画面、チャット画面、プロフィール画面を表します。</p>
 <p class="image-container"><img style="width: 306.36px" src="img/ce0e4129f72d6a96.png"></p>
-<p>ユーザプロフィール画面の作成は以上です。</p>
+<h2 is-upgraded>3. プロフィール画面の実行</h2>
+<p>画面右上の「Run」ボタンをクリックします。</p>
+<h3 is-upgraded><img style="width: 410.36px" src="img/21e2d50e6c7cbd44.png"></h3>
+<p>すると新しいタブが開いて下記の画面が表示されます。これは作成したアプリがビルドされていることを表しており、ビルドが完成するまで数分まちます。</p>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
@@ -553,7 +611,7 @@
 <p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、画面下の <img style="width: 51.63px" src="img/ee7167fa2f60a700.png"> ボタンをクリックします。</p>
 <h3 is-upgraded>②「CreateAccountPage」の作成</h3>
 <p>「Create Page」ダイアログが開くので、テキストエリアに「CreateAccountPage」と入力し、下のタブから「Auth」を選んで2行目の「Create Account 4」を選んで「Use Template Theme」をクリックします。</p>
-<p class="image-container"><img style="width: 404.45px" src="img/e8f70ff2a6935f62.png"></p>
+<p class="image-container"><img style="width: 366.46px" src="img/e8f70ff2a6935f62.png"></p>
 <h3 is-upgraded>③「CreateAccountPage」の編集開始</h3>
 <p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
 <h3 is-upgraded>④「Create Account」の編集</h3>
@@ -564,6 +622,10 @@
 <p>さらに「Create Account」ボタンをクリックして「Button Text」の「Text」を編集し「アカウントの作成」に修正します。</p>
 <p class="image-container"><img style="width: 540.36px" src="img/3aa7ec8b6440d2e0.png"></p>
 <p>以上で新規ユーザ登録画面の作成が完了です。</p>
+<h3 is-upgraded>⑤ 新規ユーザ登録画面の実行</h3>
+<p>画面右上の「Run」ボタンをクリックします。</p>
+<h3 is-upgraded><img style="width: 410.36px" src="img/21e2d50e6c7cbd44.png"></h3>
+<p>すると新しいタブが開いて下記の画面が表示されます。これは作成したアプリがビルドされていることを表しており、ビルドが完成するまで数分まちます。</p>
 <h2 is-upgraded>3. パスワード再設定画面作成</h2>
 <h3 is-upgraded>① 「Page or Component」を開く</h3>
 <p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、画面下の <img style="width: 51.63px" src="img/ee7167fa2f60a700.png"> ボタンをクリックします。</p>
@@ -574,58 +636,16 @@
 <p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
 <h3 is-upgraded>④「Forgot Password」の編集</h3>
 <p>画面上部の「Forgot Password」を選択し、右側のパレット上で「パスワード再設定」に変更します。</p>
-<p class="image-container"><img style="width: 528.36px" src="img/32ef3f472dfbca19.png"></p>
+<p class="image-container"><img style="width: 428.06px" src="img/32ef3f472dfbca19.png"></p>
 <p>またその下の「We will send you ...」のテキストを選択し、右側のパレット上で「アカウント登録済みのメールアドレスを入力してボタンをクリックするとパスワードをリセットする画面へのリンクをメールします。」に修正します。</p>
-<p class="image-container"><img style="width: 526.36px" src="img/fd55ec85ab6c855b.png"></p>
+<p class="image-container"><img style="width: 425.66px" src="img/fd55ec85ab6c855b.png"></p>
 <p>さらに、その下の「Send Link」ボタンをクリックし、「Button Text」の「Text」を編集し、「リンクの送信」に修正します。</p>
-<p class="image-container"><img style="width: 519.36px" src="img/a8573c121a9338b5.png"></p>
+<p class="image-container"><img style="width: 428.86px" src="img/a8573c121a9338b5.png"></p>
 <p>以上で新規ユーザ登録画面とパスワード再設定画面が完成です。</p>
-<p>Copyright 2022 RISA Co., LTD.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Firebaseの参照" duration="0">
-        <p>今までにノーコードで構築したアプリのログイン、ユーザ登録、パスワード再設定、ユーザプロフィールの参照といった機能はFirebase（ファイアベース）と呼ばれるバックエンド機能を利用しています。FirebaseもFlutterFlowと同じようにWebサービスであるため、学生のアカウントでログインして内容を確認します。</p>
-<h3 is-upgraded>① Firebaseに接続</h3>
-<p>下記URLにアクセスし、画面右上の「コンソールへ移動」リンクをクリックします。</p>
-<p><a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a> </p>
-<p>学生のメアドでGoogleログインしている場合、そのままFirebaseプロジェクトが表示されるため、ASUから始まる名前のプロジェクトを選択します。</p>
-<p class="image-container"><img style="width: 288.33px" src="img/cdfe35b86a50c5e7.png"></p>
-<p>下記の通り、Firebase利用規約が表示されることがあるので、同意にチェックをいれて「続行」ボタンをクリックします。</p>
-<p class="image-container"><img style="width: 312.11px" src="img/e77b4cd8ab8e6f82.png"></p>
-<h3 is-upgraded>② Firebase Authenticationの確認</h3>
-<p>左メニューから「構築」＞「Authentication」を選択し、「Users」タブが選択されていることを確認します。ここにはログイン可能なユーザのリストが表示されます。「ユーザを追加」ボタンをクリックすることで新たなユーザを追加することが可能です。</p>
-<p class="image-container"><img style="width: 435.36px" src="img/7550f5fd8928110f.png"></p>
-<p>「Template」タブを選択し、画面下部の鉛筆アイコンをクリックし、テンプレート言語を英語から日本語に変更し、「保存」ボタンをクリックします。これによってパスワード再設定用のメールの内容が日本語に変更されます。</p>
-<p class="image-container"><img style="width: 370.36px" src="img/1a04ce7fc80f1e6f.png"></p>
-<p>なお、Firebaseには下図のメニューにある機能を持っており、主要な機能としては下表のようなことを実現することが可能です。</p>
-<p><img style="width: 210.36px" src="img/4942547e0f266d7d.png">。</p>
-<table>
-<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>機能名</p>
-</td><td colspan="1" rowspan="1"><p>説明</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>1</p>
-</td><td colspan="1" rowspan="1"><p>Authentication</p>
-</td><td colspan="1" rowspan="1"><p>Eメールによるログインや電話番号ログイン、匿名ログインといったさまざまな認証をサポートするAPIを提供します。FlutterFlowとはノーコードでプログラミングを行わず設定を行うことで連携します。</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>2</p>
-</td><td colspan="1" rowspan="1"><p>Firestore Database</p>
-</td><td colspan="1" rowspan="1"><p>NoSQL型データベースを実現し、さらにはリアルタイムでのI/Oが可能であるため、チャットのような複数ユーザ間でのリアルタイムメッセージ共有といった従来型のリレーショナルデータベースでは実現できない高度なやりとりが可能です。</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>3</p>
-</td><td colspan="1" rowspan="1"><p>Storage</p>
-</td><td colspan="1" rowspan="1"><p>バイナリデータを保存するストレージをAPIで扱うことができるサービスです。</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>4</p>
-</td><td colspan="1" rowspan="1"><p>Functions</p>
-</td><td colspan="1" rowspan="1"><p>さまざまな言語で関数型で処理を記述し、APIで実行することができるサービスです。従量課金型のためクレジットカードを登録したアカウントでのみ利用できます。</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>5</p>
-</td><td colspan="1" rowspan="1"><p>Machine Learning</p>
-</td><td colspan="1" rowspan="1"><p>画像認識や画像分類や自然言語処理といった著名な機械学習のしくみをAPIを使って利用できます。従量課金型のためクレジットカードを登録したアカウントでのみ利用できます。</p>
-</td></tr>
-</table>
+<h3 is-upgraded>⑤ パスワード再設定画面の実行</h3>
+<p>画面右上の「Run」ボタンをクリックします。</p>
+<h3 is-upgraded><img style="width: 410.36px" src="img/21e2d50e6c7cbd44.png"></h3>
+<p>すると新しいタブが開いて下記の画面が表示されます。これは作成したアプリがビルドされていることを表しており、ビルドが完成するまで数分まちます。</p>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
@@ -689,8 +709,8 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="GridView画面の作成" duration="0">
-        <p>次に複数情報の概要をカードを並べる形で表示するGridViewを作成します。また、個別のカードをクリックすると詳細情報を表示する画面を表示します。表示するコンテンツはお好みのYoutube動画としてタイトルと動画と説明をリストして、GridView上のカードをクリックすると動画が表示されるGridViewを作ります。今回はお好みのYoutube動画として下記の授業動画を扱うこととします。</p>
+      <google-codelab-step label="YouTube動画画面の作成" duration="0">
+        <p>次に複数情報の概要をカードを並べる形で表示するGridViewを作成します。また、個別のカードをクリックすると詳細情報を表示する画面を表示します。表示するコンテンツはお好みのYouTube動画リストとしてタイトルと動画と説明をリストして、GridView上のカードをクリックすると動画が表示されるGridViewを作ります。今回はお好みのYoutube動画として下記の授業動画を扱うこととします。</p>
 <table>
 <tr><td colspan="1" rowspan="1"><p><strong>タイトル (title)</strong></p>
 </td><td colspan="1" rowspan="1"><p><strong>説明 (desc)</strong></p>
@@ -725,13 +745,13 @@
 </td><td colspan="1" rowspan="1"><p>https://youtu.be/mJAC6X9U-Po</p>
 </td></tr>
 </table>
-<h2 is-upgraded>1. Firestoreにコレクション作成</h2>
+<h2 is-upgraded>1. Firestoreコレクション作成と設定</h2>
 <h3 is-upgraded>① Firebaseにログイン</h3>
 <p>下記URLにアクセスし、画面右上の「コンソールへ移動」リンクをクリックします。</p>
 <p><a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a> </p>
 <p>学生のメアドでGoogleログインしている場合、そのままFirebaseプロジェクトが表示されるため、ASUから始まる名前のプロジェクトを選択します。</p>
 <p class="image-container"><img style="width: 288.33px" src="img/cdfe35b86a50c5e7.png"></p>
-<h3 is-upgraded>② Firestore Databaseにアクセス</h3>
+<h3 is-upgraded>② Firestore Databaseにmoviesコレクション作成</h3>
 <p>左メニューから「構築」＞「Firestore Database」を選択すると、ログインやチャットを行った際作成される「users」や「chats」といったコレクションが作成されています。</p>
 <p class="image-container"><img style="width: 362.64px" src="img/83c42932552ed7e.png"></p>
 <p>「+ コレクションを開始」をクリックし、表示されるダイアログの「コレクションID」に「movies」を入力し、「次へ」ボタンをクリックします。</p>
@@ -782,7 +802,15 @@
 </table>
 <p>以上すべてを追加すると下図のように設定が完了します。</p>
 <p class="image-container"><img style="width: 309.36px" src="img/ba823ea8e0b1d55f.png"></p>
-<h2 is-upgraded>4. 「MoviesPage」画面の作成と編集</h2>
+<h2 is-upgraded>4. ルールの設定と更新</h2>
+<p>「Database」画面の「Settings」タブを選択し、表示される「Firestore Settings」画面から「Firestore Rules」の表に画面をスクロールし、表示される表上の「movies」の行について、「Create」「Read」「Write」「Delete」の全列を「Authenticated Users」に変更し、表右上に表示される「Deploy」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 631.26px" src="img/3b536b5ae6d9bc20.png"></p>
+<p>すると下図のような確認のためのダイアログ「Deploy Rules」が表示されるので、「Deploy Now」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 398.17px" src="img/3aa4bf2cf90f6f67.png"></p>
+<p>下図のように「Deployd」となればルールの更新は完了です。</p>
+<p class="image-container"><img style="width: 426.46px" src="img/6ad30e7a75d8e492.png"></p>
+<p>これによってログインしたユーザのみが「movies」コレクションへのデータの作成（Create）、参照（Read）、書込（Write）、削除（Delete）が可能になります。</p>
+<h2 is-upgraded>5. 「MoviesPage」画面の作成と編集</h2>
 <p>動画タイトルのリストをGridViewで表示する画面「MoviesPage」を作成します。</p>
 <h3 is-upgraded>①「MoviesPage」画面編集開始</h3>
 <p>FlutterFlow画面の左端メニューから「Select Page or Component」<img style="width: 20.00px" src="img/ddafd464a50a9441.png">アイコンを選択し、「MoviesPage」を選択し、画面左端のメニューから<img style="width: 20.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示し、画面編集を開始します。</p>
@@ -814,7 +842,7 @@
 <p>「movie」を開いて「Source」に「movies Record (from GridView)」、「Available Options」に「reference」を選択します。</p>
 <p class="image-container"><img style="width: 240.49px" src="img/3dbd760e608e6f19.png"></p>
 <p>以上の設定により、GridView上の個別のカード押下時に「MoviePage」に遷移することになり、同時にFirestoreから取得したクリックしたカードに対応するレコードへのリファレンス（参照）が渡されることになります。</p>
-<h2 is-upgraded>5. 「MoviePage」画面の作成と編集</h2>
+<h2 is-upgraded>6. 「MoviePage」画面の作成と編集</h2>
 <p>個別のYoutube動画を表示する画面「MoviePage」を作成します。</p>
 <h3 is-upgraded>①「MoviePage」画面編集開始</h3>
 <p>FlutterFlow画面の左端メニューから「Select Page or Component」<img style="width: 20.00px" src="img/ddafd464a50a9441.png">アイコンを選択し、「MoviePage」を選択し、画面左端のメニューから<img style="width: 20.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示し、画面編集を開始します。</p>
@@ -828,6 +856,10 @@
 <p>右側パレットの「URL」右にあるオレンジ色の文字列「Set from Variables」をクリックし、「Source」に「movies Record (from MoviePage)」、「Available Options」に「url」を選択し「Confirm」ボタンをクリックします。</p>
 <h3 is-upgraded>⑤「Text」の追加と編集</h3>
 <p>左パレットから「Text」を「YouTube Player」の下にドラッグアンドドロップし、右側パレットのオレンジ色の文字列「Set from Variables」をクリックし、「Source」に「movies Record (from MoviePage)」、「Available Options」に「desc」を選択し「Confirm」ボタンをクリックします。</p>
+<h2 is-upgraded>7. YouTube動画画面の実行</h2>
+<p>画面右上の「Run」ボタンをクリックします。</p>
+<h3 is-upgraded><img style="width: 410.36px" src="img/21e2d50e6c7cbd44.png"></h3>
+<p>すると新しいタブが開いて下記の画面が表示されます。これは作成したアプリがビルドされていることを表しており、ビルドが完成するまで数分まちます。</p>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
