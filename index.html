@@ -29,7 +29,7 @@
     
       <google-codelab-step label="はじめに" duration="0">
         <h2 is-upgraded>本書のコンセプト</h2>
-<p>最近はコロナの影響もあり、在宅勤務が推奨され、学校の授業がオンライン化され、買い物はeコマースの利用が増加し、食事の際は出前アプリの利用が流行っています。コロナ以前から社会生活におけるデジタル化の必要性がうたわれていましたが、コロナ渦となり、あらゆる生活シーンでオンライン利用が半強制化され、便利で使いやすいオンラインサービスに対する需要が増しています。</p>
+<p>最近はコロナの影響もあり、在宅勤務が推奨され、学校の授業がオンライン化され、買い物はEコマースの利用が増加し、食事の際は出前アプリの利用が流行っています。コロナ以前から社会生活におけるデジタル化の必要性がうたわれていましたが、コロナ渦となり、あらゆる生活シーンでオンライン利用が半強制化され、便利で使いやすいオンラインサービスに対する需要が増しています。</p>
 <p>また最近のシステム開発の動きを見ると、いままで「使いづらい」の代名詞であった行政や金融のオンラインサービスに「<a href="https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E4%B8%AD%E5%BF%83%E8%A8%AD%E8%A8%88" target="_blank">ユーザ中心設計</a>」を採用し、使いやすくセキュリティ上も安全なサービスに作り替えようとする取組が進められています。またIT化が比較的遅れていた中小企業においてもDX（<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" target="_blank">デジタルトランスフォーメーション</a>）を促進しようとする動きがあります。</p>
 <p>このように、あらゆる業界や組織において、あらゆる生活シーンで、それぞれの立場の要望にあった使いやすいオンラインサービスが安価に構築・提供されることが求められています。</p>
 <p>一方、これらの要望を担う人材育成の観点では、子供から大人までプログラミング教育がはやっており、例えば文科省は小学校でのプログラミング授業を必須化しています。しかしシステム開発や人材育成においては下記のような課題があると感じています。</p>
@@ -307,17 +307,8 @@
     
       <google-codelab-step label="FlutterFlowによるノーコード開発演習" duration="0">
         <p>下記の手順でFlutterFlowによるアプリ開発を行います。全くのプログラミング初心者でも手順に従って作業すればとりあえず目的のアプリが開発できます。</p>
-<p>5. Googleアカウントの作成</p>
-<p>6. FlutterFlowへのユーザ登録</p>
-<p>7. ログインアプリの作成</p>
-<p>8. ユーザプロフィール画面の作成</p>
-<p>9. 新規ユーザ登録画面の作成</p>
-<p>10. パスワード再設定画面の作成</p>
-<p>11. Firebaseの参照</p>
-<p>12. チャットの設定</p>
-<p>13. GridView画面の作成</p>
-<p>14. アプリの公開</p>
-<p>手順3から以降の作業は有料アカウントを使って払い出され適切に設定されたFlutterFlowプロジェクトを利用する必要があります。有料アカウントを使った作業については本書の最後「【講師作業】事前準備」に記載します。</p>
+<p><br>5. Googleアカウントの作成<br>6. FlutterFlowへのユーザ登録<br>7. ログインアプリの作成<br>8. ユーザプロフィール画面の作成<br>9. 新規ユーザ登録画面の作成<br>10. パスワード再設定画面の作成<br>11. Firebaseの参照<br>12. チャットの設定<br>13. GridView画面の作成<br>14. アプリの公開</p>
+<p>手順3から以降の作業は有料アカウントを使って払い出され適切に設定されたFlutterFlowプロジェクトを利用する必要があります。有料アカウントを使った初期作業については、本書の最後「【講師作業】事前準備」に記載します。</p>
 <p>これらの作業は手順に従って設定を行っていくだけであるため、学生はしくみを理解することなく作業を行うことになります。これらのしくみの説明については演習をひととおり実施したあとに行います。学習はまねることで学習効率が上がりますし、達成感を味わうことで自分ごととして親近感を持つことができます。本書でもまずは理解する前にまねてひととおりを経験することから始めることで、理解したい気持ちをもってしくみの学習をすることができるため、このステップを踏むこととします。</p>
 
 
@@ -358,7 +349,7 @@
       </google-codelab-step>
     
       <google-codelab-step label="ログインアプリの作成" duration="0">
-        <p>eコマースサイトやチャットアプリなどユーザの区別が必要だったり、秘匿情報を扱うアプリケーションではユーザ登録とログインが必要であるため、アプリケーションの基本はログイン画面です。ここではFirebaseが提供する認証のしくみとFlutterFlowを組み合わせたログインアプリを作成します。</p>
+        <p>Eコマースサイトやチャットアプリなどユーザの区別が必要だったり、秘匿情報を扱うアプリケーションではユーザ登録とログインが必要であるため、アプリケーションの基本はログイン画面です。ここではFirebaseが提供する認証のしくみとFlutterFlowを組み合わせたログインアプリを作成します。</p>
 <h2 is-upgraded>前提条件</h2>
 <ul>
 <li>Firebaseと連携したFlutterFlowのプロジェクトが作成されていること。</li>
@@ -371,17 +362,17 @@
 <p>FlutterFlowのダッシュボード上で「ASU...」から始まる名前のプロジェクトを選択します。</p>
 <p class="image-container"><img style="width: 456.50px" src="img/304aab244db1ea86.png"></p>
 <h2 is-upgraded>3. 「UI Builder」でログイン画面作成</h2>
-<p>ログインすると下図の画面（UIビルダー）が表示されるので、左側のパレット上にあるアイコンを中央の画面にドラッグ＆ドロップしながらログイン画面を作成していきます。</p>
+<p>下図の画面のようにUIビルダーが表示されるので、左側のパレット上にあるアイコンを中央の画面にドラッグ＆ドロップしながらログイン画面を作成していきます。</p>
 <p class="image-container"><img style="width: 576.08px" src="img/43c6ef875f5171ea.png"></p>
-<h3 is-upgraded><strong>① LoginPageの選択</strong></h3>
+<h3 is-upgraded>① LoginPageの選択</h3>
 <p>画面右上の選択肢から「LoginPage」を選択します。</p>
 <p class="image-container"><img style="width: 485.36px" src="img/80db654e68a54345.png"></p>
-<h3 is-upgraded><strong>② Columnの設定</strong></h3>
+<h3 is-upgraded>② Columnの設定</h3>
 <p>アプリ画面の白い部分をクリックしColumn（カラム）を選択し、右側のパレット上部のPadding（パディング）で真ん中のロックをクリックしてロック上部に10と入力して上下左右4ヶ所すべてを10に設定します。これによってColumn（カラム）の四方に10 pxのパッドが設定されます。</p>
 <p class="image-container"><img style="width: 310.00px" src="img/65b126f8833859ba.png"></p>
 <p>さらに、パレット下部に移動し、Scrollableを有効化します。これによって全体の画面サイズが変化して高さが小さくなっても上下部分がスクロールできるようになります。</p>
 <p class="image-container"><img style="width: 323.36px" src="img/5d6bc834dd0fbb51.png"></p>
-<h3 is-upgraded><strong>③ eメール入力用TextFieldの追加</strong></h3>
+<h3 is-upgraded>③ eメール入力用TextFieldの追加</h3>
 <p>左パレットのTextField <img style="width: 29.17px" src="img/ebe98edac7b69c3c.png"> アイコンを、Column上にドラッグ&amp;ドロップします。</p>
 <p class="image-container"><img style="width: 413.97px" src="img/43a4fbeae903fed8.png"></p>
 <p>「TextField」をクリックした状態で右側のパレットに注目します。</p>
@@ -393,7 +384,7 @@
 <p class="image-container"><img style="width: 292.54px" src="img/cb2dc34031170a4e.png"></p>
 <p>「Content Padding」でロックアイコン<img style="width: 20.00px" src="img/21ec55eb45e4bd5c.png">をクリックして四方に5を入力します。</p>
 <p class="image-container"><img style="width: 284.36px" src="img/7e1644f80a4c20d2.png"></p>
-<h3 is-upgraded><strong>④ パスワード入力用TextFieldの追加</strong></h3>
+<h3 is-upgraded>④ パスワード入力用TextFieldの追加</h3>
 <p>左パレットのTextField <img style="width: 29.17px" src="img/ebe98edac7b69c3c.png"> アイコンを、二つ目のRowにドラッグ&amp;ドロップします。</p>
 <p class="image-container"><img style="width: 420.36px" src="img/710c84aaedfb84ef.png"></p>
 <p>「TextField」をクリックした状態で右側のパレットに注目します。</p>
@@ -405,18 +396,18 @@
 <p class="image-container"><img style="width: 329.36px" src="img/cb2dc34031170a4e.png"></p>
 <p>「Content Padding」でロックアイコン<img style="width: 20.00px" src="img/21ec55eb45e4bd5c.png">をクリックして四方に5を入力します。</p>
 <p class="image-container"><img style="width: 225.36px" src="img/7e1644f80a4c20d2.png"></p>
-<h3 is-upgraded><strong>⑤ ボタンの追加</strong></h3>
+<h3 is-upgraded>⑤ ボタンの追加</h3>
 <p>ボタン <img style="width: 26.31px" src="img/a6e3b96e3fa149ee.png"> アイコンを二行のRowアイコンの下にドラッグ＆ドロップします（ボタンアイコンは左側のアイコンリストをスクロールすると下の方にあります）。</p>
 <p class="image-container"><img style="width: 506.36px" src="img/b4889724547ef03.png"></p>
-<h3 is-upgraded><strong>⑥ ページタイトルの変更</strong></h3>
+<h3 is-upgraded>⑥ ページタイトルの変更</h3>
 <p>「Page Title」をクリックして、「ログインページ」に編集します。</p>
 <p class="image-container"><img style="width: 567.36px" src="img/2a0f178d41135892.png"></p>
 <h2 is-upgraded>4. ログインの設定</h2>
 <p>ログインを行うロジックを作成していきます。</p>
-<h3 is-upgraded><strong>① ログインページとホームページの設定</strong></h3>
+<h3 is-upgraded>① ログインページとホームページの設定</h3>
 <p>左端のメニューから設定アイコン<img style="width: 24.57px" src="img/a35508990fb81076.png">をクリックし、その右から「Authentication」を選択し、右の画面で「Enable Authentication」にチェックをいれます。すると「Initial Page」が表示されるので、「Entry Page」で「LoginPage」、「LoggedIn Page」で「HomePage」を選択します。</p>
 <p class="image-container"><img style="width: 501.16px" src="img/b02aef862b9b3469.png"></p>
-<h3 is-upgraded><strong>② ログインアクションを追加</strong></h3>
+<h3 is-upgraded>② ログインアクションを追加</h3>
 <p>ログイン画面でボタンをクリックした際のアクションの設定を行います。</p>
 <ol type="1" start="1">
 <li>画面左端の「UI Builder」アイコン<img style="width: 24.87px" src="img/dfdf397a8407c9ab.png">をクリックします。</li>
@@ -443,7 +434,7 @@
 </ol>
 <p class="image-container"><img style="width: 249.36px" src="img/c18ea846e71b7823.png"></p>
 <p>以上でログインボタンを押した時のアクションの設定は完了です。</p>
-<h3 is-upgraded><strong>③ ログアウトアクションの追加</strong></h3>
+<h3 is-upgraded>③ ログアウトアクションの追加</h3>
 <p>ログイン後に表示される「HomePage」にログアウトボタンを追加します。</p>
 <ol type="1" start="1">
 <li>画面右上の「LoginPage」をクリックして「HomePage」に切り替えます。</li>
@@ -466,7 +457,7 @@
 </ol>
 <p class="image-container"><img style="width: 205.84px" src="img/71b83c273df17f10.png"></p>
 <p>以上でログアウトボタンの設定が完了しました。</p>
-<h3 is-upgraded><strong>④ ログインアプリの実行</strong></h3>
+<h3 is-upgraded>④ ログインアプリの実行</h3>
 <p>画面右上の「Run」ボタンをクリックします。</p>
 <h3 is-upgraded><img style="width: 410.36px" src="img/21e2d50e6c7cbd44.png"></h3>
 <p>すると新しいタブが開いて下記の画面が表示されます。これは作成したログイン画面がビルドされていることを表しており、ビルドが完成するまで数分まってください。</p>
@@ -491,29 +482,30 @@
 <p>下記URLにアクセスして「Google」ボタンをクリックしてログインし、FlutterFlowのダッシュボード上で「ASU...」から始まる名前のプロジェクトを選択します。</p>
 <p><a href="https://app.flutterflow.io/" target="_blank">https://app.flutterflow.io/</a></p>
 <h2 is-upgraded>2. プロフィール画面作成</h2>
-<h3 is-upgraded><strong>① 「Page or Component」を開く。</strong></h3>
+<h3 is-upgraded>① 「Page or Component」を開く</h3>
 <p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、画面下の <img style="width: 51.63px" src="img/ee7167fa2f60a700.png"> ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 281.55px" src="img/58f51e5d4daaf6ec.png"></p>
-<h3 is-upgraded><strong>②「ProfilePage」の作成</strong></h3>
+<h3 is-upgraded>②「ProfilePage」の作成</h3>
 <p>「Create Page」ダイアログが開くので、テキストエリアに「ProfilePage」と入力し、下のタブから「Settings」を選んで「Edit Profile1」を選んで「Use Template Theme」をクリックします。</p>
 <p class="image-container"><img style="width: 453.14px" src="img/f5be081c76788cf4.png"></p>
-<h3 is-upgraded><strong>③「ProfilePage」の編集開始</strong></h3>
+<h3 is-upgraded>③「ProfilePage」の編集開始</h3>
 <p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
-<h3 is-upgraded><strong>④「Edit Profile」の編集</strong></h3>
+<h3 is-upgraded>④「Edit Profile」の編集</h3>
 <p>画面上部の「Edit Profile」を選択し、「ユーザプロフィール」に変更します。</p>
 <p class="image-container"><img style="width: 619.36px" src="img/698841cbbb5e2dd4.png"></p>
 <p>画面上部の矢印アイコン<img style="width: 20.00px" src="img/355a1d0d8fa1d7cb.png">とそれが乗っているRowは削除します。</p>
-<h3 is-upgraded><strong>⑤「Save Chages」ボタンの編集</strong></h3>
-<p>画面下部の「Save Changes」ボタンを選択し、「プロフィール更新」に変更します。<img style="width: 499.36px" src="img/3f72b1ab7bac9c3f.png"></p>
-<h3 is-upgraded><strong>⑥ CircleImageのPath変更</strong></h3>
+<h3 is-upgraded>⑤「Save Chages」ボタンの編集</h3>
+<p>画面下部の「Save Changes」ボタンを選択し、「プロフィール更新」に変更します。</p>
+<p class="image-container"><img style="width: 499.36px" src="img/3f72b1ab7bac9c3f.png"></p>
+<h3 is-upgraded>⑥ CircleImageのPath変更</h3>
 <p>犬の画面（CircleImage）をクリックして右パレットのPathの右側の「Set from Variable」をクリックします。 </p>
 <p class="image-container"><img style="width: 513.69px" src="img/354f3078390eb972.png"></p>
 <p>開いたダイアログから「Source」に「Authenticated User」、「Available Options」に「Photo URL」を選択し、「Save」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 289.30px" src="img/d8479ddd840b8632.png"></p>
-<h3 is-upgraded><strong>⑦「Save Chages」ボタンの編集</strong></h3>
+<h3 is-upgraded>⑦「Save Chages」ボタンの編集</h3>
 <p>犬の画像の下の「Chage Photo」ボタンをクリックし、Button Textを「画像の変更」に修正します。</p>
 <p class="image-container"><img style="width: 387.36px" src="img/1e557b93e59de23c.png"></p>
-<h3 is-upgraded><strong>⑧テキストフィールドの編集</strong></h3>
+<h3 is-upgraded>⑧テキストフィールドの編集</h3>
 <p>「Your Name」テキストフィールドを選択し、Initial Value右側の「Set from Variable」をクリックします。 </p>
 <p class="image-container"><img style="width: 394.36px" src="img/d5b731e1315603d9.png"></p>
 <p>開いたダイアログから「Source」に「Authenticated User」、「Available Options」に「Display Name」を選択し、「Save」ボタンをクリックします。</p>
@@ -523,7 +515,7 @@
 <p>開いたダイアログから「Source」に「Authenticated User」、「Available Options」に「Email」を選択し、「Save」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 224.36px" src="img/9e1b72d75b395094.png"></p>
 <p>「Email Address」テキストフィールド下の「myBio」テキストフィールドは削除します。</p>
-<h3 is-upgraded><strong>⑨「firestore update」アクションを更新</strong></h3>
+<h3 is-upgraded>⑨「firestore update」アクションを更新</h3>
 <p>画面上部右のバグアイコン<img style="width: 23.44px" src="img/113087311e27846.png">をクリックして、表示されるダイアログの「firestore update」をクリックします。 </p>
 <p class="image-container"><img style="width: 278.36px" src="img/6c2a6f349303b947.png"></p>
 <p>ダイアログが開くので「Source」に「Authenticated User」、「Available Options」に「User Record Reference」、「Set Field」に自動的に値がセットされるので、一番下の「myBio」を削除します。</p>
@@ -531,15 +523,16 @@
 <p>さらに「Action 2」のハンバーガーアイコン<img style="width: 20.00px" src="img/e06f3e06f278f060.png">をクリックし、「Delete Action」を選択し、確認のダイアログが開くので Remove ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 283.62px" src="img/434680dc5d06d6d3.png"></p>
 <p>削除できたら画面右下の<img style="width: 44.35px" src="img/a2cfea11511ef4a.png">ボタンをクリックしてダイアログを閉じます。</p>
-<h3 is-upgraded><strong>⑩ボトムナビゲーションバーの設定</strong></h3>
+<h3 is-upgraded>⑩ボトムナビゲーションバーの設定</h3>
 <p>左端のメニューから設定アイコン<img style="width: 24.57px" src="img/a35508990fb81076.png">をクリックし、その右から「NavBar &amp; AppBar」を選択し、右の画面で「Show Nav Bar」にチェックをいれます。「Nav Bar requires at least two pages to have &#34;Show on Nav Bar&#34; set.（Nav Barは少なくとも2つのページで「Show on Nav Bar」の設定が必要です）」というアラートメッセージが表示されますが、ひとまず無視します。</p>
 <p class="image-container"><img style="width: 680.27px" src="img/aa5b5f7bafffd377.png"></p>
 <p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、「HomePage」を選択し、右端パレットの「Show on Nav Bar」にチェックを入れます。</p>
-<p class="image-container"><img style="width: 375.36px" src="img/aac9c8de00aa74ed.png"></p>
+<p class="image-container"><img style="width: 288.36px" src="img/aac9c8de00aa74ed.png"></p>
 <p>さらに「ProfilePage」を選択し、右端パレットの「Show on Nav Bar」にチェックを入れ、Nav Bar Iconの「Home Outlined」をクリックし、表示されるダイアログに「person」と入力して<img style="width: 20.61px" src="img/8398c46924841bb8.png">アイコンを選択します。</p>
-<p class="image-container"><img style="width: 356.36px" src="img/3ed0e4d723659626.png"></p>
+<p class="image-container"><img style="width: 289.36px" src="img/3ed0e4d723659626.png"></p>
 <p>以上によりボトムナビゲーションバーが三つセットされます。左からホーム画面、チャット画面、プロフィール画面を表します。</p>
-<p class="image-container"><img style="width: 415.36px" src="img/ce0e4129f72d6a96.png"></p>
+<p class="image-container"><img style="width: 306.36px" src="img/ce0e4129f72d6a96.png"></p>
+<p>ユーザプロフィール画面の作成は以上です。</p>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
@@ -556,14 +549,14 @@
 <p>下記URLにアクセスして「Google」ボタンをクリックしてログインし、FlutterFlowのダッシュボード上で「ASU...」から始まる名前のプロジェクトを選択します。</p>
 <p><a href="https://app.flutterflow.io/" target="_blank">https://app.flutterflow.io/</a></p>
 <h2 is-upgraded>2. 新規ユーザ登録画面作成</h2>
-<h3 is-upgraded><strong>① 「Page or Component」を開く</strong></h3>
+<h3 is-upgraded>① 「Page or Component」を開く</h3>
 <p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、画面下の <img style="width: 51.63px" src="img/ee7167fa2f60a700.png"> ボタンをクリックします。</p>
-<h3 is-upgraded><strong>②「CreateAccountPage」の作成</strong></h3>
+<h3 is-upgraded>②「CreateAccountPage」の作成</h3>
 <p>「Create Page」ダイアログが開くので、テキストエリアに「CreateAccountPage」と入力し、下のタブから「Auth」を選んで2行目の「Create Account 4」を選んで「Use Template Theme」をクリックします。</p>
 <p class="image-container"><img style="width: 404.45px" src="img/e8f70ff2a6935f62.png"></p>
-<h3 is-upgraded><strong>③「CreateAccountPage」の編集開始</strong></h3>
+<h3 is-upgraded>③「CreateAccountPage」の編集開始</h3>
 <p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
-<h3 is-upgraded><strong>④「Create Account」の編集</strong></h3>
+<h3 is-upgraded>④「Create Account」の編集</h3>
 <p>画面上部の「Create Account」を選択し、「アカウントの作成」に変更します。</p>
 <p class="image-container"><img style="width: 544.36px" src="img/be982ceefaf714f5.png"></p>
 <p>その下の「Create your ...」部分を編集し、「ユーザ登録するメールアドレスとパスワードを２回入力してボタンをクリックすると登録したメールアドレスに確認メールが届きます。」に修正します。</p>
@@ -572,14 +565,14 @@
 <p class="image-container"><img style="width: 540.36px" src="img/3aa7ec8b6440d2e0.png"></p>
 <p>以上で新規ユーザ登録画面の作成が完了です。</p>
 <h2 is-upgraded>3. パスワード再設定画面作成</h2>
-<h3 is-upgraded><strong>① 「Page or Component」を開く</strong></h3>
+<h3 is-upgraded>① 「Page or Component」を開く</h3>
 <p>画面左端のメニューから<img style="width: 21.91px" src="img/438e11393232e12c.png">を選択して「Page or Component」を開き、画面下の <img style="width: 51.63px" src="img/ee7167fa2f60a700.png"> ボタンをクリックします。</p>
-<h3 is-upgraded><strong>②「ForgotPasswordPage」の作成</strong></h3>
+<h3 is-upgraded>②「ForgotPasswordPage」の作成</h3>
 <p>「Create Page」ダイアログが開くので、テキストエリアに「ForgotPasswordPage」と入力し、下のタブから「Auth」を選んで2行目の「Forgot Password 3」を選んで「Use Template Theme」をクリックします。</p>
 <p class="image-container"><img style="width: 474.36px" src="img/e1e6f402ebb41481.png"></p>
-<h3 is-upgraded><strong>③「ForgotPasswordPage」の編集開始</strong></h3>
+<h3 is-upgraded>③「ForgotPasswordPage」の編集開始</h3>
 <p>画面左端のメニューから<img style="width: 24.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示します。</p>
-<h3 is-upgraded><strong>④「Forgot Password」の編集</strong></h3>
+<h3 is-upgraded>④「Forgot Password」の編集</h3>
 <p>画面上部の「Forgot Password」を選択し、右側のパレット上で「パスワード再設定」に変更します。</p>
 <p class="image-container"><img style="width: 528.36px" src="img/32ef3f472dfbca19.png"></p>
 <p>またその下の「We will send you ...」のテキストを選択し、右側のパレット上で「アカウント登録済みのメールアドレスを入力してボタンをクリックするとパスワードをリセットする画面へのリンクをメールします。」に修正します。</p>
@@ -594,14 +587,14 @@
     
       <google-codelab-step label="Firebaseの参照" duration="0">
         <p>今までにノーコードで構築したアプリのログイン、ユーザ登録、パスワード再設定、ユーザプロフィールの参照といった機能はFirebase（ファイアベース）と呼ばれるバックエンド機能を利用しています。FirebaseもFlutterFlowと同じようにWebサービスであるため、学生のアカウントでログインして内容を確認します。</p>
-<h3 is-upgraded><strong>① Firebaseに接続</strong></h3>
+<h3 is-upgraded>① Firebaseに接続</h3>
 <p>下記URLにアクセスし、画面右上の「コンソールへ移動」リンクをクリックします。</p>
 <p><a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a> </p>
 <p>学生のメアドでGoogleログインしている場合、そのままFirebaseプロジェクトが表示されるため、ASUから始まる名前のプロジェクトを選択します。</p>
 <p class="image-container"><img style="width: 288.33px" src="img/cdfe35b86a50c5e7.png"></p>
 <p>下記の通り、Firebase利用規約が表示されることがあるので、同意にチェックをいれて「続行」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 312.11px" src="img/e77b4cd8ab8e6f82.png"></p>
-<h3 is-upgraded><strong>② Firebase Authenticationの確認</strong></h3>
+<h3 is-upgraded>② Firebase Authenticationの確認</h3>
 <p>左メニューから「構築」＞「Authentication」を選択し、「Users」タブが選択されていることを確認します。ここにはログイン可能なユーザのリストが表示されます。「ユーザを追加」ボタンをクリックすることで新たなユーザを追加することが可能です。</p>
 <p class="image-container"><img style="width: 435.36px" src="img/7550f5fd8928110f.png"></p>
 <p>「Template」タブを選択し、画面下部の鉛筆アイコンをクリックし、テンプレート言語を英語から日本語に変更し、「保存」ボタンをクリックします。これによってパスワード再設定用のメールの内容が日本語に変更されます。</p>
@@ -654,32 +647,32 @@
 <p class="image-container"><img style="width: 353.36px" src="img/75056063b9b57200.png"></p>
 <h2 is-upgraded>2. チャットの設定</h2>
 <p>「HomePage」にチャット相手のリストと「ChatPage」に遷移する設定を行います。</p>
-<h3 is-upgraded><strong>① ListViewの設定</strong></h3>
+<h3 is-upgraded>① ListViewの設定</h3>
 <p>UI Builderを表示し、左のパレットからListView <img style="width: 20.00px" src="img/3a0db650cfff6ebc.png"> をColumn上に載せます。</p>
 <p class="image-container"><img style="width: 266.36px" src="img/37ca4bb68db02ac8.png"></p>
 <p>右のパレット上のBackend Queryタブ <img style="width: 26.64px" src="img/d84994b28e8c305.png"> を選択し、表示される画面に「Query Type」に「Query Collection」、「Collection」に「users」、「Query Type」に「List of Documents」を選択し、「Exclude Current User」にチェックを入れて「Save」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 210.36px" src="img/8ff7a61034521023.png"></p>
 <p>下記のダイアログが表示されるので、OKボタンをクリックします。</p>
 <p class="image-container"><img style="width: 220.36px" src="img/dceb94202958efe8.png"></p>
-<h3 is-upgraded><strong>② Cardの設定</strong></h3>
+<h3 is-upgraded>② Cardの設定</h3>
 <p>ListView上にCard <img style="width: 20.00px" src="img/9d254bf72a712fec.png"> をのせ、右パレット上のPaddingを5に設定し、Elevationを10に設定します。</p>
 <p class="image-container"><img style="width: 464.36px" src="img/87708ef149e2e4d1.png"></p>
 <p>Card上にRowをのせ、Row上に左からImage<img style="width: 21.92px" src="img/fee24d1f5c89f560.png">、Text<img style="width: 23.38px" src="img/762dd8dac028369f.png">、Icon<img style="width: 24.01px" src="img/cf5e3ca9a59c44c7.png">を乗せ、RowのPaddingを5に設定し、Main Axis Alignmentで <img style="width: 22.91px" src="img/1f162b2e1253c727.png"> を選択します。</p>
 <p class="image-container"><img style="width: 360.36px" src="img/7e6f0270cd9ef2db.png"></p>
-<h3 is-upgraded><strong>③ Imageの設定</strong></h3>
+<h3 is-upgraded>③ Imageの設定</h3>
 <p>Imageを選択して右パレット上のPath右のオレンジ文字「Set from Variable」をクリックし、表示される画面で「Source」で「users Record (from ListView)」、「Available Options」で「photo_url」を選択し、「Save」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 236.36px" src="img/1daa37ae24af6fdd.png"></p>
-<h3 is-upgraded><strong>④ Textの設定</strong></h3>
+<h3 is-upgraded>④ Textの設定</h3>
 <p>Textを選択して右パレット上の「Hello World」上のオレンジ文字「Set from Variable」をクリックし、表示される画面で「Source」で「users Record (from ListView)」、「Available Options」で「email」を選択し、「Save」ボタンをクリックします。</p>
 <p class="image-container"><img style="width: 237.36px" src="img/a344813de4b3806d.png"></p>
-<h3 is-upgraded><strong>⑤ Iconの設定</strong></h3>
+<h3 is-upgraded>⑤ Iconの設定</h3>
 <p>Iconを選択して右パレット上の「Setting Outlined」を選択して、開いたダイアログ上の「Search icons...」に「send」を入力して表示される矢印アイコン<img style="width: 20.00px" src="img/c205ea2b7eaf95c.png">を選択します。</p>
 <p>さらに右パレット上の「Actions」タブをクリックし、「+ Add Action」ボタンをクリックし、「Navigate To」から「ChatPage」を選択します。</p>
 <p class="image-container"><img style="width: 436.00px" src="img/4c5afa046447af01.png"></p>
 <p>また、「ChatPage」に変数値をPathするために「Parameters」の「Pass」をクリックします。すると「chatUser」が自動セットされますので、右の <img style="width: 20.91px" src="img/c2d2ee5706ffac7b.png"> ボタンをクリックして設定を開き、「Source」で「users Record (from ListView)」を選択します。</p>
 <p class="image-container"><img style="width: 264.36px" src="img/eb52a89bda67ade1.png"></p>
 <p>以上でチャットアプリの完成です。</p>
-<h3 is-upgraded><strong>⑥ チャットアプリの実行</strong></h3>
+<h3 is-upgraded>⑥ チャットアプリの実行</h3>
 <p>画面右上の「Run」ボタンをクリックします。</p>
 <h3 is-upgraded><img style="width: 410.36px" src="img/21e2d50e6c7cbd44.png"></h3>
 <p>すると新しいタブが開いて下記の画面が表示されます。これは作成したログイン画面がビルドされていることを表しており、ビルドが完成するまで数分まってください。</p>
@@ -697,9 +690,144 @@
       </google-codelab-step>
     
       <google-codelab-step label="GridView画面の作成" duration="0">
-        <p>（作成中）</p>
-<h2 is-upgraded>1. （作成中）</h2>
-<p>（作成中）</p>
+        <p>次に複数情報の概要をカードを並べる形で表示するGridViewを作成します。また、個別のカードをクリックすると詳細情報を表示する画面を表示します。表示するコンテンツはお好みのYoutube動画としてタイトルと動画と説明をリストして、GridView上のカードをクリックすると動画が表示されるGridViewを作ります。今回はお好みのYoutube動画として下記の授業動画を扱うこととします。</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p><strong>タイトル (title)</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>説明 (desc)</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>URL (url)</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>①初回授業</p>
+</td><td colspan="1" rowspan="1"><p>初回の授業動画です。</p>
+</td><td colspan="1" rowspan="1"><p>https://youtu.be/omfJv918vsc</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>②共生デザインとは</p>
+</td><td colspan="1" rowspan="1"><p>共生デザインを説明する授業動画です。</p>
+</td><td colspan="1" rowspan="1"><p>https://youtu.be/KaMSF08vQac</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>③IoTとクラウドの紹介</p>
+</td><td colspan="1" rowspan="1"><p>IoTとクラウドを説明し、事例を紹介する授業動画です。</p>
+</td><td colspan="1" rowspan="1"><p>https://youtu.be/0tuxqPJfV-g</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>④AIとビッグデータの紹介</p>
+</td><td colspan="1" rowspan="1"><p>AIとビッグデータを説明し、事例を紹介する授業動画です。</p>
+</td><td colspan="1" rowspan="1"><p>https://youtu.be/qSwhlk7n-_U</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>⑤新しい社会デザイン1</p>
+</td><td colspan="1" rowspan="1"><p>新しい社会デザインとしてシェアリングエコノミーやサブスクリプションといったビジネスモデルを紹介する授業動画です。</p>
+</td><td colspan="1" rowspan="1"><p>https://youtu.be/P06C_c25xHA</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>⑥新しい社会デザイン2</p>
+</td><td colspan="1" rowspan="1"><p>新しい社会デザインとして各種オンラインサービスを紹介する授業動画です。</p>
+</td><td colspan="1" rowspan="1"><p>https://youtu.be/lWR39GBJwlo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>⑦新しい社会デザイン3</p>
+</td><td colspan="1" rowspan="1"><p>新しい社会デザインとしてスマートシティ、スーパーシティ、デジタル田園都市国家構想などを紹介する授業動画です。</p>
+</td><td colspan="1" rowspan="1"><p>https://youtu.be/mJAC6X9U-Po</p>
+</td></tr>
+</table>
+<h2 is-upgraded>1. Firestoreにコレクション作成</h2>
+<h3 is-upgraded>① Firebaseにログイン</h3>
+<p>下記URLにアクセスし、画面右上の「コンソールへ移動」リンクをクリックします。</p>
+<p><a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a> </p>
+<p>学生のメアドでGoogleログインしている場合、そのままFirebaseプロジェクトが表示されるため、ASUから始まる名前のプロジェクトを選択します。</p>
+<p class="image-container"><img style="width: 288.33px" src="img/cdfe35b86a50c5e7.png"></p>
+<h3 is-upgraded>② Firestore Databaseにアクセス</h3>
+<p>左メニューから「構築」＞「Firestore Database」を選択すると、ログインやチャットを行った際作成される「users」や「chats」といったコレクションが作成されています。</p>
+<p class="image-container"><img style="width: 362.64px" src="img/83c42932552ed7e.png"></p>
+<p>「+ コレクションを開始」をクリックし、表示されるダイアログの「コレクションID」に「movies」を入力し、「次へ」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 319.36px" src="img/efcf8a226a075b21.png"></p>
+<p>次ページで、ドキュメントIDを入れるテキストフィールドの「自動ID」をクリックして、上述の授業動画の表にある1行目の値を下図のとおり入力して「保存」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 364.50px" src="img/31819cde7f0d9a58.png"></p>
+<p>授業動画の2行目の値を入れる場合は、画面中央の「+ ドキュメントを追加」をクリックします。</p>
+<p class="image-container"><img style="width: 518.36px" src="img/59050639ef354aab.png"></p>
+<p>次ページで、前回と同様にドキュメントIDを入れるテキストフィールドの「自動ID」をクリックして、上述の授業動画の表にある2行目の値を下図のとおり入力して「保存」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 425.36px" src="img/451de512f8938128.png"></p>
+<p>3行目以降も同様に「+ ドキュメントを追加」から追加を行ってFirestoreへのデータ入力を完了します。</p>
+<h2 is-upgraded>2. 「MoviesPage」と「MoviePage」画面作成</h2>
+<p>動画タイトルのリストをGridViewで表示する画面「MoviesPage」と個別のYoutube動画を表示する画面「MoviePage」を作成します。</p>
+<p>FlutterFlowにて編集前の「MoviesPage」と「MoviePage」を作成します。FlutterFlow画面の左端メニューから「Select Page or Component」<img style="width: 20.00px" src="img/ddafd464a50a9441.png">アイコンを選択し、画面下から「+ Page」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 226.42px" src="img/93493d686cc067e8.png"></p>
+<p>「Create Page」ダイアログが表示されるため、「MoiesPage」（複数形の「Movies」になっていることに注意してください）と入力し、「Blank Page」の「+ Create New」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 371.44px" src="img/a24d071600d517a.png"></p>
+<p>さらに同じ方法で「MoviePage」（単数形の「Movie」になっていることに注意してください）と入力し、「Blank Page」の「+ Create New」ボタンをクリックします。</p>
+<p>以上により「MoviePage」と「MoviesPage」が追加されます。</p>
+<p class="image-container"><img style="width: 221.52px" src="img/302e7627bae70eee.png"></p>
+<h2 is-upgraded>3. Firestore Collection「movies」の作成</h2>
+<p>FlutterFlow画面の左端メニューから「Firestore」<img style="width: 23.65px" src="img/58f85d20501ea1a4.png"> アイコンを選択し、下図のとおりいくつかの「Collections」がリストされることを確認します。</p>
+<p class="image-container"><img style="width: 225.36px" src="img/b7fbf58a2e8e9e90.png"></p>
+<p>「Collections」右の「＋」ボタンをクリックして表示される「Create Collection」ダイアログに「movies」と入力し、「Create」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 269.36px" src="img/fbbc7743bedced20.png"></p>
+<p>次ページで「+ Add Field」ボタンをクリックして下表のとおり3つのフィールドを追加します。</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p><strong>No</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>field_name</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>Data Type</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>Field Type</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>1</p>
+</td><td colspan="1" rowspan="1"><p>title</p>
+</td><td colspan="1" rowspan="1"><p>String</p>
+</td><td colspan="1" rowspan="1"><p>Single Element</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>2</p>
+</td><td colspan="1" rowspan="1"><p>desc</p>
+</td><td colspan="1" rowspan="1"><p>String</p>
+</td><td colspan="1" rowspan="1"><p>Single Element</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>3</p>
+</td><td colspan="1" rowspan="1"><p>url</p>
+</td><td colspan="1" rowspan="1"><p>Video Path</p>
+</td><td colspan="1" rowspan="1"><p>Single Element</p>
+</td></tr>
+</table>
+<p>以上すべてを追加すると下図のように設定が完了します。</p>
+<p class="image-container"><img style="width: 309.36px" src="img/ba823ea8e0b1d55f.png"></p>
+<h2 is-upgraded>4. 「MoviesPage」画面の作成と編集</h2>
+<p>動画タイトルのリストをGridViewで表示する画面「MoviesPage」を作成します。</p>
+<h3 is-upgraded>①「MoviesPage」画面編集開始</h3>
+<p>FlutterFlow画面の左端メニューから「Select Page or Component」<img style="width: 20.00px" src="img/ddafd464a50a9441.png">アイコンを選択し、「MoviesPage」を選択し、画面左端のメニューから<img style="width: 20.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示し、画面編集を開始します。</p>
+<h3 is-upgraded>②「Page Title」の編集</h3>
+<p>画面上部の「Page Title」を選択し、「動画リスト」に変更します。</p>
+<p class="image-container"><img style="width: 411.36px" src="img/9421b686351033fa.png"></p>
+<h3 is-upgraded>③「GridView」とバックエンドクエリの追加</h3>
+<p>画面左のパレットから「GridView」を画面中央白い部分にドラッグアンドドロップします。</p>
+<p class="image-container"><img style="width: 391.36px" src="img/d24dbc6b36889a49.png"></p>
+<p>「GridView」を選択した状態で画面右側のタブから「Backend Query」アイコン<img style="width: 23.85px" src="img/c0cd345a0bdafa2c.png">を選択し、「Query Type」に「Query Collection」、「Build Firebase Query」の「Collection」に「movies」、「Query Type」に「List of Document」を選択して、画面右下の「Confirm」ボタンをクリックします。確認のダイアログが開くので「OK」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 394.36px" src="img/b7c22aa9bdb85bc5.png"></p>
+<h3 is-upgraded>④「Card」と「Column」の追加と設定</h3>
+<p>画面左のパレットから「Card」を「GridView」の上にドラッグアンドドロップし、さらに「Column」を「Card」の上にドラッグアンドドロップします。「Column」を選択した状態で右側のパレットで「Main Axis Alignment」で上下中央を表す<img style="width: 20.00px" src="img/f9d880f279eea213.png">アイコンを選択します。</p>
+<p class="image-container"><img style="width: 547.36px" src="img/c0bb33f177bcf27e.png"></p>
+<h3 is-upgraded>⑤「Text」の追加と設定</h3>
+<p>画面左のパレットから「Text」を「Column」の上にドラッグアンドドロップします。「Text」が選択されている状態で右側パレットの上部のオレンジ色の文字列「Set from Variable」をクリックし、表示されるダイアログで「Source」に「movies Record (from GridView)」、「Available Options」で「title」を選択し、「Confirm」ボタンをクリックします。これによってGridViewのカードの上に動画のタイトルが表示されるようになります。</p>
+<p class="image-container"><img style="width: 541.36px" src="img/ec1becab3068780.png"></p>
+<h3 is-upgraded>⑥「Column」押下時のアクションの追加</h3>
+<p>「Column」を選択した状態で右パレットのタブから「Actions」アイコン<img style="width: 20.00px" src="img/1a26a59281699025.png">を選択して「+ Add Action」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 541.36px" src="img/a85352b050aed8eb.png"></p>
+<p>「Navigate To」を開いて、「MoviePage」を選択します。</p>
+<p class="image-container"><img style="width: 277.22px" src="img/27b74f34ebec6626.png"></p>
+<p>下図のように設定されるので「Define」をクリックし、「+ Add Parameter」をクリックします。</p>
+<p class="image-container"><img style="width: 277.36px" src="img/20ef1072d6738867.png"></p>
+<p>画面が一時的に「MoviePage」に遷移するので、下図のとおり「Parameter Name」に「movie」、「Type」に「DocumentReference」、「Collection Type」に「movies」を選択し、「Confirm」ボタンをクリックします。</p>
+<p class="image-container"><img style="width: 279.22px" src="img/b5696407b5f4ca2e.png"></p>
+<p>MoviesPageに再び戻るので、画面左下の「Pass」ボタンをクリックし、先程作成したパラメータ「movie」を追加します。</p>
+<p class="image-container"><img style="width: 239.89px" src="img/864319ea7e76063b.png"></p>
+<p>「movie」を開いて「Source」に「movies Record (from GridView)」、「Available Options」に「reference」を選択します。</p>
+<p class="image-container"><img style="width: 240.49px" src="img/3dbd760e608e6f19.png"></p>
+<p>以上の設定により、GridView上の個別のカード押下時に「MoviePage」に遷移することになり、同時にFirestoreから取得したクリックしたカードに対応するレコードへのリファレンス（参照）が渡されることになります。</p>
+<h2 is-upgraded>5. 「MoviePage」画面の作成と編集</h2>
+<p>個別のYoutube動画を表示する画面「MoviePage」を作成します。</p>
+<h3 is-upgraded>①「MoviePage」画面編集開始</h3>
+<p>FlutterFlow画面の左端メニューから「Select Page or Component」<img style="width: 20.00px" src="img/ddafd464a50a9441.png">アイコンを選択し、「MoviePage」を選択し、画面左端のメニューから<img style="width: 20.50px" src="img/3cdd8558f70b452d.png">を選択し、「UI Builder」を表示し、画面編集を開始します。</p>
+<h3 is-upgraded>② Backend Queryの設定</h3>
+<p>画面右側のタブから「Backend Query」アイコン<img style="width: 23.85px" src="img/c0cd345a0bdafa2c.png">を選択し、「Query Type」に「Document from Reference」、「Get Document from Reference」の「Collection」に「movies」、「Source」に「movie」を選択して、画面右下の「Confirm」ボタンをクリックします。</p>
+<h3 is-upgraded>③「Page Title」の編集</h3>
+<p>画面上部の「Page Title」を選択し、右側パレット上部のオレンジ色の文字列「Set from Variables」をクリックし、「Source」に「movies Record (from MoviePage)」、「Available Options」に「title」を選択し「Confirm」ボタンをクリックします。</p>
+<h3 is-upgraded>④「YouTube Player」の追加と編集</h3>
+<p>左パレットから「YouTube Player」をドラッグアンドドロップします。</p>
+<p class="image-container"><img style="width: 612.36px" src="img/26067740f20e7868.png"></p>
+<p>右側パレットの「URL」右にあるオレンジ色の文字列「Set from Variables」をクリックし、「Source」に「movies Record (from MoviePage)」、「Available Options」に「url」を選択し「Confirm」ボタンをクリックします。</p>
+<h3 is-upgraded>⑤「Text」の追加と編集</h3>
+<p>左パレットから「Text」を「YouTube Player」の下にドラッグアンドドロップし、右側パレットのオレンジ色の文字列「Set from Variables」をクリックし、「Source」に「movies Record (from MoviePage)」、「Available Options」に「desc」を選択し「Confirm」ボタンをクリックします。</p>
 <p>Copyright 2022 RISA Co., LTD.</p>
 
 
